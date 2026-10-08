@@ -1,0 +1,2191 @@
+# Knowledge Registry
+#
+# Single source of truth for ALL Knowledge Units in the Library.
+# Spec: 01_KNOWLEDGE/KNOWLEDGE_INGESTION_SPEC.md §2
+#
+# Status: Active — Phase 4 Batch 1
+# Knowledge Unit count: 57
+# Content files: 02_GAME_ENGINES/Godot/Knowledge/ (Engine Isolation §9)
+#
+# Rules:
+#   - Knowledge ≠ Capability ≠ Asset ≠ Project (see KNOWLEDGE_RULES.md)
+#   - Link via ID Reference only; never copy data between registries
+#   - Import ≠ Active: first batch is "Reviewed", pending user gate → Validated → Active
+registry:
+  version: 1.0.0
+  updated_at: '2026-10-08'
+knowledge_units:
+- knowledge_id: K-SOFTWARE-GDSCRIPT-STATIC-TYPING-001
+  title: GDScript 静态类型系统
+  domain: Software
+  subcategory: GDScript
+  engine: Godot
+  summary: GDScript 可选静态类型系统：冒号显式标注与 := 类型推断、返回类型标注，带来编译期错误检测、编辑器补全增强与已知类型下的操作码性能优化。
+  concepts:
+  - '静态类型标注 var x: T / const C: T / 参数与返回类型 -> T'
+  - := 类型推断
+  - Variant 与 void 作为类型标注
+  - 静态类型在编译期检测错误并优化 opcodes
+  prerequisites: []
+  source:
+  - SRC-GODOT-001
+  source_version: stable (docs 4.7)
+  source_date: null
+  ingestion_date: '2026-10-06'
+  confidence: high
+  status: Reviewed
+  technology: Godot / GDScript
+  version: 4.x
+  related_capabilities:
+  - game.behavior_tree
+  - game.blackboard
+  - game.bt_ai_agent
+  - game.event_engine
+  - game.job_queue_scheduler
+  - game.quest_state_machine
+  - game.turn_based_combat
+  - software.structured_logger
+  - software.json_save_archive
+  - software.resource_auto_indexer
+  related_projects: []
+  related_assets: []
+  related_knowledge: []
+  notes: '类型使用完全可选（官方文档明确）；content: 02_GAME_ENGINES/Godot/Knowledge/K-SOFTWARE-GDSCRIPT-STATIC-TYPING-001.md'
+- knowledge_id: K-SOFTWARE-GODOT-REFCOUNTED-001
+  title: RefCounted 引用计数对象生命周期
+  domain: Software
+  subcategory: Godot Core
+  engine: Godot
+  summary: RefCounted 继承 Object，通过引用计数自动管理内存：引用归零即自动释放；FileAccess、DirAccess、Resource 等常见工具类都继承自它，实例离开作用域即释放并触发内部资源关闭。
+  concepts:
+  - 引用计数自动释放（无需手动 free）
+  - Object → RefCounted 继承关系
+  - 实例生命周期与作用域绑定
+  - FileAccess/DirAccess/Resource 均为 RefCounted 派生
+  prerequisites: []
+  source:
+  - SRC-GODOT-002
+  source_version: stable (docs 4.7)
+  source_date: null
+  ingestion_date: '2026-10-06'
+  confidence: high
+  status: Reviewed
+  technology: Godot
+  version: 4.x
+  related_capabilities:
+  - game.behavior_tree
+  - game.blackboard
+  - game.bt_ai_agent
+  - game.event_engine
+  - game.job_queue_scheduler
+  - game.quest_state_machine
+  - game.turn_based_combat
+  - software.structured_logger
+  - software.json_save_archive
+  - software.resource_auto_indexer
+  related_projects: []
+  related_assets: []
+  related_knowledge:
+  - K-SOFTWARE-GODOT-FILEACCESS-001
+  - K-SOFTWARE-GODOT-RESOURCE-001
+  notes: '10 个 Capability 全部基于 RefCounted；content: 02_GAME_ENGINES/Godot/Knowledge/K-SOFTWARE-GODOT-REFCOUNTED-001.md'
+- knowledge_id: K-SOFTWARE-GODOT-SIGNAL-001
+  title: Signal 信号机制与 Callable 连接
+  domain: Software
+  subcategory: Godot Core
+  engine: Godot
+  summary: Signal 是 Object 的内置 Variant 类型，用 signal 关键字声明（可带参数），通过 Signal.connect(Callable) 连接监听者，支持 Callable.bind 附加参数，使通信双方无需直接引用。
+  concepts:
+  - signal 关键字声明与参数
+  - Signal.connect() / 推荐的点号连接语法
+  - Callable 与 Callable.bind() 参数绑定
+  - has_signal() 检测
+  - 发布-订阅解耦通信
+  prerequisites:
+  - K-SOFTWARE-GODOT-REFCOUNTED-001
+  source:
+  - SRC-GODOT-003
+  source_version: stable (docs 4.7)
+  source_date: null
+  ingestion_date: '2026-10-06'
+  confidence: high
+  status: Reviewed
+  technology: Godot
+  version: 4.x
+  related_capabilities:
+  - game.job_queue_scheduler
+  - game.event_engine
+  - game.quest_state_machine
+  - game.turn_based_combat
+  - software.structured_logger
+  related_projects: []
+  related_assets: []
+  related_knowledge:
+  - K-SOFTWARE-GODOT-REFCOUNTED-001
+  notes: '4 个 Capability 为信号驱动；content: 02_GAME_ENGINES/Godot/Knowledge/K-SOFTWARE-GODOT-SIGNAL-001.md'
+- knowledge_id: K-SOFTWARE-GODOT-RESOURCE-001
+  title: Resource 自定义资源与序列化
+  domain: Software
+  subcategory: Godot Core
+  engine: Godot
+  summary: Resource 继承 RefCounted，是 Godot 的数据序列化基类：自定义 Resource 脚本 + @export 属性可保存为 .tres/.res，经 ResourceLoader/ResourceSaver
+    在编辑器与运行时读写。
+  concepts:
+  - 自定义 Resource 子类与 @export 属性
+  - .tres 文本 / .res 二进制格式
+  - ResourceLoader / ResourceSaver
+  - 继承链 Object → RefCounted → Resource
+  prerequisites:
+  - K-SOFTWARE-GODOT-REFCOUNTED-001
+  source:
+  - SRC-GODOT-004
+  source_version: stable (docs 4.7)
+  source_date: null
+  ingestion_date: '2026-10-06'
+  confidence: high
+  status: Reviewed
+  technology: Godot
+  version: 4.x
+  related_capabilities:
+  - game.event_engine
+  - software.json_save_archive
+  - software.resource_auto_indexer
+  related_projects: []
+  related_assets: []
+  related_knowledge:
+  - K-SOFTWARE-GODOT-REFCOUNTED-001
+  notes: 'event_data/EventData 与 archiver 均基于 Resource；content: 02_GAME_ENGINES/Godot/Knowledge/K-SOFTWARE-GODOT-RESOURCE-001.md'
+- knowledge_id: K-SOFTWARE-GODOT-DIRACCESS-001
+  title: DirAccess 目录遍历模式
+  domain: Software
+  subcategory: Godot IO
+  engine: Godot
+  summary: DirAccess 通过静态 DirAccess.open(path) 创建（不能直接 new），用 list_dir_begin()/get_next() 循环迭代、current_is_dir() 判断类型；多数方法有只支持绝对路径的静态替代版。
+  concepts:
+  - DirAccess.open() 工厂方式创建
+  - list_dir_begin / get_next / current_is_dir 迭代模式
+  - 静态方法仅支持绝对路径（含 res:// user://）
+  - res:// 与 user:// 路径约定
+  prerequisites:
+  - K-SOFTWARE-GODOT-REFCOUNTED-001
+  source:
+  - SRC-GODOT-005
+  source_version: stable (docs 4.7)
+  source_date: null
+  ingestion_date: '2026-10-06'
+  confidence: high
+  status: Reviewed
+  technology: Godot
+  version: 4.x
+  related_capabilities:
+  - software.resource_auto_indexer
+  related_projects: []
+  related_assets: []
+  related_knowledge:
+  - K-SOFTWARE-GODOT-EXPORT-ACCESS-001
+  notes: 'resource_auto_indexer 的 event_indexer 即此模式；content: 02_GAME_ENGINES/Godot/Knowledge/K-SOFTWARE-GODOT-DIRACCESS-001.md'
+- knowledge_id: K-SOFTWARE-GODOT-FILEACCESS-001
+  title: FileAccess 文件读写与游标
+  domain: Software
+  subcategory: Godot IO
+  engine: Godot
+  summary: FileAccess 提供 FileAccess.open(path, READ/WRITE) 打开文件，store_string/get_as_text 读写，实例自带文件游标（seek/get_position），实例释放时自动关闭文件。
+  concepts:
+  - open() 模式标志 READ/WRITE
+  - store_* 写入与 get_* 读取系列
+  - 文件游标 seek/seek_end/get_position
+  - 实例释放 = 文件关闭（RefCounted）
+  - user:// 持久化路径
+  prerequisites:
+  - K-SOFTWARE-GODOT-REFCOUNTED-001
+  source:
+  - SRC-GODOT-006
+  source_version: stable (docs 4.7)
+  source_date: null
+  ingestion_date: '2026-10-06'
+  confidence: high
+  status: Reviewed
+  technology: Godot
+  version: 4.x
+  related_capabilities:
+  - software.structured_logger
+  - software.json_save_archive
+  related_projects: []
+  related_assets: []
+  related_knowledge:
+  - K-SOFTWARE-GODOT-REFCOUNTED-001
+  - K-SOFTWARE-GODOT-EXPORT-ACCESS-001
+  notes: 'logger.gd 与 archiver.gd 均基于 FileAccess；content: 02_GAME_ENGINES/Godot/Knowledge/K-SOFTWARE-GODOT-FILEACCESS-001.md'
+- knowledge_id: K-SOFTWARE-GODOT-EXPORT-ACCESS-001
+  title: 导出项目的文件访问限制
+  domain: Software
+  subcategory: Godot IO
+  engine: Godot
+  summary: 导出后 res:// 目录访问行为会变化：源文件被转换为引擎格式并可能重映射文件名，官方建议导出项目中用 ResourceLoader 而非 FileAccess 访问资源，用 ResourceLoader.list_directory()
+    获取真实资源清单。
+  concepts:
+  - 导出 PCK 中源文件格式转换
+  - 文件名导出后可能重映射
+  - 导出项目用 ResourceLoader 替代 FileAccess
+  - ResourceLoader.list_directory() 获取编辑器视角清单
+  prerequisites:
+  - K-SOFTWARE-GODOT-DIRACCESS-001
+  - K-SOFTWARE-GODOT-FILEACCESS-001
+  source:
+  - SRC-GODOT-005
+  source_version: stable (docs 4.7)
+  source_date: null
+  ingestion_date: '2026-10-06'
+  confidence: high
+  status: Reviewed
+  technology: Godot
+  version: 4.x
+  related_capabilities:
+  - software.resource_auto_indexer
+  - software.json_save_archive
+  related_projects: []
+  related_assets: []
+  related_knowledge:
+  - K-SOFTWARE-GODOT-DIRACCESS-001
+  - K-SOFTWARE-GODOT-FILEACCESS-001
+  notes: 'DirAccess 官方页面 Note 段；content: 02_GAME_ENGINES/Godot/Knowledge/K-SOFTWARE-GODOT-EXPORT-ACCESS-001.md'
+- knowledge_id: K-AI-PROMPT-AUDIT
+  title: 维度 H：规则去重（硬门禁）
+  domain: AI
+  subdomain: AI
+  type: Constraint
+  summary: 目的：** 确保 prompt 里同一语义只出现一次，没有从多源（writing-style / anti-ai / scene-craft / genre-example）带进来的重复规则。这是"组装后去重检查"（prompt-crafting.md
+    Step 2）的核验——组装流程要求了，但需要独立视角确认做到了没有。
+  content: 01_KNOWLEDGE/AI/K-AI-PROMPT-AUDIT.md
+  keywords:
+  - audit
+  - prompt
+  - AI
+  concepts:
+  - 目的：** 确保 prompt 里同一语义只出现一次，没有从多源（writing-style / anti-ai / scene-craft / genre-example）带进来的重复规则。这是"组装后去重检查"（prompt-crafting.md
+    Step 2）的核验——组装流程要求了，但需要
+  - 任一重复 → **FAIL**（打回时指出哪两条是同一件事，建议合并哪条）
+  - 全部唯一 → **PASS**
+  - 操作判据（硬门禁必须可判定）：**
+  - 措辞不同的等价约束**："对话要短"+"纯台词不超8句"+"少让角色长篇"指向同一件事但各有侧重（一个给原则、一个给数量、一个给反例）→ 是有效冗余，保留。审计只要求**同一格式的完全重复**被合并，不要求所有语义等价约束合并成一条。
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-001
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/prompt-audit/SKILL.md#维度 H：规则去重（硬门禁）
+  - source_id: SRC-SKILL-001
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/prompt-audit/SKILL.md#维度 I：规则重排（位置效应核验，硬门禁）
+  source:
+  - SRC-SKILL-001
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: medium
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-AI-PROMPT-AUDIT; original_section=维度 H：规则去重（硬门禁）; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-ELECTRON-NOVEL-PROOFREAD
+  title: 'novel-proofread: 6.5.1 语境词表（题材可配置）'
+  domain: Electronics
+  subdomain: General
+  type: Pattern
+  summary: 执行时读取 `settings/writing-style.md` 中的 `context_vocab` 字段（如有）。以下为修仙题材的默认词表（完整版见 `references/context-vocab/xianxia.md`）：
+  content: 01_KNOWLEDGE/Electronics/K-ELECTRON-NOVEL-PROOFREAD.md
+  keywords:
+  - novel
+  - proofread
+  - General
+  concepts:
+  - 做法：** 扫描全文 + 对照 `settings/world-setting.md` 中的核心术语表（如有）+ 读取跨章缓存中的术语快照。不一致 → 直接改。
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-002
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/proofread/SKILL.md#6.5.1 语境词表（题材可配置）
+  source:
+  - SRC-SKILL-002
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-NOVEL-PROOFREAD; original_section=6.5.1 语境词表（题材可配置）; source_type=Agent Skill;
+    extraction_date=2026-10-08; pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-TENCENT-DOCS
+  title: 'tencent-docs: 核心规则'
+  domain: Software
+  subdomain: General
+  type: Engineering Rule
+  summary: 🚨 所有 PPT / 幻灯片任务统一走 Slide 工作流**：用户提供 `https://docs.qq.com/slide/<id>` 链接、或提及 "PPT / 幻灯片 / 演示文稿 / slide / 投影片" 等任何与
+    PPT 相关的需求（包括 0-1 生成整份、续写、加页、改页、删页、检查），**必须**按 `slide/entry.md` 的工作流执行：先跑状态脚本 → 必要时写 D
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-TENCENT-DOCS.md
+  keywords:
+  - docs
+  - tencent
+  - General
+  concepts:
+  - 🚨 所有 PPT / 幻灯片任务统一走 Slide 工作流**：用户提供 `https://docs.qq.com/slide/<id>` 链接、或提及 "PPT / 幻灯片 / 演示文稿 / slide / 投影片" 等任何与 PPT
+    相关的需求（包括 0-1 生成整份、续写、加页、改页、删页、检
+  - 文档编辑与新建**：使用`manage.query_file_info`或者`文档链接前缀`获取文档类型，根据文档类型优先使用对应的工具集，可参考**场景路由表**
+  - 优先批量写入，避免多次重复调用**：当对同一文档存在**连续 3 次及以上**的数据写入（如向智能表格写多行记录、向 sheet 写多个单元格/区域、向文档插入多段内容等）时，**必须**使用对应工具的**批量写入接口**一次性提交（如
+    `smartsheet.add_records` / `sma
+  - 用户需要保存/上传Markdown格式内容**：直接填入 `create_smartcanvas_by_mdx` 的 `mdx` 参数，MDX 已向下兼容全部 Markdown 语法，无需转换，也无需切换 `content_format`
+  - 用户有本地文件保存/沉淀/落盘**：一律使用 `import_file.sh` → `manage.async_import` → `manage.import_progress` 统一上传通路，保留原文件结构，不要用 `create_*`
+    工具重新生成内容；文件格式是否支持由后端判定，收到"不支持
+  - 保存/沉淀/落盘/转写类**：用户提出"整理/保存/归档/转写/沉淀/会议纪要"等把当前对话内容落到云端的诉求时，优先使用 `create_smartcanvas_by_mdx`（智能文档 mdx 格式，排版美观、组件丰富）
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-003
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/ai-heritage-library/workspace/skills/tencent-docs/SKILL.md#核心规则
+  - source_id: SRC-SKILL-004
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/software-development/game-dev-lessons/SKILL.md#六条核心原则
+  source:
+  - SRC-SKILL-003
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: medium
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-TENCENT-DOCS-2; original_section=核心规则; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-WEIXINPAY-PAY
+  title: 回复前检查清单
+  domain: Software
+  subdomain: General
+  type: Constraint
+  summary: 1. 出现支付信号即调用工具：出现 `WeixinPay-Required` 时立即调用 `weixinpay_pay`，而非将内容复述给用户
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-WEIXINPAY-PAY.md
+  keywords:
+  - weixinpay
+  - General
+  concepts:
+  - 回复前检查清单
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-005
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/plugins/weixinpay/skills/weixinpay-pay/SKILL.md#回复前检查清单
+  source:
+  - SRC-SKILL-005
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-WEIXINPAY-PAY; original_section=回复前检查清单; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-AI-TENCENT-MEETING-MCP
+  title: 'tencent-meeting-mcp: 概述'
+  domain: AI
+  subdomain: AI
+  type: Troubleshooting
+  summary: 本技能为腾讯会议提供完整的 MCP 工具集，涵盖会议管理、成员管理、录制、转写与智能纪要查询等核心功能。
+  content: 01_KNOWLEDGE/AI/K-AI-TENCENT-MEETING-MCP.md
+  keywords:
+  - meeting
+  - tencent
+  - AI
+  concepts:
+  - ⚠️ 最高优先级提示**：当遇到以下任何情况时，必须立即暂停当前任务并主动触发 `submit_feedback` 工具上报反馈（详见场景7）：工具缺失（功能不存在）、工具报错（返回错误码）、能力不足（参数/功能限制）、结果不符预期（数据异常）、改进建议（功能优化）。这是强制触发机制，优先级高于所有
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-006
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/ai-heritage-library/workspace/skills/@wemeeting/tencent-meeting-skill/SKILL.md#概述
+  source:
+  - SRC-SKILL-006
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-AI-TENCENT-MEETING-MCP; original_section=概述; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-SHOPIFY
+  title: Storefront API (public read-only)
+  domain: Software
+  subdomain: General
+  type: API / Specification
+  summary: 'Different endpoint, different token, used for customer-facing apps/hydrogen-style headless setups. Headers differ:'
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-SHOPIFY.md
+  keywords:
+  - only
+  - public
+  - read
+  - shopify
+  - storefront
+  - General
+  concepts:
+  - Endpoint:** `https://$SHOPIFY_STORE_DOMAIN/api/$SHOPIFY_API_VERSION/graphql.json`
+  - 'Auth header (public):** `X-Shopify-Storefront-Access-Token: <public token>` — embeddable in browser'
+  - 'Auth header (private):** `Shopify-Storefront-Private-Token: <private token>` — server-only'
+  - 'H "Content-Type: application/json" \'
+  - 'H "X-Shopify-Storefront-Access-Token: ${SHOPIFY_STOREFRONT_TOKEN}" \'
+  - 'd ''{"query":"{ shop { name } products(first: 5) { edges { node { id title handle } } } }"}'' | jq'
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-007
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/hermes-agent/optional-skills/productivity/shopify/SKILL.md#Storefront API (public read-only)
+  source:
+  - SRC-SKILL-007
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-SHOPIFY; original_section=Storefront API (public read-only); source_type=Agent
+    Skill; extraction_date=2026-10-08; pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-GENERAL-ART-BIBLE
+  title: 'art-bible: 阶段 0：解析参数和上下文检查'
+  domain: General
+  subdomain: Game Design
+  type: Troubleshooting
+  summary: 读取 `design/gdd/game-concept.md`。如果不存在，报错返回：
+  content: 01_KNOWLEDGE/General/K-GENERAL-ART-BIBLE.md
+  keywords:
+  - bible
+  - Game Design
+  concepts:
+  - 改造模式检测**：检查 `design/art/art-bible.md` 是否存在。如果存在：
+  - 对每个章节检查是否有实际内容或仅为占位符
+  - 只处理"空"或"占位符"的章节，不重写已完成内容
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-008
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/ai-heritage-library/workspace/Agent/art-series/skills/art-bible/SKILL.md#阶段 0：解析参数和上下文检查
+  source:
+  - SRC-SKILL-008
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GAME-ART-BIBLE; original_section=阶段 0：解析参数和上下文检查; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-TENCENT-DOCS-002
+  title: 'tencent-docs: 注意事项'
+  domain: Software
+  subdomain: General
+  type: API / Specification
+  summary: 默认使用 smartcanvas**：除非用户明确指定其他格式，否则**新增文档**时优先使用 `create_smartcanvas_by_markdown`；**编辑已有智能文档**时使用 `smartcanvas.*`
+    系列工具
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-TENCENT-DOCS-002.md
+  keywords:
+  - docs
+  - tencent
+  - General
+  concepts:
+  - 默认使用 smartcanvas**：除非用户明确指定其他格式，否则**新增文档**时优先使用 `create_smartcanvas_by_markdown`；**编辑已有智能文档**时使用 `smartcanvas.*` 系列工具
+  - 创建文档时支持 `parent_id`**：所有 `create_*_by_markdown` 和 `create_flowchart_by_mermaid` 工具均支持 `parent_id` 参数，可将文档直接创建到指定目录；不填则在根目录创建
+  - 删除节点**：`delete_space_node` 默认仅删除当前节点（`remove_type=current`），使用 `all` 时会递归删除所有子节点，需谨慎
+  - Markdown 内容使用 UTF-8 格式，特殊字符无需转义
+  - 幻灯片必须遵循层级结构，每页包含 2-4 个段落标题
+  - 分页查询每页返回 20-40 条记录，使用 `has_next` 判断是否有更多
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-009
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/ai-heritage-library/workspace/Agent/office-agent/skills/tencent-docs/SKILL.md#注意事项
+  source:
+  - SRC-SKILL-009
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-TENCENT-DOCS; original_section=注意事项; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-TENCENT-DOCS-003
+  title: 常见错误码及解决方案
+  domain: Software
+  subdomain: General
+  type: Troubleshooting
+  summary: '| 错误码 | 错误类型 | 解决方案 |'
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-TENCENT-DOCS-003.md
+  keywords:
+  - docs
+  - tencent
+  - General
+  concepts:
+  - 常见错误码及解决方案
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-009
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/ai-heritage-library/workspace/Agent/office-agent/skills/tencent-docs/SKILL.md#常见错误码及解决方案
+  - source_id: SRC-SKILL-003
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/ai-heritage-library/workspace/skills/tencent-docs/SKILL.md#常见错误码
+  source:
+  - SRC-SKILL-009
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: medium
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-TENCENT-DOCS; original_section=常见错误码及解决方案; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-NOVEL-ARCHIVE
+  title: 发布前质检清单（Pre-Publish Checklist）
+  domain: Software
+  subdomain: General
+  type: Engineering Rule
+  summary: 以下为发布前**建议检验项**。不通过不阻断归档（可标注"已知问题"后继续），但发布前必须清零。
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-NOVEL-ARCHIVE.md
+  keywords:
+  - archive
+  - checklist
+  - novel
+  - publish
+  - General
+  concepts:
+  - '全部通过 → 标记 `pre-publish: ready`'
+  - '部分不通过但已标注"已知问题" → 标记 `pre-publish: aware-issues`，仍可归档'
+  - 关键项（#1/#2）不通过 → **STOP，返回对应流程**
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-010
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/archive/SKILL.md#发布前质检清单（Pre-Publish Checklist）
+  source:
+  - SRC-SKILL-010
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-NOVEL-ARCHIVE; original_section=发布前质检清单（Pre-Publish Checklist）; source_type=Agent
+    Skill; extraction_date=2026-10-08; pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-GENERAL-NOVEL-CHAPTER
+  title: e. 验收（章纲完成后强制执行，全部通过才进提示词生成）
+  domain: General
+  subdomain: General
+  type: Constraint
+  summary: 详见 `references/chapter-setting-style.md#做完之后验收流程`。以下为 SOP 摘要：
+  content: 01_KNOWLEDGE/General/K-GENERAL-NOVEL-CHAPTER.md
+  keywords:
+  - chapter
+  - novel
+  - General
+  concepts:
+  - 第 1 步：给作者看 structured 反馈**
+  - '{title}（角色：{人物列表}）'
+  - 第 2 步：检查清单自检**
+  - '[ ] 字数目标已确认（4000+）'
+  - '[ ] 段落分布已确认（推进/过渡/埋伏笔各几段）'
+  - '[ ] 每条 key_point 对应一个可写场景，含冲突事件'
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-011
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/chapter/SKILL.md#e. 验收（章纲完成后强制执行，全部通过才进提示词生成）
+  source:
+  - SRC-SKILL-011
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-NOVEL-CHAPTER; original_section=e. 验收（章纲完成后强制执行，全部通过才进提示词生成）; source_type=Agent
+    Skill; extraction_date=2026-10-08; pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-AI-NOVEL-PROMPT
+  title: 'novel-prompt: Step 2: 按指南填充 9 层'
+  domain: AI
+  subdomain: AI
+  type: Constraint
+  summary: Read `references/prompt-setting-style.md`，按以下顺序填充：
+  content: 01_KNOWLEDGE/AI/K-AI-NOVEL-PROMPT.md
+  keywords:
+  - novel
+  - prompt
+  - step
+  - AI
+  concepts:
+  - 按边界信号（换地点/跳时间/情绪转折）切分场景（2-4 个）
+  - 每场景填种子三字段（入口画面/核心事件/出口画面）+ 情绪拐点
+  - 视角：从 genre-example `prompt_segment` 提取视角字段（如"第三人称限制"）
+  - 描写要求：从 genre-example `prompt_segment` 提取描写手法/节奏/禁止项
+  - 疲劳词阈值：从 anti-ai/common-rules.md 表一复制（如"突然≤3/章"）
+  - 句式规则：从 anti-ai/common-rules.md 表二复制（如"连续4句主语不得相同"）
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-012
+    version: null
+    date: '2026-10-08'
+    location: '/home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/prompt/SKILL.md#Step 2: 按指南填充 9 层'
+  source:
+  - SRC-SKILL-012
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-AI-NOVEL-PROMPT; original_section=Step 2: 按指南填充 9 层; source_type=Agent Skill;
+    extraction_date=2026-10-08; pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-NOVEL-REVIEW
+  title: 维度 5：写作风格执行度（对照 settings/writing-style.md）
+  domain: Software
+  subdomain: General
+  type: Engineering Rule
+  summary: 对照 writing-style.md 对应字段逐条检查。AI 味相关的硬性检测（疲劳词、句式癖好）见 anti-ai.md，本维度聚焦内容层面的风格执行。
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-NOVEL-REVIEW.md
+  keywords:
+  - novel
+  - review
+  - settings
+  - style
+  - writing
+  - General
+  concepts:
+  - 维度 5：写作风格执行度（对照 settings/writing-style.md）
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-013
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/review/SKILL.md#维度 5：写作风格执行度（对照 settings/writing-style.md）
+  source:
+  - SRC-SKILL-013
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-NOVEL-REVIEW; original_section=维度 5：写作风格执行度（对照 settings/writing-style.md）;
+    source_type=Agent Skill; extraction_date=2026-10-08; pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-AI-STYLE-DISTILL
+  title: 一、主卡蒸馏
+  domain: AI
+  subdomain: AI
+  type: Engineering Rule
+  summary: 1. 收集样本：项目根 `novel-samples/` 目录下的作者文档（.md/.txt，作者放置）、`.agent/task/style-sample.md`（聊天粘贴）或已归档章节。**少于 6000 字（约 3
+    章的量）向 novel-agent 说明质量不足可挂起**——1500 字样本句长分布/五层占比统计噪声大、场景卡子样本不足（每类 ≥800 字会大量跳过）；6000-10000
+  content: 01_KNOWLEDGE/AI/K-AI-STYLE-DISTILL.md
+  keywords:
+  - distill
+  - style
+  - AI
+  concepts:
+  - 量化表 → 卡量化维（案例 1 九维，schema 见 check-agents）
+  - 建模规则 → 卡声音层（hard_constraints / soft_guidance / few_shot_examples）
+  - 开头说明定位：**「以下是你文风在 AI 眼里的理解——不是文学评价，AI 会照着这个写。哪里不对直接说。」**
+  - 全文用作者语言，不得出现任何内部词**（卡/主卡/场景卡/confidence/维度/override/蒸馏/量化/特征 等）——作者看不懂的都不用：
+  - 「你的写作特点」（= 叙事身份，用大白话转述，不抄节名）
+  - 「你定的规矩」（= 硬约束，用大白话转述 2-4 条）
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-014
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/style-distill/SKILL.md#一、主卡蒸馏
+  source:
+  - SRC-SKILL-014
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-AI-STYLE-DISTILL; original_section=一、主卡蒸馏; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-CN-MARKET-DATA-FAILOVER
+  title: 数据源层级（2026-07/08 实测）
+  domain: Software
+  subdomain: General
+  type: Troubleshooting
+  summary: '| 层级 | 源 | 能力 | 限制 |'
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-CN-MARKET-DATA-FAILOVER.md
+  keywords:
+  - data
+  - failover
+  - market
+  - General
+  concepts:
+  - 数据源层级（2026-07/08 实测）
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-015
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/finance/cn-market-data-failover/SKILL.md#数据源层级（2026-07/08 实测）
+  source:
+  - SRC-SKILL-015
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-CN-MARKET-DATA-FAILOVER; original_section=数据源层级（2026-07/08 实测）; source_type=Agent
+    Skill; extraction_date=2026-10-08; pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-OSS-FORENSICS
+  title: API Rate Limiting
+  domain: Software
+  subdomain: General
+  type: API / Specification
+  summary: GitHub REST API enforces rate limits that will interrupt large investigations if not managed.
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-OSS-FORENSICS.md
+  keywords:
+  - forensics
+  - limiting
+  - rate
+  - General
+  concepts:
+  - 'Authenticated requests**: 5,000/hour (requires `GITHUB_TOKEN` env var or `gh` CLI auth)'
+  - 'Unauthenticated requests**: 60/hour (unusable for investigations)'
+  - 'Best practices**:'
+  - 'Always authenticate: `export GITHUB_TOKEN=ghp_...` or use `gh` CLI (auto-authenticates)'
+  - Use conditional requests (`If-None-Match` / `If-Modified-Since` headers) to avoid consuming quota on unchanged data
+  - For paginated endpoints, fetch all pages in sequence — don't parallelize against the same endpoint
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-016
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/hermes-agent/optional-skills/security/oss-forensics/SKILL.md#API Rate Limiting
+  source:
+  - SRC-SKILL-016
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-OSS-FORENSICS; original_section=API Rate Limiting; source_type=Agent Skill;
+    extraction_date=2026-10-08; pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-AI-TENCENT-MEETING-MCP-002
+  title: 'tencent-meeting-mcp: 场景7：提交反馈（Agent 意见箱）'
+  domain: AI
+  subdomain: AI
+  type: Troubleshooting
+  summary: 触发条件（强制触发 - 优先级最高）**
+  content: 01_KNOWLEDGE/AI/K-AI-TENCENT-MEETING-MCP-002.md
+  keywords:
+  - agent
+  - meeting
+  - tencent
+  - AI
+  concepts:
+  - 触发条件（强制触发 - 优先级最高）**
+  - 工具缺失**：用户请求的功能在当前工具集中完全不存在
+  - 工具报错**：任何工具调用返回非成功状态
+  - 能力不足**：工具存在但参数限制或功能范围无法满足用户需求
+  - 结果不符预期**：工具调用成功但返回结果与用户预期明显不一致
+  - 改进建议**：发现工具集有明显改进空间或新增功能需求
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-006
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/ai-heritage-library/workspace/skills/@wemeeting/tencent-meeting-skill/SKILL.md#场景7：提交反馈（Agent 意见箱）
+  source:
+  - SRC-SKILL-006
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-AI-TENCENT-MEETING-MCP; original_section=场景7：提交反馈（Agent 意见箱）; source_type=Agent
+    Skill; extraction_date=2026-10-08; pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-AI-PROMPT-AUDIT-002
+  title: 维度 F：去 AI 校验（新增核心维度）
+  domain: AI
+  subdomain: AI
+  type: Constraint
+  summary: 目的：** 确保 prompt 从根源上抑制 AI 均匀工整的写作惯性。
+  content: 01_KNOWLEDGE/AI/K-AI-PROMPT-AUDIT-002.md
+  keywords:
+  - audit
+  - prompt
+  - AI
+  concepts:
+  - 目的：** 确保 prompt 从根源上抑制 AI 均匀工整的写作惯性。
+  - 6 项全部 PASS → **PASS（去 AI 设计完整）**
+  - 4-5 项 PASS → **WARN（建议补充缺失项）**
+  - ≤ 3 项 PASS → **FAIL（严重去 AI 缺陷）**
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-001
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/prompt-audit/SKILL.md#维度 F：去 AI 校验（新增核心维度）
+  source:
+  - SRC-SKILL-001
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-AI-PROMPT-AUDIT; original_section=维度 F：去 AI 校验（新增核心维度）; source_type=Agent Skill;
+    extraction_date=2026-10-08; pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-SHORT-PLAN
+  title: 'short-plan: Phase planning：构思与排纲'
+  domain: Software
+  subdomain: General
+  type: Principle
+  summary: 按序执行，不适用项标注原因后可跳过：
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-SHORT-PLAN.md
+  keywords:
+  - phase
+  - plan
+  - planning
+  - short
+  - General
+  concepts:
+  - 每节一行**，字段：`结构段/五段功能 | 主事件 | 子事件×3-5（->连接，各带功能标签：对话/冲突/伏笔/回忆/发现/递进，描述具体到谁做了什么）| 情绪 | 人物/关系变化 | 因果链 | 读者新获知 | 结尾承接/钩子 |
+    伏笔/物件 | 动静 | 对话密度 | 目标字数`
+  - 因果链固定形状**：`承接点 → 动机与行动 → 核心事件 → 直接后果 → 结尾钩子`；承接点写明继承什么，直接后果写明导致什么，MUST NOT 省略连接位
+  - 情绪链落点**：链名 + 各阶段覆盖的节号（全篇每节都被覆盖，无节落链外）
+  - 招式落点表**：每招式标承载节与兑现节，中间留铺垫距离，禁止承载即兑现
+  - 无无功能节**：每节至少承担 推进招式 / 加压 / 伏笔 / 关系变化 / 情绪兑现 / 展开配角支线 之一；配角支线须有记忆点且作用于主线；纯过渡节合并或补功能
+  - 反派作恶前置铺垫**：每次作恶前有危险累积的铺垫
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-017
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/short/short-plan/SKILL.md#Phase planning：构思与排纲
+  source:
+  - SRC-SKILL-017
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-SHORT-PLAN; original_section=Phase planning：构思与排纲; source_type=Agent Skill;
+    extraction_date=2026-10-08; pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-XURL
+  title: Raw API Access
+  domain: Software
+  subdomain: General
+  type: API / Specification
+  summary: 'The shortcuts cover common operations. For anything else, use raw curl-style mode against any X API v2 endpoint:'
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-XURL.md
+  keywords:
+  - access
+  - xurl
+  - General
+  concepts:
+  - Raw API Access
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-018
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/hermes-agent/skills/social-media/xurl/SKILL.md#Raw API Access
+  source:
+  - SRC-SKILL-018
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-XURL; original_section=Raw API Access; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-AI-WEIXINPAY-FEEDBACK
+  title: 'weixinpay-feedback: 适用场景'
+  domain: AI
+  subdomain: AI
+  type: Troubleshooting
+  summary: 用户在使用微信AI支付/AI专属卡过程中遇到无法通过重试或常规引导解决的问题、并希望反馈时使用。按问题类型选择反馈方式：
+  content: 01_KNOWLEDGE/AI/K-AI-WEIXINPAY-FEEDBACK.md
+  keywords:
+  - feedback
+  - weixinpay
+  - AI
+  concepts:
+  - 开通 / 绑定过程的问题**（如开通失败、绑定不上）直接展示反馈收集表链接引导手动提交，**不调用工具**（见「开通/绑定问题的反馈方式」）
+  - 支付 / 管理问题**（如支付失败、扣款异常、余额或 AI专属卡管理问题）调用工具 `weixinpay_feedback` 反馈（见执行流程）
+  - 用户直接要给微信支付反馈问题**（未明确属于上面哪类）默认走工具反馈
+  - 绑定、开通流程反复失败或卡住
+  - 支付点击后无反应、扣款失败或返回未知错误
+  - 支付技能返回未知错误码或异常输出
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-019
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/plugins/weixinpay/skills/weixinpay-feedback/SKILL.md#适用场景
+  source:
+  - SRC-SKILL-019
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-AI-WEIXINPAY-FEEDBACK; original_section=适用场景; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-CODEBASE-MAPPING
+  title: 流程（按序执行）
+  domain: Software
+  subdomain: General
+  type: Engineering Rule
+  summary: 1. **定界**：确认目标路径与只读要求。先用非 LLM 脚本清点文件（类型/体积/分类）。分类规则：当前代码按路径；备份区（隐藏目录、backup 命名）；运行产物（日志/导出）；生成物（缓存/元数据）。每类记录理由——不确定就标注，不擅自排除，源文件一律不动。
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-CODEBASE-MAPPING.md
+  keywords:
+  - codebase
+  - mapping
+  - General
+  concepts:
+  - 流程（按序执行）
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-020
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/codebase-mapping/SKILL.md#流程（按序执行）
+  source:
+  - SRC-SKILL-020
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-CODEBASE-MAPPING; original_section=流程（按序执行）; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-GENERAL-NOVEL-MIGRATE
+  title: 'novel-migrate: Step 执行失败'
+  domain: General
+  subdomain: Game Design
+  type: Troubleshooting
+  summary: '| 步骤 | 失败场景 | 恢复策略 |'
+  content: 01_KNOWLEDGE/General/K-GENERAL-NOVEL-MIGRATE.md
+  keywords:
+  - migrate
+  - novel
+  - step
+  - Game Design
+  - Python
+  concepts:
+  - Step 执行失败
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-021
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/migrate/SKILL.md#Step 执行失败
+  source:
+  - SRC-SKILL-021
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: Python
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GAME-NOVEL-MIGRATE; original_section=Step 执行失败; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-AI-NOVEL-DISPATCH
+  title: 断点续跑语义
+  domain: AI
+  subdomain: AI
+  type: Concept
+  summary: 状态记录是唯一断点源，重启动时直接读 status.md 的 `## 当前章节进度` 段，不做 Glob 全量扫描（省 token）。**
+  content: 01_KNOWLEDGE/AI/K-AI-NOVEL-DISPATCH.md
+  keywords:
+  - dispatch
+  - novel
+  - AI
+  concepts:
+  - 状态记录是唯一断点源，重启动时直接读 status.md 的 `## 当前章节进度` 段，不做 Glob 全量扫描（省 token）。**
+  - '`章节状态` = 最近已完成的阶段**（子 agent order DONE 后才推进，dispatch 前不改）。判断用**严格大于 `>`**：状态 > 某阶段 = 已完成可跳过；**等值 = 该阶段未完成，需重派**。'
+  - 状态更新规则（机械指令）**：某阶段子 agent order 标 DONE 后，才把 `章节状态` 更新为该阶段（= 已完成）。dispatch 进行中不改（当前阶段由 current_step 表达）。新章节开始重置状态。
+  - 校正兜底（仅状态与实际明显冲突时）**：状态滞后（如状态=writing 但 `.draft.md` 已存在 → 实际完成）→ Glob 校验单文件并推进状态；状态超前（等值但产出缺失 → 实际未完成）→ 重派该阶段。不常态扫描。
+  - writer 中断恢复（唯一长输出阶段）**：读 `writing-order.md` 的 `partial_path:` 字段——有值且 `.draft.md` 不存在 →
+  - 归档幂等**：`.agent/archiving/{chapter}.done` 存在 → 归档已完成，直接推进章节状态=全部完成，不重派。
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-022
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/novel-dispatch/SKILL.md#断点续跑语义
+  source:
+  - SRC-SKILL-022
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-AI-NOVEL-DISPATCH; original_section=断点续跑语义; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-ELECTRON-NOVEL-PROOFREAD-002
+  title: 'novel-proofread: 11.2 跨章检测项'
+  domain: Electronics
+  subdomain: General
+  type: Pattern
+  summary: 11.2.1 时间线一致性
+  content: 01_KNOWLEDGE/Electronics/K-ELECTRON-NOVEL-PROOFREAD-002.md
+  keywords:
+  - novel
+  - proofread
+  - General
+  concepts:
+  - 比对本章的语境词表命中结果与缓存中的 `terms_taken` → 同一条术语在不同章写法不同则标记
+  - 例：前章用"灵脉"，本章用"真脉" → 标记术语混用
+  - 对照缓存中的 `established_facts` → 本章与之矛盾处逐条标记
+  - 例：前章确立"主角没有灵识"，本章写"主角用灵识感知" → 标记设定矛盾
+  - 对照 `items_state` → 上章已被破坏/消耗/遗失的物品本章无故重现 → 标记
+  - 同一场景中：角色A上场之后未再提及，后续又突然说话/行动
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-002
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/proofread/SKILL.md#11.2 跨章检测项
+  source:
+  - SRC-SKILL-002
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-NOVEL-PROOFREAD; original_section=11.2 跨章检测项; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-NOVEL-REVIEW-002
+  title: 维度 4：角色一致性（对照 settings/character-setting/*.md）
+  domain: Software
+  subdomain: General
+  type: Concept
+  summary: 对本章出场的每个角色逐条检查。
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-NOVEL-REVIEW-002.md
+  keywords:
+  - character
+  - novel
+  - review
+  - setting
+  - settings
+  - General
+  concepts:
+  - 维度 4：角色一致性（对照 settings/character-setting/*.md）
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-013
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/review/SKILL.md#维度 4：角色一致性（对照 settings/character-setting/*.md）
+  source:
+  - SRC-SKILL-013
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-NOVEL-REVIEW; original_section=维度 4：角色一致性（对照 settings/character-setting/*.md）;
+    source_type=Agent Skill; extraction_date=2026-10-08; pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-GODOT-KB
+  title: 'godot-kb: 使用规则'
+  domain: Software
+  subdomain: Game Design
+  type: Engineering Rule
+  summary: 0. **查官方规则先看 `~/GODOT_KNOWLEDGE/`**（2026-10-07 Phase 0 建库）：352 条规则/237 条 API/187 条反模式，100% 官方来源、带 version_scope
+    与置信度，面向 Godot 4.6.2；本技能存实战踩坑，两者冲突以官方库为准并回改本技能。
+  content: 02_GAME_ENGINES/Godot/Knowledge/K-SOFTWARE-GODOT-KB.md
+  keywords:
+  - godot
+  - Game Design
+  - Godot
+  concepts:
+  - 使用规则
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-023
+    version: Godot 4.6
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/software-development/godot-kb/SKILL.md#使用规则
+  source:
+  - SRC-SKILL-023
+  source_version: Godot 4.6
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: Godot
+  version: Godot 4.6
+  notes: 'provenance: source_skill_id=SKILL-GAME-GODOT-KB; original_section=使用规则; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-RULES-KNOWLEDGE-BASE
+  title: 'rules-knowledge-base: 1. 先立契约，再填内容'
+  domain: Software
+  subdomain: General
+  type: Engineering Rule
+  summary: 目录：每领域 `<DOMAIN>/{RULES,API,ANTI_PATTERNS}.yaml + NOTES.md`；`CHECKPOINTS/CHECKPOINT_<DOMAIN>.md`；顶层四库（BEST_PRACTICES
+    / ANTI_PATTERNS / API_INDEX / VERSION_RULES）+ `_stats.json`；`tools/`；`tools/domains
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-RULES-KNOWLEDGE-BASE.md
+  keywords:
+  - base
+  - knowledge
+  - rules
+  - General
+  concepts:
+  - 目录：每领域 `<DOMAIN>/{RULES,API,ANTI_PATTERNS}.yaml + NOTES.md`；`CHECKPOINTS/CHECKPOINT_<DOMAIN>.md`；顶层四库（BEST_PRACTICES /
+    ANTI_PATTERNS / API_INDEX / VER
+  - 规则 schema 必填：`id / rule / level(MUST|SHOULD|MAY|SHOULD_NOT|MUST_NOT) / category / why / version_scope / confidence / source`；可选
+    `preferred / note / ca
+  - version_scope 用闭集枚举**，版本备注放独立 `note` 字段——下游按值精确匹配，备注混入主字段必漏检。
+  - confidence：high=≥2 独立来源、medium=1、low=仅第三方（禁用）。独立性归一化：同主版本同页快照（stable/latest/4.N）折叠为一个来源；跨主版本快照（3.x vs 4.x 同页）对版本差异主张算不同证据。
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-024
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/software-development/rules-knowledge-base/SKILL.md#1. 先立契约，再填内容
+  source:
+  - SRC-SKILL-024
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-RULES-KNOWLEDGE-BASE; original_section=1. 先立契约，再填内容; source_type=Agent Skill;
+    extraction_date=2026-10-08; pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-COMFYUI
+  title: What's in this skill
+  domain: Software
+  subdomain: General
+  type: API / Specification
+  summary: Reference docs (`references/`):**
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-COMFYUI.md
+  keywords:
+  - comfyui
+  - skill
+  - this
+  - what
+  - General
+  concepts:
+  - Reference docs (`references/`):**
+  - '`official-cli.md` — every `comfy ...` command, with flags'
+  - '`rest-api.md` — REST + WebSocket endpoints (local + cloud), payload schemas'
+  - '`workflow-format.md` — API-format JSON, common node types, param mapping'
+  - '`template-integrity.md` — converting `comfyui-workflow-templates` from'
+  - Scripts (`scripts/`):**
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-025
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/hermes-agent/optional-skills/creative/comfyui/SKILL.md#What's in this skill
+  source:
+  - SRC-SKILL-025
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-COMFYUI; original_section=What''s in this skill; source_type=Agent Skill;
+    extraction_date=2026-10-08; pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-WEIXINPAY-PAY-002
+  title: 失败返回与处理
+  domain: Software
+  subdomain: General
+  type: Engineering Rule
+  summary: 失败时工具返回一段可直接展示的错误文本，统一形如 `支付请求失败：<原因>`（`isError=true`）。
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-WEIXINPAY-PAY-002.md
+  keywords:
+  - weixinpay
+  - General
+  concepts:
+  - 失败返回与处理
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-005
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/plugins/weixinpay/skills/weixinpay-pay/SKILL.md#失败返回与处理
+  source:
+  - SRC-SKILL-005
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-WEIXINPAY-PAY; original_section=失败返回与处理; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-ANYSEARCH
+  title: Scenarios
+  domain: Software
+  subdomain: General
+  type: API / Specification
+  summary: '| Scenario | Behavior |'
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-ANYSEARCH.md
+  keywords:
+  - anysearch
+  - scenarios
+  - General
+  concepts:
+  - 'Key Configuration Guide** (display in the user''s language if the user asks about API keys):'
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-026
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/ai-heritage-library/workspace/Agent/scholar-series/skills/anysearch/SKILL.md#Scenarios
+  source:
+  - SRC-SKILL-026
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-ANYSEARCH; original_section=Scenarios; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-AI-SELF-IMPROVING-AGENT
+  title: Pattern-Key Taxonomy
+  domain: AI
+  subdomain: AI
+  type: Pattern
+  summary: '`Pattern-Key` is the stable dedup and recurrence key for entries in all three'
+  content: 01_KNOWLEDGE/AI/K-AI-SELF-IMPROVING-AGENT.md
+  keywords:
+  - agent
+  - improving
+  - pattern
+  - self
+  - taxonomy
+  - AI
+  - Python
+  concepts:
+  - 'Format**: `area.symptom` — exactly two levels, lowercase, hyphenated'
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-027
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/ai-heritage-library/workspace/skills/@pskoett/self-improving-agent/SKILL.md#Pattern-Key Taxonomy
+  source:
+  - SRC-SKILL-027
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: Python
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-AI-SELF-IMPROVING-AGENT-3; original_section=Pattern-Key Taxonomy; source_type=Agent
+    Skill; extraction_date=2026-10-08; pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-TENCENT-CLOUD-COS
+  title: (prelude)
+  domain: Software
+  subdomain: General
+  type: Reference
+  summary: 一站式管理腾讯云对象存储(COS)和数据万象(CI)，通过统一的 Node.js SDK 脚本提供以下能力：
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-TENCENT-CLOUD-COS.md
+  keywords:
+  - cloud
+  - prelude
+  - tencent
+  - General
+  concepts:
+  - 文件存储**：上传、下载、列出、删除文件，获取签名下载链接，批量操作，复制
+  - 存储桶管理**：列出/创建存储桶，ACL、跨域、标签、版本控制、生命周期管理
+  - 图片处理**：缩放、裁剪、旋转、格式转换、文字水印、质量评估、超分辨率、智能裁剪、二维码识别
+  - 内容识别**：图片标签识别、OCR 文字识别
+  - 文档处理**：办公文档转 PDF、文档预览（图片/HTML）
+  - 媒体处理**：视频智能封面、转码、截帧、媒体信息
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-028
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/ai-heritage-library/workspace/skills/@shawnminh/tencent-cos-skill/SKILL.md#(prelude)
+  source:
+  - SRC-SKILL-028
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-TENCENT-CLOUD-COS; original_section=(prelude); source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-TENCENT-CLOUD-COS-002
+  title: 功能对照表
+  domain: Software
+  subdomain: General
+  type: Concept
+  summary: '| 分类 | action | 说明 |'
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-TENCENT-CLOUD-COS-002.md
+  keywords:
+  - cloud
+  - tencent
+  - General
+  concepts:
+  - 功能对照表
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-028
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/ai-heritage-library/workspace/skills/@shawnminh/tencent-cos-skill/SKILL.md#功能对照表
+  source:
+  - SRC-SKILL-028
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-TENCENT-CLOUD-COS; original_section=功能对照表; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-TENCENT-DOCS-004
+  title: 📁 文件目录结构
+  domain: Software
+  subdomain: General
+  type: Engineering Rule
+  summary: tencent-docs/
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-TENCENT-DOCS-004.md
+  keywords:
+  - docs
+  - tencent
+  - General
+  concepts:
+  - 📁 文件目录结构
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-003
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/ai-heritage-library/workspace/skills/tencent-docs/SKILL.md#📁 文件目录结构
+  source:
+  - SRC-SKILL-003
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-TENCENT-DOCS-2; original_section=📁 文件目录结构; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-STUDIO-ROLES
+  title: 'studio-roles: 角色表'
+  domain: Software
+  subdomain: Game Design
+  type: Pattern
+  summary: '| 分组 | 路径 | 角色 |'
+  content: 02_GAME_ENGINES/Godot/Knowledge/K-SOFTWARE-STUDIO-ROLES.md
+  keywords:
+  - roles
+  - studio
+  - Game Design
+  - Godot
+  - GDScript
+  - Unity
+  - Unreal
+  concepts:
+  - 角色表
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-029
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/autonomous-ai-agents/studio-roles/SKILL.md#角色表
+  source:
+  - SRC-SKILL-029
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: Godot, GDScript, Unity, Unreal
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GAME-STUDIO-ROLES; original_section=角色表; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-CODEBASE-MAPPING-002
+  title: Pitfalls
+  domain: Software
+  subdomain: General
+  type: Troubleshooting
+  summary: 一次 grep 一个问题，扫全树**；按文件清单循环调 terminal 会瞬间烧掉几十次调用预算。
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-CODEBASE-MAPPING-002.md
+  keywords:
+  - codebase
+  - mapping
+  - pitfalls
+  - General
+  concepts:
+  - 一次 grep 一个问题，扫全树**；按文件清单循环调 terminal 会瞬间烧掉几十次调用预算。
+  - raw 进文件、汇总进上下文**：把提取结果整份读回来等于变相全树入上下文。
+  - 配对正则先看样本行**：对分段式结构化文本（场景文件、ini、config）先打印 2-3 行原始格式再写匹配；猜格式会静默失配（配对结果全为 `?` 却不报错）。
+  - 规则与实践分开报**：文档声明的做法与结构提取的实况冲突时两边都报，冲突本身是发现（标 NEEDS_VERIFICATION）。
+  - 清单式验收**：交付前逐项对照用户/规范给的完成清单（字段数、计数、警告），中英文标题混排时用逐字段程序核对，别靠肉眼扫 MD。
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-020
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/codebase-mapping/SKILL.md#Pitfalls
+  - source_id: SRC-SKILL-007
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/hermes-agent/optional-skills/productivity/shopify/SKILL.md#Pitfalls
+  source:
+  - SRC-SKILL-020
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: medium
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-CODEBASE-MAPPING; original_section=Pitfalls; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-GENERAL-NOVEL-CHAPTER-002
+  title: 主 agent 汇总 + 仲裁
+  domain: General
+  subdomain: General
+  type: Constraint
+  summary: 收到四份报告后，主 agent **不自己读文件补充**，直接基于四份报告输出规划草案。
+  content: 01_KNOWLEDGE/General/K-GENERAL-NOVEL-CHAPTER-002.md
+  keywords:
+  - agent
+  - chapter
+  - novel
+  - General
+  concepts:
+  - '{agent A}：[内容]'
+  - '{agent B}：[内容]'
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-011
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/chapter/SKILL.md#主 agent 汇总 + 仲裁
+  source:
+  - SRC-SKILL-011
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-NOVEL-CHAPTER; original_section=主 agent 汇总 + 仲裁; source_type=Agent Skill;
+    extraction_date=2026-10-08; pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-AI-NOVEL-DISPATCH-002
+  title: 作者确认关卡（人铸灵魂，AI 行笔墨）
+  domain: AI
+  subdomain: AI
+  type: Constraint
+  summary: 设定、卷纲、章纲是故事的灵魂，AI 只负责笔墨。以下产出 order DONE 后**必须停下等作者确认**，未确认前不写下一步 order、不推进 step（与 setup 的确认语义同构）：
+  content: 01_KNOWLEDGE/AI/K-AI-NOVEL-DISPATCH-002.md
+  keywords:
+  - dispatch
+  - novel
+  - AI
+  concepts:
+  - 作者明确确认（"可以/没问题/就这样"）→ 推进；作者要改 → 重派对应 agent（order 内嵌修改意见）→ 改完再次展示确认（受重试/断路器约束）
+  - 作者回复模糊（"差不多""你看着办"）→ 一律视为未确认，追问具体哪项不确定
+  - 作者说"你全权写/别等确认"（全自动模式）→ 展示摘要后视为已确认直接推进；**单次有效**，下一关卡仍停（作者再说一次即再放行）
+  - 作者说"继续/推进"= 推进到下一个作者确认关卡即停**，不是推到底；正文流水线（提示词→正文→去AI味→验收→归档）属 AI 笔墨，确认章纲后可连续推进到归档后的重写/下一章询问
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-022
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/novel-dispatch/SKILL.md#作者确认关卡（人铸灵魂，AI
+      行笔墨）
+  source:
+  - SRC-SKILL-022
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-AI-NOVEL-DISPATCH; original_section=作者确认关卡（人铸灵魂，AI 行笔墨）; source_type=Agent Skill;
+    extraction_date=2026-10-08; pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-NOVEL-OUTLINE
+  title: 'novel-outline: 2.2 拆章节 + 填冲突载体'
+  domain: Software
+  subdomain: General
+  type: Concept
+  summary: 以上一步确认的模板各阶段（首卷）或角色发声推导的冲突路径（卷 N+1）为骨架，逐章填充。
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-NOVEL-OUTLINE.md
+  keywords:
+  - novel
+  - outline
+  - General
+  concepts:
+  - 4 种不合格章纲，必须检测并修正：**
+  - 章节间必须存在因果链：** 前一章的章末变化是后一章的起点或动机。各章独立不递进 = 故事没有在推进。
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-030
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/outline/SKILL.md#2.2 拆章节 + 填冲突载体
+  source:
+  - SRC-SKILL-030
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-NOVEL-OUTLINE; original_section=2.2 拆章节 + 填冲突载体; source_type=Agent Skill;
+    extraction_date=2026-10-08; pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-SHORT-AUDIT
+  title: 审计五项（每项附原文证据）
+  domain: Software
+  subdomain: General
+  type: Constraint
+  summary: 1. **转化质量**：抽查契约中来自题材包的招式条目——是否锚定本篇主角（角色名）、信息差（谁瞒谁追）、情绪节奏；发现原文复制或套用痕迹 → FAIL
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-SHORT-AUDIT.md
+  keywords:
+  - audit
+  - short
+  - General
+  concepts:
+  - 审计五项（每项附原文证据）
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-031
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/short/short-audit/SKILL.md#审计五项（每项附原文证据）
+  source:
+  - SRC-SKILL-031
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-SHORT-AUDIT; original_section=审计五项（每项附原文证据）; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-GENERAL-SHORT-VERIFY
+  title: 十项核对清单
+  domain: General
+  subdomain: General
+  type: Engineering Rule
+  summary: '| # | 项 | 判据 |'
+  content: 01_KNOWLEDGE/General/K-GENERAL-SHORT-VERIFY.md
+  keywords:
+  - short
+  - verify
+  - General
+  concepts:
+  - 十项核对清单
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-032
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/short/short-verify/SKILL.md#十项核对清单
+  source:
+  - SRC-SKILL-032
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-SHORT-VERIFY; original_section=十项核对清单; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-GENERAL-UPDATER-ARCHIVE
+  title: 二、归档前检查
+  domain: General
+  subdomain: General
+  type: Engineering Rule
+  summary: '| 检查项 | 操作 |'
+  content: 01_KNOWLEDGE/General/K-GENERAL-UPDATER-ARCHIVE.md
+  keywords:
+  - archive
+  - updater
+  - General
+  concepts:
+  - 二、归档前检查
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-033
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/updater-archive/SKILL.md#二、归档前检查
+  source:
+  - SRC-SKILL-033
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-UPDATER-ARCHIVE; original_section=二、归档前检查; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-VOLUME-WRITING
+  title: 'volume-writing: 9. AI 味自检与去除'
+  domain: Software
+  subdomain: General
+  type: Constraint
+  summary: 扫描卷纲全文，命中任一条 → 修改后重新检查，确认全部清除才算通过。
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-VOLUME-WRITING.md
+  keywords:
+  - volume
+  - writing
+  - General
+  concepts:
+  - ❌ "展开精彩对决" → ✅ "陆征在废弃工厂与灰短袖男人对峙，对方掏出旧案卷宗要挟"
+  - ❌ "冲突激烈升级" → ✅ "方岩被上级停职，陆征失去警队内部信息源"
+  - 速查：全文搜"精彩""激烈""惊心动魄"——有 → 命中
+  - 模式二："万能推进句式"**
+  - ❌ "随着调查的深入，真相逐渐浮出水面"
+  - ❌ "在这个过程中，主角遇到了新的挑战"
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-034
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/volume-writing/SKILL.md#9. AI 味自检与去除
+  source:
+  - SRC-SKILL-034
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-VOLUME-WRITING; original_section=9. AI 味自检与去除; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-RULES-KNOWLEDGE-BASE-002
+  title: 'rules-knowledge-base: 2. 并行子代理扇出（学习阶段）'
+  domain: Software
+  subdomain: General
+  type: API / Specification
+  summary: 用 `delegate_task` 按领域分组（每子代理 1–3 域）并行抓官方资料。任务书必须自带：来源白名单（仅官方，禁博客/SO/AI 内容）、完整 YAML schema 与 id 前缀、条目数量预算（宁缺毋滥）、checkpoint
+    格式、禁编造 API/版本差异、产出后自验（safe_load + 计数）。
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-RULES-KNOWLEDGE-BASE-002.md
+  keywords:
+  - base
+  - knowledge
+  - rules
+  - General
+  concepts:
+  - 用 `delegate_task` 按领域分组（每子代理 1–3 域）并行抓官方资料。任务书必须自带：来源白名单（仅官方，禁博客/SO/AI 内容）、完整 YAML schema 与 id 前缀、条目数量预算（宁缺毋滥）、checkpoint
+    格式、禁编造 API/版本差异、产出后自验（safe_l
+  - 每子代理工作流：抓官方页 → 提炼 → 写领域 YAML → 写 checkpoint → 汇报文件清单+条目数。
+  - 子代理汇报是自述**：父会话必须用脚本重新解析磁盘文件核对计数与字段，不采信摘要数字。
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-024
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/skills/software-development/rules-knowledge-base/SKILL.md#2. 并行子代理扇出（学习阶段）
+  source:
+  - SRC-SKILL-024
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-RULES-KNOWLEDGE-BASE; original_section=2. 并行子代理扇出（学习阶段）; source_type=Agent
+    Skill; extraction_date=2026-10-08; pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-ONE-THREE-ONE-RULE
+  title: 'one-three-one-rule: Example'
+  domain: Software
+  subdomain: General
+  type: Pattern
+  summary: 'User: "Give me a 1-3-1 for adding retry logic to our API client."'
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-ONE-THREE-ONE-RULE.md
+  keywords:
+  - example
+  - rule
+  - three
+  - General
+  - ROS
+  concepts:
+  - Problem:** API calls to external services fail intermittently under load and need graceful retry handling.
+  - 'Option A: Exponential backoff with jitter in a shared utility.**'
+  - 'Option B: Retry library (tenacity) as a decorator on each endpoint call.**'
+  - 'Option C: Queue-based async retry with dead letter handling.**'
+  - Recommendation:** Option A. The call volume doesn't justify queue infrastructure, and a shared utility with exponential
+    backoff + jitter covers the fa
+  - Definition of Done:**
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-035
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/hermes-agent/optional-skills/communication/one-three-one-rule/SKILL.md#Example
+  source:
+  - SRC-SKILL-035
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: ROS
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-ONE-THREE-ONE-RULE; original_section=Example; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-OSINT-INVESTIGATION
+  title: 'osint-investigation: 2. Acquire data'
+  domain: Software
+  subdomain: General
+  type: Concept
+  summary: 'Each source has a stdlib-only fetch script in `SKILL_DIR/scripts/`:'
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-OSINT-INVESTIGATION.md
+  keywords:
+  - acquire
+  - data
+  - investigation
+  - osint
+  - General
+  - Python
+  concepts:
+  - Federal financial / regulatory**
+  - types 10-K,10-Q --out data/edgar_filings.csv
+  - fy 2024 --out data/contracts.csv
+  - year 2024 --out data/lobbying.csv
+  - out data/icij.csv
+  - Identity / property / litigation / archives / news**
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-036
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/hermes-agent/optional-skills/research/osint-investigation/SKILL.md#2. Acquire data
+  source:
+  - SRC-SKILL-036
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: Python
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-OSINT-INVESTIGATION; original_section=2. Acquire data; source_type=Agent Skill;
+    extraction_date=2026-10-08; pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-BOX
+  title: Choose the right path
+  domain: Software
+  subdomain: General
+  type: Reference
+  summary: '| Need | Read |'
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-BOX.md
+  keywords:
+  - choose
+  - path
+  - right
+  - General
+  concepts:
+  - Choose the right path
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-037
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/.hermes/hermes-agent/skills/productivity/box/SKILL.md#Choose the right path
+  source:
+  - SRC-SKILL-037
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-BOX; original_section=Choose the right path; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-AI-SELF-IMPROVING-AGENT-002
+  title: Evolution Priority Matrix
+  domain: AI
+  subdomain: AI
+  type: Troubleshooting
+  summary: 'Trigger evolution when new reusable knowledge appears:'
+  content: 01_KNOWLEDGE/AI/K-AI-SELF-IMPROVING-AGENT-002.md
+  keywords:
+  - agent
+  - evolution
+  - improving
+  - matrix
+  - priority
+  - self
+  - AI
+  concepts:
+  - Evolution Priority Matrix
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-038
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/ai-heritage-library/workspace/Agent/game-series/skills/self-improving-agent/SKILL.md#Evolution
+      Priority Matrix
+  - source_id: SRC-SKILL-039
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/ai-heritage-library/workspace/Agent/scholar-series/skills/self-improving-agent/SKILL.md#Evolution
+      Priority Matrix
+  source:
+  - SRC-SKILL-038
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: medium
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-AI-SELF-IMPROVING-AGENT; original_section=Evolution Priority Matrix; source_type=Agent
+    Skill; extraction_date=2026-10-08; pipeline=Skill→Knowledge Ingestion BATCH2'
+- knowledge_id: K-SOFTWARE-AWESOME-NOVEL
+  title: 各阶段文件读取指南
+  domain: Software
+  subdomain: General
+  type: Procedure
+  summary: 每个子步骤按"写什么文件 → 读什么参考 → 可选的参考阅读"来准备。读完一份，再看下一份。
+  content: 01_KNOWLEDGE/Software/K-SOFTWARE-AWESOME-NOVEL.md
+  keywords:
+  - awesome
+  - novel
+  - General
+  concepts:
+  - 各阶段文件读取指南
+  prerequisites: []
+  related_knowledge: []
+  related_capabilities: []
+  related_projects: []
+  related_assets: []
+  source_refs:
+  - source_id: SRC-SKILL-040
+    version: null
+    date: '2026-10-08'
+    location: /home/ubuntu/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/SKILL.md#各阶段文件读取指南
+  source:
+  - SRC-SKILL-040
+  source_version: null
+  source_date: null
+  ingestion_date: '2026-10-08'
+  confidence: low
+  status: Candidate
+  validation_status: UNVALIDATED
+  technology: null
+  version: null
+  notes: 'provenance: source_skill_id=SKILL-GEN-AWESOME-NOVEL; original_section=各阶段文件读取指南; source_type=Agent Skill; extraction_date=2026-10-08;
+    pipeline=Skill→Knowledge Ingestion BATCH2'

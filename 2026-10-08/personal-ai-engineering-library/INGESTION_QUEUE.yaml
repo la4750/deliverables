@@ -1,0 +1,72 @@
+# Ingestion Queue
+# Spec: 01_KNOWLEDGE/KNOWLEDGE_INGESTION_SPEC.md §16, §17
+# Status: Active — Phase 4 Batch 1 DONE
+# Queue: 1 entry (Done)
+registry:
+  version: 1.0.0
+  updated_at: '2026-10-08'
+queue:
+- source_id: SRC-GODOT-001
+  batch: BATCH1
+  covers:
+  - SRC-GODOT-001
+  - SRC-GODOT-002
+  - SRC-GODOT-003
+  - SRC-GODOT-004
+  - SRC-GODOT-005
+  - SRC-GODOT-006
+  priority: P0
+  domain: Software
+  reason: Godot 4.x 官方文档基础：10/10 现有 Capability 的前置知识缺口（静态类型/RefCounted/Signal/Resource/DirAccess/FileAccess/导出限制）
+  status: Done
+  requested_by: AI auto-plan (user-approved workflow 2026-10-06 21:36)
+  last_updated: '2026-10-06'
+- source_id: SRC-SKILL-001
+  batch: BATCH2-SKILL-INGESTION
+  covers:
+  - SRC-SKILL-001
+  - SRC-SKILL-002
+  - SRC-SKILL-003
+  - SRC-SKILL-004
+  - SRC-SKILL-005
+  - SRC-SKILL-006
+  - SRC-SKILL-007
+  - SRC-SKILL-008
+  - SRC-SKILL-009
+  - SRC-SKILL-010
+  - SRC-SKILL-011
+  - SRC-SKILL-012
+  - SRC-SKILL-013
+  - SRC-SKILL-014
+  - SRC-SKILL-015
+  - SRC-SKILL-016
+  - SRC-SKILL-017
+  - SRC-SKILL-018
+  - SRC-SKILL-019
+  - SRC-SKILL-020
+  - SRC-SKILL-021
+  - SRC-SKILL-022
+  - SRC-SKILL-023
+  - SRC-SKILL-024
+  - SRC-SKILL-025
+  - SRC-SKILL-026
+  - SRC-SKILL-027
+  - SRC-SKILL-028
+  - SRC-SKILL-029
+  - SRC-SKILL-030
+  - SRC-SKILL-031
+  - SRC-SKILL-032
+  - SRC-SKILL-033
+  - SRC-SKILL-034
+  - SRC-SKILL-035
+  - SRC-SKILL-036
+  - SRC-SKILL-037
+  - SRC-SKILL-038
+  - SRC-SKILL-039
+  - SRC-SKILL-040
+  priority: P1
+  domain: 多域（Skill 语料全量吸收）
+  reason: Skill→Knowledge Ingestion：358 个逻辑 Skill 全量重检，提取长期工程知识（API/原理/限制/最佳实践/排障/经验），Workflow 保留原 Skill
+  status: Done
+  requested_by: user task 2026-10-08
+  last_updated: '2026-10-08'

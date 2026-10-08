@@ -1,0 +1,723 @@
+# Source Registry
+#
+# Single source of truth for ALL Knowledge sources.
+# Spec: 01_KNOWLEDGE/KNOWLEDGE_INGESTION_SPEC.md §5, §6, §7
+#
+# Status: Active — Phase 4 Batch 1
+# Source count: 46
+#
+# Reliability hierarchy:
+#   Tier 1: official docs / official specs / official standards / original papers / vendor tech docs
+#   Tier 2: high-quality textbooks / professional publications / university courses / standards bodies
+#   Tier 3: high-quality technical articles / professional blogs / community wikis
+#   Tier 4: forums / personal blogs / unverified tutorials / social media
+registry:
+  version: 1.0.0
+  updated_at: '2026-10-08'
+sources:
+- source_id: SRC-GODOT-001
+  title: Static typing in GDScript
+  author: Godot Foundation
+  organization: Godot Foundation
+  source_type: Official Documentation
+  url: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/static_typing.html
+  version: stable (docs 4.7)
+  publication_date: null
+  access_date: '2026-10-06'
+  license: CC BY 4.0
+  copyright: © Godot Foundation
+  domain: Software
+  reliability: 1
+  status: Active
+  notes: docs.godotengine.org /en/stable/
+- source_id: SRC-GODOT-002
+  title: RefCounted (class reference)
+  author: Godot Foundation
+  organization: Godot Foundation
+  source_type: Official Documentation
+  url: https://docs.godotengine.org/en/stable/classes/class_refcounted.html
+  version: stable (docs 4.7)
+  publication_date: null
+  access_date: '2026-10-06'
+  license: CC BY 4.0
+  copyright: © Godot Foundation
+  domain: Software
+  reliability: 1
+  status: Active
+  notes: null
+- source_id: SRC-GODOT-003
+  title: Signal (class reference)
+  author: Godot Foundation
+  organization: Godot Foundation
+  source_type: Official Documentation
+  url: https://docs.godotengine.org/en/stable/classes/class_signal.html
+  version: stable (docs 4.7)
+  publication_date: null
+  access_date: '2026-10-06'
+  license: CC BY 4.0
+  copyright: © Godot Foundation
+  domain: Software
+  reliability: 1
+  status: Active
+  notes: null
+- source_id: SRC-GODOT-004
+  title: Resource (class reference)
+  author: Godot Foundation
+  organization: Godot Foundation
+  source_type: Official Documentation
+  url: https://docs.godotengine.org/en/stable/classes/class_resource.html
+  version: stable (docs 4.7)
+  publication_date: null
+  access_date: '2026-10-06'
+  license: CC BY 4.0
+  copyright: © Godot Foundation
+  domain: Software
+  reliability: 1
+  status: Active
+  notes: null
+- source_id: SRC-GODOT-005
+  title: DirAccess (class reference)
+  author: Godot Foundation
+  organization: Godot Foundation
+  source_type: Official Documentation
+  url: https://docs.godotengine.org/en/stable/classes/class_diraccess.html
+  version: stable (docs 4.7)
+  publication_date: null
+  access_date: '2026-10-06'
+  license: CC BY 4.0
+  copyright: © Godot Foundation
+  domain: Software
+  reliability: 1
+  status: Active
+  notes: 含导出项目目录访问限制说明（→ K-SOFTWARE-GODOT-EXPORT-ACCESS-001）
+- source_id: SRC-GODOT-006
+  title: FileAccess (class reference)
+  author: Godot Foundation
+  organization: Godot Foundation
+  source_type: Official Documentation
+  url: https://docs.godotengine.org/en/stable/classes/class_fileaccess.html
+  version: stable (docs 4.7)
+  publication_date: null
+  access_date: '2026-10-06'
+  license: CC BY 4.0
+  copyright: © Godot Foundation
+  domain: Software
+  reliability: 1
+  status: Active
+  notes: null
+- source_id: SRC-SKILL-001
+  title: prompt-audit
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/prompt-audit/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: AI
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/prompt-audit/SKILL.md（Tier
+    4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-002
+  title: novel-proofread
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/proofread/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/proofread/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-003
+  title: tencent-docs
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/ai-heritage-library/workspace/skills/tencent-docs/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/ai-heritage-library/workspace/skills/tencent-docs/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-004
+  title: game-dev-lessons
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/skills/software-development/game-dev-lessons/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: Game
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/skills/software-development/game-dev-lessons/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-005
+  title: weixinpay-pay
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/plugins/weixinpay/skills/weixinpay-pay/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/plugins/weixinpay/skills/weixinpay-pay/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-006
+  title: tencent-meeting-mcp
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/ai-heritage-library/workspace/skills/@wemeeting/tencent-meeting-skill/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: AI
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/ai-heritage-library/workspace/skills/@wemeeting/tencent-meeting-skill/SKILL.md（Tier
+    4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-007
+  title: shopify
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/hermes-agent/optional-skills/productivity/shopify/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/hermes-agent/optional-skills/productivity/shopify/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-008
+  title: art-bible
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/ai-heritage-library/workspace/Agent/art-series/skills/art-bible/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: Game
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/ai-heritage-library/workspace/Agent/art-series/skills/art-bible/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-009
+  title: tencent-docs
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/ai-heritage-library/workspace/Agent/office-agent/skills/tencent-docs/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/ai-heritage-library/workspace/Agent/office-agent/skills/tencent-docs/SKILL.md（Tier
+    4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-010
+  title: novel-archive
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/archive/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/archive/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-011
+  title: novel-chapter
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/chapter/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/chapter/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-012
+  title: novel-prompt
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/prompt/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: AI
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/prompt/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-013
+  title: novel-review
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/review/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/review/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-014
+  title: style-distill
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/style-distill/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: AI
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/style-distill/SKILL.md（Tier
+    4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-015
+  title: cn-market-data-failover
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/skills/finance/cn-market-data-failover/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/skills/finance/cn-market-data-failover/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-016
+  title: oss-forensics
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/hermes-agent/optional-skills/security/oss-forensics/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/hermes-agent/optional-skills/security/oss-forensics/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-017
+  title: short-plan
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/short/short-plan/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/short/short-plan/SKILL.md（Tier
+    4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-018
+  title: xurl
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/hermes-agent/skills/social-media/xurl/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/hermes-agent/skills/social-media/xurl/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-019
+  title: weixinpay-feedback
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/plugins/weixinpay/skills/weixinpay-feedback/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: AI
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/plugins/weixinpay/skills/weixinpay-feedback/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-020
+  title: codebase-mapping
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/skills/codebase-mapping/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/skills/codebase-mapping/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-021
+  title: novel-migrate
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/migrate/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: Game
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/migrate/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-022
+  title: novel-dispatch
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/novel-dispatch/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: AI
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/novel-dispatch/SKILL.md（Tier
+    4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-023
+  title: godot-kb
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/skills/software-development/godot-kb/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: Game
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/skills/software-development/godot-kb/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-024
+  title: rules-knowledge-base
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/skills/software-development/rules-knowledge-base/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/skills/software-development/rules-knowledge-base/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-025
+  title: comfyui
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/hermes-agent/optional-skills/creative/comfyui/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/hermes-agent/optional-skills/creative/comfyui/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-026
+  title: anysearch
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/ai-heritage-library/workspace/Agent/scholar-series/skills/anysearch/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/ai-heritage-library/workspace/Agent/scholar-series/skills/anysearch/SKILL.md（Tier
+    4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-027
+  title: self-improving-agent
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/ai-heritage-library/workspace/skills/@pskoett/self-improving-agent/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: AI
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/ai-heritage-library/workspace/skills/@pskoett/self-improving-agent/SKILL.md（Tier
+    4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-028
+  title: tencent-cloud-cos
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/ai-heritage-library/workspace/skills/@shawnminh/tencent-cos-skill/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/ai-heritage-library/workspace/skills/@shawnminh/tencent-cos-skill/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-029
+  title: studio-roles
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/skills/autonomous-ai-agents/studio-roles/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: Game
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/skills/autonomous-ai-agents/studio-roles/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-030
+  title: novel-outline
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/outline/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/outline/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-031
+  title: short-audit
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/short/short-audit/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/short/short-audit/SKILL.md（Tier
+    4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-032
+  title: short-verify
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/short/short-verify/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/short/short-verify/SKILL.md（Tier
+    4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-033
+  title: updater-archive
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/updater-archive/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/updater-archive/SKILL.md（Tier
+    4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-034
+  title: volume-writing
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/volume-writing/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/volume-writing/SKILL.md（Tier
+    4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-035
+  title: one-three-one-rule
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/hermes-agent/optional-skills/communication/one-three-one-rule/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/hermes-agent/optional-skills/communication/one-three-one-rule/SKILL.md（Tier
+    4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-036
+  title: osint-investigation
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/hermes-agent/optional-skills/research/osint-investigation/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/hermes-agent/optional-skills/research/osint-investigation/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-037
+  title: box
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/.hermes/hermes-agent/skills/productivity/box/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/.hermes/hermes-agent/skills/productivity/box/SKILL.md（Tier 4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-038
+  title: self-improving-agent
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/ai-heritage-library/workspace/Agent/game-series/skills/self-improving-agent/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: AI
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/ai-heritage-library/workspace/Agent/game-series/skills/self-improving-agent/SKILL.md（Tier
+    4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-039
+  title: self-improving-agent
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/ai-heritage-library/workspace/Agent/scholar-series/skills/self-improving-agent/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: AI
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/ai-heritage-library/workspace/Agent/scholar-series/skills/self-improving-agent/SKILL.md（Tier
+    4：单一内部来源，未交叉验证）'
+- source_id: SRC-SKILL-040
+  title: awesome-novel
+  author: Agent Skill（内部沉淀）
+  organization: personal
+  source_type: Other
+  url: file:///home/ubuntu/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/SKILL.md
+  version: null
+  publication_date: null
+  access_date: '2026-10-08'
+  license: null
+  copyright: null
+  domain: General
+  reliability: 4
+  status: Active
+  notes: 'Agent Skill file: /home/ubuntu/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/SKILL.md（Tier
+    4：单一内部来源，未交叉验证）'

@@ -34,3 +34,12 @@
 | SKILL_CONTRACT_AUDIT.yaml | 逐技能 Contract 判定（358 条：required/current/gap/reason + 缺失字段 + 文件核对） |
 | SKILL_CONTRACT_AUDIT_REPORT.md | 上半场：契约判定规则、一致性核对、分项达成度 |
 | SKILL_CONTRACT_STATUS.yaml | 16 项机读状态汇总 |
+
+### 本批新增（Skill → Knowledge Ingestion，BATCH2）
+
+| 文件 | 说明 |
+|---|---|
+| SKILL_KNOWLEDGE_INGESTION_REPORT.md | 迁移报告：计数、分布、规则执行、Skill→Knowledge 映射、KGAP 提案 |
+| SKILL_KNOWLEDGE_INGESTION.yaml | 358 行逐技能迁移追踪 + 10 项质检 + 映射 |
+| KNOWLEDGE_REGISTRY.yaml / SOURCE_REGISTRY.yaml / INGESTION_QUEUE.yaml / KNOWLEDGE_INDEX.md | Phase 4 注册表入库后状态（57 units / 46 sources / BATCH2） |
+| knowledge-units/ | 50 个新 Knowledge Unit 内容文件（镜像库内路径） |
