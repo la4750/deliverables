@@ -1,0 +1,504 @@
+{
+ "exact": [
+  {
+   "name": "hermes-agent",
+   "copies": [
+    "~/.hermes/hermes-agent/skills/autonomous-ai-agents/hermes-agent/SKILL.md"
+   ]
+  },
+  {
+   "name": "architecture-diagram",
+   "copies": [
+    "~/.hermes/hermes-agent/skills/creative/architecture-diagram/SKILL.md"
+   ]
+  },
+  {
+   "name": "humanizer",
+   "copies": [
+    "~/.hermes/hermes-agent/skills/creative/humanizer/SKILL.md"
+   ]
+  },
+  {
+   "name": "novel-archive",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/archive/SKILL.md"
+   ]
+  },
+  {
+   "name": "novel-body-verify",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/body-verify/SKILL.md"
+   ]
+  },
+  {
+   "name": "chapter-reference",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/chapter-reference/SKILL.md"
+   ]
+  },
+  {
+   "name": "novel-chapter",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/chapter/SKILL.md"
+   ]
+  },
+  {
+   "name": "detect-loop",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/detect-loop/SKILL.md"
+   ]
+  },
+  {
+   "name": "memory-recording",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/memory-recording/SKILL.md"
+   ]
+  },
+  {
+   "name": "novel-migrate",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/migrate/SKILL.md"
+   ]
+  },
+  {
+   "name": "novel-dispatch",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/novel-dispatch/SKILL.md"
+   ]
+  },
+  {
+   "name": "novel-outline",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/outline/SKILL.md"
+   ]
+  },
+  {
+   "name": "prompt-audit",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/prompt-audit/SKILL.md"
+   ]
+  },
+  {
+   "name": "novel-prompt-verify",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/prompt-verify/SKILL.md"
+   ]
+  },
+  {
+   "name": "novel-prompt",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/prompt/SKILL.md"
+   ]
+  },
+  {
+   "name": "novel-proofread",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/proofread/SKILL.md"
+   ]
+  },
+  {
+   "name": "novel-review",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/review/SKILL.md"
+   ]
+  },
+  {
+   "name": "roleplay-sandbox",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/roleplay-sandbox/SKILL.md"
+   ]
+  },
+  {
+   "name": "novel-setup",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/setup/SKILL.md"
+   ]
+  },
+  {
+   "name": "short-analyze",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/short/short-analyze/SKILL.md"
+   ]
+  },
+  {
+   "name": "short-audit",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/short/short-audit/SKILL.md"
+   ]
+  },
+  {
+   "name": "short-craft-prompt",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/short/short-craft-prompt/SKILL.md"
+   ]
+  },
+  {
+   "name": "short-plan",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/short/short-plan/SKILL.md"
+   ]
+  },
+  {
+   "name": "short-polish",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/short/short-polish/SKILL.md"
+   ]
+  },
+  {
+   "name": "short-scan",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/short/short-scan/SKILL.md"
+   ]
+  },
+  {
+   "name": "short-verify",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/short/short-verify/SKILL.md"
+   ]
+  },
+  {
+   "name": "short-write",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/short/short-write/SKILL.md"
+   ]
+  },
+  {
+   "name": "style-distill",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/style-distill/SKILL.md"
+   ]
+  },
+  {
+   "name": "updater-archive",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/updater-archive/SKILL.md"
+   ]
+  },
+  {
+   "name": "updater-rollback",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/updater-rollback/SKILL.md"
+   ]
+  },
+  {
+   "name": "updater-setting",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/updater-setting/SKILL.md"
+   ]
+  },
+  {
+   "name": "volume-arc",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/volume-arc/SKILL.md"
+   ]
+  },
+  {
+   "name": "volume-direction",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/volume-direction/SKILL.md"
+   ]
+  },
+  {
+   "name": "volume-writing",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/volume-writing/SKILL.md"
+   ]
+  },
+  {
+   "name": "novel-write",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/skills/write/SKILL.md"
+   ]
+  },
+  {
+   "name": "maps",
+   "copies": [
+    "~/.hermes/hermes-agent/skills/productivity/maps/SKILL.md"
+   ]
+  },
+  {
+   "name": "powerpoint",
+   "copies": [
+    "~/.hermes/hermes-agent/skills/productivity/powerpoint/SKILL.md"
+   ]
+  },
+  {
+   "name": "arxiv",
+   "copies": [
+    "~/.hermes/hermes-agent/skills/research/arxiv/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-architecture-decision",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/architecture-decision/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-architecture-review",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/architecture-review/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-balance-check",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/balance-check/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-brainstorm",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/brainstorm/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-bug-report",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/bug-report/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-create-architecture",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/create-architecture/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-create-epics",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/create-epics/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-create-stories",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/create-stories/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-design-review",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/design-review/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-design-system",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/design-system/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-help",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/help/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-localize",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/localize/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-map-systems",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/map-systems/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-project-stage-detect",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/project-stage-detect/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-prototype",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/prototype/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-qa-plan",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/qa-plan/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-quick-design",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/quick-design/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-release-checklist",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/release-checklist/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-review-all-gdds",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/review-all-gdds/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-scope-check",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/scope-check/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-sprint-plan",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/sprint-plan/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-start",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/start/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-team-combat",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/team-combat/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-team-level",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/team-level/SKILL.md"
+   ]
+  },
+  {
+   "name": "game-studio-team-live-ops",
+   "copies": [
+    "~/ai-heritage-library/workspace/Agent/game-series/skills/game-studio/team-live-ops/SKILL.md"
+   ]
+  },
+  {
+   "name": "hermes-agent-skill-authoring",
+   "copies": [
+    "~/.hermes/hermes-agent/skills/software-development/hermes-agent-skill-authoring/SKILL.md"
+   ]
+  },
+  {
+   "name": "node-inspect-debugger",
+   "copies": [
+    "~/.hermes/hermes-agent/skills/software-development/node-inspect-debugger/SKILL.md"
+   ]
+  },
+  {
+   "name": "python-debugpy",
+   "copies": [
+    "~/.hermes/hermes-agent/skills/software-development/python-debugpy/SKILL.md"
+   ]
+  },
+  {
+   "name": "requesting-code-review",
+   "copies": [
+    "~/.hermes/hermes-agent/skills/software-development/requesting-code-review/SKILL.md"
+   ]
+  },
+  {
+   "name": "spike",
+   "copies": [
+    "~/.hermes/hermes-agent/skills/software-development/spike/SKILL.md"
+   ]
+  },
+  {
+   "name": "systematic-debugging",
+   "copies": [
+    "~/.hermes/hermes-agent/skills/software-development/systematic-debugging/SKILL.md"
+   ]
+  },
+  {
+   "name": "test-driven-development",
+   "copies": [
+    "~/.hermes/hermes-agent/skills/software-development/test-driven-development/SKILL.md"
+   ]
+  },
+  {
+   "name": "github",
+   "copies": [
+    "~/ai-heritage-library/workspace/skills/@steipete/github/SKILL.md"
+   ]
+  },
+  {
+   "name": "find-skill-skillhub",
+   "copies": [
+    "~/.agents/skills/find-skill-skillhub/SKILL.md"
+   ]
+  }
+ ],
+ "same_name": {
+  "github": [
+   "~/.hermes/hermes-agent/skills/software-development/github/SKILL.md",
+   "~/ai-heritage-library/workspace/Agent/coding-series/skills/github/SKILL.md"
+  ],
+  "self-improving-agent": [
+   "~/ai-heritage-library/workspace/Agent/game-series/skills/self-improving-agent/SKILL.md",
+   "~/ai-heritage-library/workspace/Agent/scholar-series/skills/self-improving-agent/SKILL.md",
+   "~/ai-heritage-library/workspace/skills/@pskoett/self-improving-agent/SKILL.md"
+  ],
+  "tencent-docs": [
+   "~/ai-heritage-library/workspace/Agent/office-agent/skills/tencent-docs/SKILL.md",
+   "~/ai-heritage-library/workspace/skills/tencent-docs/SKILL.md"
+  ]
+ },
+ "near": [
+  [
+   "novel-writing",
+   "novel-write",
+   0.83
+  ],
+  [
+   "game-studio-architecture-decision",
+   "game-studio-architecture-review",
+   0.84
+  ],
+  [
+   "game-studio-balance-check",
+   "game-studio-scope-check",
+   0.83
+  ],
+  [
+   "game-studio-create-epics",
+   "game-studio-create-stories",
+   0.84
+  ],
+  [
+   "game-studio-team-level",
+   "game-studio-team-live-ops",
+   0.85
+  ],
+  [
+   "test-driven-development",
+   "subagent-driven-development",
+   0.84
+  ],
+  [
+   "test-driven-development",
+   "doubt-driven-development",
+   0.85
+  ],
+  [
+   "test-driven-development",
+   "spec-driven-development",
+   0.87
+  ],
+  [
+   "subagent-driven-development",
+   "doubt-driven-development",
+   0.86
+  ],
+  [
+   "subagent-driven-development",
+   "spec-driven-development",
+   0.84
+  ]
+ ],
+ "same_desc": {}
+}

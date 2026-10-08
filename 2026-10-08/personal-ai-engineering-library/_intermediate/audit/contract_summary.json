@@ -1,0 +1,134 @@
+{
+ "total": 358,
+ "required": {
+  "L2": 181,
+  "L3": 118,
+  "L1": 59
+ },
+ "current": {
+  "L1": 357,
+  "L0": 1
+ },
+ "gap": {
+  "True": 299,
+  "False": 59
+ },
+ "gap_by_required": {
+  "L1": {
+   "False": 59
+  },
+  "L2": {
+   "True": 181
+  },
+  "L3": {
+   "True": 118
+  }
+ },
+ "gap_by_category": {
+  "TOOL_WRAPPER": {
+   "n": 129,
+   "gap": 128
+  },
+  "AGENT_WORKFLOW": {
+   "n": 16,
+   "gap": 12
+  },
+  "WORKFLOW_SKILL": {
+   "n": 167,
+   "gap": 116
+  },
+  "KNOWLEDGE_WRAPPER": {
+   "n": 29,
+   "gap": 26
+  },
+  "META_SKILL": {
+   "n": 10,
+   "gap": 10
+  },
+  "PROJECT_SPECIFIC": {
+   "n": 1,
+   "gap": 1
+  },
+  "CAPABILITY_WRAPPER": {
+   "n": 6,
+   "gap": 6
+  }
+ },
+ "l1_failures": [
+  "SKILL-AI-SELF-IMPROVING-AGENT"
+ ],
+ "name_mismatch": [],
+ "desc_mismatch": [],
+ "missing_canonical": [],
+ "version_unknown_n": 134,
+ "top_missing_fields": [
+  [
+   "compatible_agents",
+   358
+  ],
+  [
+   "runtime/interface",
+   351
+  ],
+  [
+   "known_limitations",
+   326
+  ],
+  [
+   "version_scope",
+   321
+  ],
+  [
+   "outputs",
+   310
+  ],
+  [
+   "risk_level",
+   286
+  ],
+  [
+   "constraints",
+   279
+  ],
+  [
+   "inputs",
+   271
+  ],
+  [
+   "failure_handling",
+   226
+  ],
+  [
+   "validation_requirements",
+   201
+  ],
+  [
+   "required_knowledge",
+   200
+  ],
+  [
+   "required_capabilities",
+   200
+  ],
+  [
+   "dependencies",
+   200
+  ],
+  [
+   "workflow",
+   181
+  ],
+  [
+   "trigger/applicability",
+   128
+  ],
+  [
+   "examples",
+   126
+  ],
+  [
+   "description",
+   1
+  ]
+ ]
+}

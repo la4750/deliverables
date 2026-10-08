@@ -1,0 +1,358 @@
+0|AGENT_WORKFLOW|D_|Email Management|Triage inbox email, draft clear replies, and manage follow-ups with priority routing, commitment tracking, and reusable templates.
+1|AGENT_WORKFLOW|B2|accelerate|Run PyTorch training across GPUs with minimal changes.
+2|AGENT_WORKFLOW|B2|agent-merge-conflict-arbiter|Neutral arbiter for merge conflicts between two agents.
+3|AGENT_WORKFLOW|B2|ai-presenter-video|Make a verified AI presenter video from script + image.
+4|AGENT_WORKFLOW|B2|antigravity-cli|Operate the Antigravity CLI (agy): plugins, auth, sandbox.
+5|AGENT_WORKFLOW|B2|bioinformatics|Gateway to 400+ genomics and computational biology skills.
+6|AGENT_WORKFLOW|B2|blackbox|Delegate coding tasks to the Blackbox AI multi-model CLI.
+7|AGENT_WORKFLOW|B1|claude-code|Delegate coding to Claude Code CLI (features, PRs).
+8|AGENT_WORKFLOW|D_|delivery-workflow|Structured AI delivery: mission lifecycle, evidence-backed QA, repo truth, release gates. Use for scoped build/review/approve workflows.
+9|AGENT_WORKFLOW|D_|doubt-driven-development|Subjects every non-trivial decision to a fresh-context adversarial review before it stands. Use when correctness matters more than speed, when working
+10|AGENT_WORKFLOW|B2|dream-loop|Build stunning 3D scenes via a concept-art fidelity loop.
+11|AGENT_WORKFLOW|B2|dynamic-workflow|Plan-in-code fan-outs, adversarial verification, waves.
+12|AGENT_WORKFLOW|A_|game-studio-team-combat|Orchestrate the combat team: coordinates game-designer, gameplay-programmer, ai-programmer, technical-artist, sound-designer, and qa-tester to design,
+13|AGENT_WORKFLOW|A_|game-studio-team-level|Orchestrate level design team: level-designer + narrative-director + world-builder + art-director + systems-designer + qa-tester for complete area/lev
+14|AGENT_WORKFLOW|A_|game-studio-team-live-ops|Orchestrate the live-ops team for post-launch content planning: coordinates live-ops-designer, economy-designer, analytics-engineer, community-manager
+15|AGENT_WORKFLOW|B2|grill-me|Adversarial plan interview before implementation.
+16|AGENT_WORKFLOW|B2|grok|Delegate coding to xAI Grok Build CLI (features, PRs).
+17|AGENT_WORKFLOW|B2|honcho|Configure and troubleshoot Honcho memory for Hermes.
+18|AGENT_WORKFLOW|B2|ip-as-logo|Design minimal cute IP mascot marks readable at 32px.
+19|AGENT_WORKFLOW|B2|kanban-video-orchestrator|Plan and run multi-agent video production pipelines.
+20|AGENT_WORKFLOW|B2|lambda-labs|On-demand GPU cloud instances for ML training.
+21|AGENT_WORKFLOW|B2|modal|Serverless GPU cloud for ML jobs and model APIs.
+22|AGENT_WORKFLOW|A_|novel-dispatch|novel-agent 调度 SOP
+23|AGENT_WORKFLOW|A_|novel-writing|与 AI 协作完成设定、卷纲与逐章循环的小说创作流水线。
+24|AGENT_WORKFLOW|B1|opencode|Delegate coding to OpenCode CLI (features, PR review).
+25|AGENT_WORKFLOW|B2|openhands|Delegate coding to OpenHands CLI (model-agnostic, LiteLLM).
+26|AGENT_WORKFLOW|B2|oss-forensics|GitHub supply-chain forensics: recovery, IOCs, reporting.
+27|AGENT_WORKFLOW|B2|pr-lens|Draw code changes as animated architecture/data-flow SVGs.
+28|AGENT_WORKFLOW|B2|pytorch-lightning|Clean training loops with built-in distributed support.
+29|AGENT_WORKFLOW|A_|requesting-code-review|Pre-commit review: security scan, quality gates, auto-fix.
+30|AGENT_WORKFLOW|A_|rules-knowledge-base|Build and audit rules knowledge bases with cited sources.
+31|AGENT_WORKFLOW|B1|simplify-code|Parallel 4-agent cleanup of recent code changes.
+32|AGENT_WORKFLOW|A_|spike|Throwaway experiments to validate an idea before build.
+33|AGENT_WORKFLOW|B2|stable-diffusion|Text-to-image generation, inpainting, and img2img.
+34|AGENT_WORKFLOW|A_|studio-roles|游戏工作室角色卡，配合 delegate_task 实例化专家子代理。
+35|AGENT_WORKFLOW|B2|subagent-driven-development|Execute plans via delegate_task subagents (2-stage review).
+36|AGENT_WORKFLOW|B2|system-atlas|Build explorable isometric architecture atlases as HTML.
+37|AGENT_WORKFLOW|D_|vertical-slice|Pre-Production validation — build a production-quality end-to-end build to confirm the full game loop is achievable before committing to Production. R
+38|AGENT_WORKFLOW|B2|web-pentest|Authorized web pentest: recon, proof-based exploits, report.
+39|CAPABILITY_WRAPPER|B1|docx|Create, read, edit, template, and review Word .docx files.
+40|CAPABILITY_WRAPPER|B1|manim-video|Manim CE animations: 3Blue1Brown math/algo videos.
+41|CAPABILITY_WRAPPER|A_|maps|Geocode, POIs, routes, timezones via OpenStreetMap/OSRM.
+42|CAPABILITY_WRAPPER|A_|powerpoint|Create, read, edit .pptx decks with python-pptx.
+43|CAPABILITY_WRAPPER|B1|xlsx|Create, read, edit Excel .xlsx workbooks and CSVs.
+44|KNOWLEDGE_WRAPPER|B2|ast-grep|AST-aware structural code search and rewrite via ast-grep.
+45|KNOWLEDGE_WRAPPER|D_|awesome-novel|和 AI 协作写小说的工作流系统。流程：一次设定→规划卷纲→逐章写作循环（章纲→提示词→验收→正文→验收→评审→归档→下一章）。适用场景：从零写新小说、导入已有小说。
+46|KNOWLEDGE_WRAPPER|B2|baoyu-comic|Knowledge comics (知识漫画): educational, biography, tutorial.
+47|KNOWLEDGE_WRAPPER|B1|box|Box manages cloud files, sharing, search, and metadata.
+48|KNOWLEDGE_WRAPPER|D_|bug-triage|Read all open bugs in production/qa/bugs/, re-evaluate priority vs. severity, assign to sprints, surface systemic trends, and produce a triage report.
+49|KNOWLEDGE_WRAPPER|A_|chapter-reference|获取参考 skill
+50|KNOWLEDGE_WRAPPER|B2|code-wiki|Generate wiki docs + Mermaid diagrams for any codebase.
+51|KNOWLEDGE_WRAPPER|B2|decision-questionnaire|Turn an unanswerable decision into a questionnaire doc.
+52|KNOWLEDGE_WRAPPER|A_|detect-loop|detect-loop skill — 外部检测校准闭环（作者触发，可选）
+53|KNOWLEDGE_WRAPPER|D_|documentation-and-adrs|Records decisions and documentation. Use when making architectural decisions, changing public APIs, shipping features, or when you need to record cont
+54|KNOWLEDGE_WRAPPER|A_|game-studio-localize|Full localization pipeline: scan for hardcoded strings, extract and manage string tables, validate translations, generate translator briefings, run cu
+55|KNOWLEDGE_WRAPPER|D_|godot-coding-patterns|Godot/GDScript 编码模式库，从 awesome-godot 精选项目提取的代码实现模式和最佳实践。涵盖行为树、状态机、事件系统、资源管理、场景管理等。
+56|KNOWLEDGE_WRAPPER|D_|godot-knowledge|提供 Godot GDScript 编程语言和 TSCN 场景文件格式的完整知识库，适用于游戏开发、UI 设计和场景构建。
+57|KNOWLEDGE_WRAPPER|A_|humanizer|Humanize text: strip AI-isms and add real voice.
+58|KNOWLEDGE_WRAPPER|A_|memory-recording|写作记忆记录 skill
+59|KNOWLEDGE_WRAPPER|A_|novel-chapter|章纲设定——从卷纲拆出每章内容规划。触发："规划章节""章纲""这章写什么""拆章节"。章纲完成后自动路由到提示词生成。
+60|KNOWLEDGE_WRAPPER|A_|novel-setup|小说项目初始化与设定。当项目尚未创建、world-setting.md 为空、或用户说"创建项目""讨论设定""设计角色""世界观""写作风格""题材""导入小说"时必须使用。即使只说"帮我开始写小说"也要先加载本技能完成设定。
+61|KNOWLEDGE_WRAPPER|B2|osint-investigation|Follow the money via public records and sanctions data.
+62|KNOWLEDGE_WRAPPER|D_|playtest-report|Structured playtest report template, or turn existing playtest notes into structured feedback.
+63|KNOWLEDGE_WRAPPER|B2|pokemon-player|Play Pokemon via headless emulator + RAM reads.
+64|KNOWLEDGE_WRAPPER|A_|prompt-audit|Prompt 审计 SOP
+65|KNOWLEDGE_WRAPPER|D_|qa-plan|QA test plan for a sprint — classifies stories by Logic/Integration/Visual/UI, covers automated tests, manual cases, smoke scope.
+66|KNOWLEDGE_WRAPPER|B2|qdrant|Vector search engine for production RAG systems.
+67|KNOWLEDGE_WRAPPER|A_|roleplay-sandbox|**什么时候用：** 作者主动要求剧情推演，或新章编写过程中卡剧情——有核心故事但不知道怎么展开成具体剧情。推演记录给你角色行为素材，帮你写出章纲。
+68|KNOWLEDGE_WRAPPER|D_|setup-engine|Configure the project's game engine and version. Pins the engine in AGENTS.md, detects knowledge gaps, and populates engine reference docs via WebSear
+69|KNOWLEDGE_WRAPPER|A_|short-analyze|short-analyze skill — 短篇拆文（独立工具）
+70|KNOWLEDGE_WRAPPER|A_|short-plan|short-plan SOP — 定情绪与排纲
+71|KNOWLEDGE_WRAPPER|A_|short-polish|short-polish SOP — 去 AI 味与精修
+72|KNOWLEDGE_WRAPPER|A_|short-write|short-write SOP — 正文分批写作
+73|KNOWLEDGE_WRAPPER|B2|simpo|Reference-free preference alignment, simpler than DPO.
+74|KNOWLEDGE_WRAPPER|D_|soak-test|Generate a soak test protocol for extended play sessions. Defines what to observe, measure, and log during long play sessions to surface slow leaks, f
+75|KNOWLEDGE_WRAPPER|A_|style-distill|style-distill skill — 三阶段 13 模板 LLM 蒸馏（style-distill-order）
+76|KNOWLEDGE_WRAPPER|D_|tencentcloud-lighthouse-skill|Load when: user mentions Lighthouse, 轻量应用服务器, 轻量服务器, or asks to check/create/manage/deploy Lighthouse instances, deploy applications to Lighthouse, ma
+77|KNOWLEDGE_WRAPPER|A_|updater-archive|updater-archive-sop
+78|KNOWLEDGE_WRAPPER|A_|volume-writing|卷纲讨论 skill
+79|META_SKILL|D_|agent-browser|Headless browser automation CLI optimized for AI agents with accessibility tree snapshots and ref-based element selection
+80|META_SKILL|B2|dcf-model|Build discounted cash flow valuation workbooks in Excel.
+81|META_SKILL|D_|find-skill-skillhub|在 SkillHub 平台查找/搜索 Skill 技能。基于 skills 列表接口，支持关键词分词搜索、一级标签（一级分类）筛选、以及二者组合检索。当用户说『找个 xxx 技能』『有没有处理 PDF 的 skill』『SkillHub 上搜一下 xxx』『按分类看技能』『办公效率类有哪些技能』『推
+82|META_SKILL|A_|game-studio-create-architecture|Guided, section-by-section authoring of the master architecture document for the game. Reads all GDDs, the systems index, existing ADRs, and the engin
+83|META_SKILL|A_|game-studio-review-all-gdds|Holistic cross-GDD consistency and game design review. Reads all system GDDs simultaneously and checks for contradictions between them, stale referenc
+84|META_SKILL|A_|hermes-agent|Use, configure, theme, extend, and orchestrate Hermes Agent.
+85|META_SKILL|A_|hermes-agent-skill-authoring|Author in-repo SKILL.md files: frontmatter and structure.
+86|META_SKILL|A_|insight-registry|带置信度的行为模式注册表与经验沉淀规程。
+87|META_SKILL|A_|legacy-system-migration|Audit legacy agent archives and port value into Hermes.
+88|META_SKILL|B2|pptx-author|Build PowerPoint decks headless with python-pptx.
+89|META_SKILL|B1|sdlc-review|Review Kanban handoffs and route verified outcomes.
+90|META_SKILL|D_|self-improving-agent|
+91|META_SKILL|D_|self-improving-agent|A universal self-improving agent that learns from ALL skill experiences. Uses multi-memory architecture (semantic + episodic + working) to continuousl
+92|META_SKILL|D_|self-improving-agent|Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User correc
+93|OBSOLETE|A_|novel-archive|章节归档与状态更新。正文验收通过后归档——去 draft 标记、更新角色状态/情绪弧线/钩子追踪、滑动窗口审视、卷边界检测。触发："归档""存档""这章完成了"。
+94|PROJECT_SPECIFIC|A_|ai-engineering-library|个人AI工程能力库的宪法、阶段状态与操作门禁。
+95|PROJECT_SPECIFIC|A_|game-dev-lessons|引擎无关的游戏开发通用原则与编码前检查清单。
+96|PROJECT_SPECIFIC|A_|godot-kb|Godot 4 编码规范、节点信号与常见坑知识库。
+97|TOOL_WRAPPER|B2|actual-setup|Set up Actual Computer (actual.inc) inference in Hermes.
+98|TOOL_WRAPPER|B2|agentmail|Use when an agent needs AgentMail CLI email inboxes.
+99|TOOL_WRAPPER|B1|airtable|Airtable REST API via curl. Records CRUD, filters, upserts.
+100|TOOL_WRAPPER|D_|anysearch|Real-time search engine supporting web search, vertical domain search, parallel batch search, and URL content extraction.
+101|TOOL_WRAPPER|D_|api-gateway||
+102|TOOL_WRAPPER|B1|apple-notes|Manage Apple Notes via memo CLI: create, search, edit.
+103|TOOL_WRAPPER|A_|arxiv|Search arXiv papers by keyword, author, category, or ID.
+104|TOOL_WRAPPER|B2|ascii-art|ASCII art: pyfiglet, cowsay, boxes, image-to-ascii.
+105|TOOL_WRAPPER|B2|auteur|Design and build cinematic, award-level web pages.
+106|TOOL_WRAPPER|B2|baoyu-article-illustrator|Article illustrations: type × style × palette consistency.
+107|TOOL_WRAPPER|B1|blocked-page-recovery|Use when a fetch fails: 403/429, paywall, WAF, bot wall.
+108|TOOL_WRAPPER|B2|blogwatcher|Monitor blogs and RSS/Atom feeds via blogwatcher-cli tool.
+109|TOOL_WRAPPER|B2|canvas|Fetch Canvas LMS courses and assignments via API token.
+110|TOOL_WRAPPER|B2|cloudflare-temporary-deploy|Deploy a Worker live, no account, via wrangler --temporary.
+111|TOOL_WRAPPER|A_|cn-market-data-failover|东财行情接口被风控时的备用数据源与排障顺序。
+112|TOOL_WRAPPER|B2|comfyui|Generate images, video, and audio via diffusion workflows.
+113|TOOL_WRAPPER|B2|comps-analysis|Build comparable-company valuation workbooks in Excel.
+114|TOOL_WRAPPER|B1|computer-use|Drive the desktop background-first; escalate on signal.
+115|TOOL_WRAPPER|D_|context-engineering|Optimizes agent context setup. Use when starting a new session, when agent output quality degrades, when switching between tasks, or when you need to 
+116|TOOL_WRAPPER|B2|creative-ideation|Generate ideas via named methods from creative practice.
+117|TOOL_WRAPPER|B2|domain-intel|Passive recon of subdomains, SSL certs, WHOIS, and DNS.
+118|TOOL_WRAPPER|B2|drug-discovery|Drug discovery: ChEMBL search, drug-likeness, interactions.
+119|TOOL_WRAPPER|B2|duckduckgo-search|Free keyless web, news, and image search via ddgs.
+120|TOOL_WRAPPER|B2|excel-author|Build auditable financial workbooks headless via openpyxl.
+121|TOOL_WRAPPER|B2|fastmcp|Build, test, and deploy Python MCP servers.
+122|TOOL_WRAPPER|B2|fitness-nutrition|Workout planning, macros, and body metrics via wger/USDA.
+123|TOOL_WRAPPER|B1|gif-search|Search/download GIFs from Tenor via curl + jq.
+124|TOOL_WRAPPER|B1|github|GitHub via gh CLI: PRs, issues, reviews, repos, auth.
+125|TOOL_WRAPPER|B2|gitnexus-explorer|Serve an interactive codebase knowledge graph web UI.
+126|TOOL_WRAPPER|D_|godot-console|提供Godot引擎控制台命令行工具的调用能力，支持运行Godot命令、执行脚本、导出项目等操作，适用于游戏开发和自动化任务。
+127|TOOL_WRAPPER|B1|google_meet|Join a Google Meet call, transcribe live captions, optionally speak in realtime, and do the followup work afterwards. Use when the user asks the agent
+128|TOOL_WRAPPER|B1|grounded-citations|Ground answers and documents in cited, verifiable sources.
+129|TOOL_WRAPPER|B2|har-derived-api-client|Record a site's XHR into a HAR, derive an HTTP client.
+130|TOOL_WRAPPER|B2|here-now|Publish sites to {slug}.here.now and store files in Drives.
+131|TOOL_WRAPPER|B1|himalaya|Himalaya CLI: IMAP/SMTP email from terminal.
+132|TOOL_WRAPPER|B2|huggingface-hub|HuggingFace hf CLI: search/download/upload models, datasets.
+133|TOOL_WRAPPER|B2|inference-sh-cli|Run 150+ AI apps (image, video, LLM) via inference.sh CLI.
+134|TOOL_WRAPPER|B1|inspecting-hermes-desktop-dom|Read the live Hermes desktop DOM/CSS over CDP.
+135|TOOL_WRAPPER|B2|jupyter-notebook|Iterative Python via live Jupyter kernel (hamelnb).
+136|TOOL_WRAPPER|B2|llama-cpp|llama.cpp local GGUF inference + HF Hub model discovery.
+137|TOOL_WRAPPER|B1|llm-wiki|Karpathy's LLM Wiki: build/query interlinked markdown KB.
+138|TOOL_WRAPPER|B2|mcp-oauth-remote-gateway|Manual OAuth for remote MCP servers on headless gateways.
+139|TOOL_WRAPPER|B2|mcporter|List, auth, and call MCP servers/tools from the terminal.
+140|TOOL_WRAPPER|B2|merger-model|Build M&A accretion/dilution workbooks in Excel.
+141|TOOL_WRAPPER|B2|mpp-agent|Pay HTTP 402 APIs via Machine Payments Protocol (MPP).
+142|TOOL_WRAPPER|A_|node-inspect-debugger|Debug Node.js via --inspect + Chrome DevTools Protocol CLI.
+143|TOOL_WRAPPER|B1|notion|Notion API + ntn CLI: pages, databases, markdown, Workers.
+144|TOOL_WRAPPER|B1|obsidian|Read, search, create, and edit notes in the Obsidian vault.
+145|TOOL_WRAPPER|B2|openhue|Control Philips Hue lights, scenes, rooms via OpenHue CLI.
+146|TOOL_WRAPPER|B1|p5js|p5.js sketches: gen art, shaders, interactive, 3D.
+147|TOOL_WRAPPER|B2|page-agent|Embed an in-page natural-language GUI copilot in web apps.
+148|TOOL_WRAPPER|B2|parallel-cli|Agent-native web search, deep research, and enrichment.
+149|TOOL_WRAPPER|B2|pinggy-tunnel|Zero-install localhost tunnels over SSH via Pinggy.
+150|TOOL_WRAPPER|B2|polymarket|Query Polymarket: markets, prices, orderbooks, history.
+151|TOOL_WRAPPER|B2|publish-site|Versioned site deploys to GitHub/Cloudflare/Netlify Pages.
+152|TOOL_WRAPPER|B2|qmd|Hybrid local search over notes, docs, and transcripts.
+153|TOOL_WRAPPER|B2|rest-graphql-debug|Debug REST/GraphQL APIs: status codes, auth, schemas, repro.
+154|TOOL_WRAPPER|B2|rss-feeds|Read RSS, Atom, JSON feeds; discover feeds behind a page.
+155|TOOL_WRAPPER|B2|scrapling|Scrape sites with stealth browsing and Cloudflare bypass.
+156|TOOL_WRAPPER|B2|searxng-search|Free keyless meta-search aggregating 70+ engines.
+157|TOOL_WRAPPER|B2|serving-llms-vllm|vLLM: high-throughput LLM serving, OpenAI API, quantization.
+158|TOOL_WRAPPER|B2|shop|Shop catalog search, checkout, order tracking, returns.
+159|TOOL_WRAPPER|B2|shopify|Query Shopify Admin/Storefront GraphQL APIs via curl.
+160|TOOL_WRAPPER|B2|siyuan|Query and edit a SiYuan knowledge base via its API.
+161|TOOL_WRAPPER|B2|stripe-link-cli|Agent payments via Stripe Link — cards, SPT, approvals.
+162|TOOL_WRAPPER|A_|systematic-debugging|4-phase root cause debugging: understand bugs before fixing.
+163|TOOL_WRAPPER|D_|tavily-search|Web search via Tavily API (alternative to Brave). Use when the user asks to search the web / look up sources / find links and Brave web_search is unav
+164|TOOL_WRAPPER|D_|tencent-cloud-cos|>
+165|TOOL_WRAPPER|D_|tencent-docs|腾讯文档，提供完整的腾讯文档操作能力。当用户需要操作腾讯文档时使用此skill，包括：(1) 创建各类在线文档（智能文档、Word、Excel、幻灯片、思维导图、流程图）(2) 查询、搜索文档空间与文件 (3) 管理空间节点、文件夹结构 (4) 读取文档内容 (5) 编辑操作智能表 （6）编辑操作智
+166|TOOL_WRAPPER|D_|tencent-docs|腾讯文档（docs.qq.com）-在线云文档平台，是创建、编辑、管理文档的首选 skill。涉及"新建/创建/编辑/读取/查看/搜索文档"、"保存文件"、"云文档"、"腾讯文档"、"docs.qq.com"等操作，请优先使用本 skill。支持能力：(1) 创建各类在线文档（文档/Word/Exc
+167|TOOL_WRAPPER|D_|tencent-meeting-mcp|腾讯会议：会议管理与音视频协作助手。预约/创建/修改/取消会议、查询会议详情与会议号转换、查看参会成员/受邀人/等候室成员、查询用户会议列表（即将开始/进行中/已结束）、查询录制列表与下载地址、获取转写全文/段落/搜索、获取AI智能纪要（支持多语言翻译）、录制权限申请（预览+提交两步流程）、时间转换
+168|TOOL_WRAPPER|B2|tensorrt-llm|High-throughput LLM inference on NVIDIA GPUs.
+169|TOOL_WRAPPER|B2|tldraw-offline|Drive and script tldraw offline canvases with an agent.
+170|TOOL_WRAPPER|B2|unreal-mcp|Automate Unreal Engine editor scenes, actors, and renders.
+171|TOOL_WRAPPER|B1|weekly-review-planning|Weekly reset: commitments, stalled work, next-week plan.
+172|TOOL_WRAPPER|C_|weixinpay-feedback|【微信支付官方】问题反馈。当用户使用微信AI支付/AI专属卡的开通/绑定或支付/管理过程遇到异常或错误（尤其是同一环节连续/反复报错、重试仍失败），主动引导用户上报问题。开通/绑定过程的问题通过反馈收集表链接反馈；支付/管理问题或用户直接想要反馈时通过工具反馈。关键词：微信AI支付反馈、Agent支
+173|TOOL_WRAPPER|C_|weixinpay-pay|【微信支付官方】在AI对话中发起微信支付。核心触发规则：工具/HTTP 响应中含 WeixinPay-Required（其值为 paymentCode）。命中该规则后立即调用 weixinpay_pay 发起微信支付（只用本轮新出现的支付信号，不复用历史凭证）。
+174|TOOL_WRAPPER|C_|weixinpay-register|【微信支付官方】用于用户开通/绑定微信AI支付或者AI专属卡功能，或查询开通/绑定状态。用于用户要开通、绑定、激活在 AI 对话中使用微信支付的能力。也用于回答用户"我是否已开通、如何查看或管理微信AI支付"等开通状态咨询。关键词：微信支付AI专属卡、微信AI支付、开通微信支付、绑定微信支付、激活A
+175|TOOL_WRAPPER|B1|xurl|X/Twitter via xurl CLI: raw post search, posting, DM, media.
+176|UNKNOWN|B2|adversarial-ux-test|Roleplay a hostile user to find and triage UX pain points.
+177|UNKNOWN|B2|archify|Validated interactive HTML diagrams, upstream-maintained.
+178|UNKNOWN|D_|architecture-review|Traceability matrix mapping GDD requirements to ADRs. Finds gaps, cross-ADR conflicts, engine compatibility. PASS/CONCERNS/NOT ASSESSED/FAIL.
+179|UNKNOWN|D_|balance-check|Find balance outliers, broken progressions, degenerate strategies, economy imbalances in formulas and data. 'Check game balance'.
+180|UNKNOWN|D_|changelog|Auto-generates a changelog from git commits, sprint data, and design documents. Produces both internal and player-facing versions.
+181|UNKNOWN|D_|consistency-check|Scan GDDs against the entity registry for cross-document conflicts. Grep-first approach targets conflicting sections, different stats.
+182|UNKNOWN|D_|day-one-patch|Prepare a day-one patch for a game launch. Scopes, prioritises, implements, and QA-gates a focused patch addressing known issues discovered after gold
+183|UNKNOWN|D_|design-review|Reviews one design document for completeness, internal consistency, implementability, and design standards. Before handing to programmers.
+184|UNKNOWN|D_|dev-story|Read a story file and implement it. Loads the full context (story, GDD requirement, ADR guidelines, control manifest), routes to the right programmer 
+185|UNKNOWN|B2|draw-your-font|Turn a handwriting photo into an installable TTF font.
+186|UNKNOWN|A_|game-studio-architecture-review|Validates completeness and consistency of the project architecture against all GDDs. Builds a traceability matrix mapping every GDD technical requirem
+187|UNKNOWN|A_|game-studio-bug-report|从描述创建结构化Bug报告，或分析代码识别潜在Bug。
+188|UNKNOWN|A_|game-studio-map-systems|Decompose a game concept into individual systems, map dependencies, prioritize design order, and create the systems index.
+189|UNKNOWN|A_|game-studio-quick-design|Lightweight design spec for small changes — tuning adjustments, minor mechanics, balance tweaks. Skips full GDD authoring when a system GDD already ex
+190|UNKNOWN|A_|game-studio-start|首次启动引导 — 询问项目状态，引导到正确工作流。不做假设。
+191|UNKNOWN|D_|git-helper|Common git operations as a skill (status, pull, push, branch, log)
+192|UNKNOWN|D_|github|Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.
+193|UNKNOWN|D_|godot-class-name-checker|Godot 类名冲突检查器。在 Godot 项目中创建自定义类时，避免与 Godot 内置类名发生命名冲突。
+194|UNKNOWN|B2|impeccable|Frontend design guidance, upstream-maintained (impeccable).
+195|UNKNOWN|B2|lbo-model|Build leveraged buyout workbooks with IRR/MOIC in Excel.
+196|UNKNOWN|B2|neuroskill-bci|Use live BCI cognitive and mood state from NeuroSkill.
+197|UNKNOWN|A_|novel-migrate|旧版项目迁移。Step 1 检测到 story.yaml 或 skill_version 过低时分发至此。将 2.x 格式的 YAML 设定→Markdown，挪入 old/ 回滚保留。仅已归档章节迁移，在制章节跳过。
+198|UNKNOWN|B2|openclaw-migration|Import an OpenClaw setup (memories, skills) into Hermes.
+199|UNKNOWN|B1|popular-web-designs|54 real design systems (Stripe, Linear, Vercel) as HTML/CSS.
+200|UNKNOWN|D_|python-web-scraper|Python 网页爬虫工具集，支持 requests+BeautifulSoup 静态抓取、httpx 异步爬取、API 接口采集、JSON/CSV/Excel 数据导出。提供标准化脚本模板，开箱即用。
+201|UNKNOWN|D_|regression-suite|Map test coverage to GDD critical paths, identify fixed bugs without regression tests, flag coverage drift from new features, and maintain tests/regre
+202|UNKNOWN|B2|scrollcraft|Premium scroll-driven landing pages; scroll = timeline.
+203|UNKNOWN|D_|security-audit|Audit the game for security vulnerabilities: save tampering, cheat vectors, network exploits, data exposure, and input validation gaps. Produces a pri
+204|UNKNOWN|A_|short-scan|short-scan skill — 短篇扫榜（独立工具）
+205|UNKNOWN|B2|simple-english|Rewrite text to ASD-STE100 Simplified Technical English.
+206|UNKNOWN|B2|sketch|Throwaway HTML mockups: 2-3 design variants to compare.
+207|UNKNOWN|D_|smoke-check|Run the critical path smoke test gate before QA hand-off. Executes the automated test suite, verifies core functionality, and produces a PASS/FAIL rep
+208|UNKNOWN|B1|songsee|Audio spectrograms/features (mel, chroma, MFCC) via CLI.
+209|UNKNOWN|B1|songwriting-and-ai-music|Songwriting craft and Suno AI music prompts.
+210|UNKNOWN|D_|sprint-status|Fast sprint status check. Reads the current sprint plan, scans story files for status, and produces a concise progress snapshot with burndown assessme
+211|UNKNOWN|D_|story-done|End-of-story completion review. Reads the story file, verifies each acceptance criterion against the implementation, checks for GDD/ADR deviations, pr
+212|UNKNOWN|D_|tech-debt|Track, categorize, and prioritize technical debt across the codebase. Scans for debt indicators, maintains a debt register, and recommends repayment s
+213|UNKNOWN|B2|telephony|Provision Twilio numbers, SMS/MMS, and AI outbound calls.
+214|UNKNOWN|D_|test-flakiness|Detect non-deterministic (flaky) tests by reading CI run logs or test result history. Aggregates pass rates per test, identifies intermittent failures
+215|UNKNOWN|D_|test-helpers|Generate engine-specific test helper libraries for the project's test suite. Reads existing test patterns and produces tests/helpers/ with assertion u
+216|UNKNOWN|B3|typer|Typer best practices and conventions. Use when working with Typer CLIs. Keeps Typer code clean and up to date with the latest features and patterns, u
+217|UNKNOWN|A_|updater-rollback|updater 回滚 skill — 撤销本章归档追加
+218|UNKNOWN|D_|ux-review|验证 UX 规范的完整性、可访问合规性、GDD 对齐和实施就绪度。产出 APPROVED / NEEDS REVISION / MAJOR REVISION NEEDED 评定。只读诊断工具。
+219|UNKNOWN|D_|web-tools-guide|MANDATORY before calling web_search, web_fetch, browser, or opencli. Contains required error-handling procedures (web_search failure → must guide user
+220|UNKNOWN|B2|yuanbao|Yuanbao (元宝) groups: @mention users, query info/members.
+221|WORKFLOW_SKILL|B2|1password|Set up op CLI, sign in, and read or inject secrets.
+222|WORKFLOW_SKILL|B2|3-statement-model|Build integrated IS/BS/CF financial workbooks in Excel.
+223|WORKFLOW_SKILL|B1|apple-reminders|Apple Reminders via remindctl: add, list, complete.
+224|WORKFLOW_SKILL|A_|architecture-diagram|Dark-themed SVG architecture/cloud/infra diagrams as HTML.
+225|WORKFLOW_SKILL|D_|art-bible|艺术圣经创作。引导式分章节视觉规范编写，产出视觉身份说明、色调系统、角色/环境/UI美术方向、资产标准和风格禁令。门控技能——所有资产生产前必须先通过此技能。
+226|WORKFLOW_SKILL|B1|ascii-video|ASCII video: convert video/audio to colored ASCII MP4/GIF.
+227|WORKFLOW_SKILL|D_|asset-audit|审计游戏资产的命名规范、文件大小预算、格式标准和管线合规性。识别孤悬资产、缺失引用和标准违规。只读诊断工具。
+228|WORKFLOW_SKILL|D_|asset-spec|从 GDD/关卡文档/角色档案生成每项资产的视觉规格和 AI 生成提示词。产出结构化规格文件并更新主资产清单。
+229|WORKFLOW_SKILL|B2|audiocraft-audio-generation|AudioCraft: MusicGen text-to-music, AudioGen text-to-sound.
+230|WORKFLOW_SKILL|B2|axolotl|Axolotl: YAML LLM fine-tuning (LoRA, DPO, GRPO).
+231|WORKFLOW_SKILL|B1|baoyu-infographic|Infographics: 21 layouts x 21 styles (信息图, 可视化).
+232|WORKFLOW_SKILL|B2|chroma|Embedding database for RAG and semantic search.
+233|WORKFLOW_SKILL|B1|claude-design|Design one-off HTML artifacts (landing, deck, prototype).
+234|WORKFLOW_SKILL|B2|clip|Zero-shot image classification and image-text search.
+235|WORKFLOW_SKILL|D_|code-review|代码审查 — 对指定文件执行架构和代码质量审查。检查编码标准、架构模式、SOLID原则、可测试性和性能。
+236|WORKFLOW_SKILL|B1|codebase-inspection|Inspect codebases w/ pygount: LOC, languages, ratios.
+237|WORKFLOW_SKILL|A_|codebase-mapping|Map unfamiliar codebases without deep-reading every file.
+238|WORKFLOW_SKILL|B1|codex|Delegate coding to OpenAI Codex CLI (features, PRs).
+239|WORKFLOW_SKILL|B1|competitor-news-monitor|Watch named companies for material news; cited digests.
+240|WORKFLOW_SKILL|B2|concept-diagrams|Generate flat, minimal educational SVG visuals as HTML.
+241|WORKFLOW_SKILL|B2|darwinian-evolver|Evolve prompts/regex/SQL/code with Imbue's evolution loop.
+242|WORKFLOW_SKILL|B1|design-md|Author/validate/export Google's DESIGN.md token spec files.
+243|WORKFLOW_SKILL|B2|docker-management|Manage Docker containers, images, volumes, and Compose.
+244|WORKFLOW_SKILL|B1|document-to-action-items|Extract cited obligations, deadlines, tasks from documents.
+245|WORKFLOW_SKILL|B1|dogfood|Exploratory QA of web apps: find bugs, evidence, reports.
+246|WORKFLOW_SKILL|B2|dspy|DSPy: declarative LM programs, auto-optimize prompts, RAG.
+247|WORKFLOW_SKILL|B1|email-inbox-triage|Triage an inbox: prioritize threads, draft replies safely.
+248|WORKFLOW_SKILL|B2|evaluating-llms-harness|lm-eval-harness: benchmark LLMs (MMLU, GSM8K, etc.).
+249|WORKFLOW_SKILL|B2|evm|Read-only EVM client: wallets, tokens, gas across 8 chains.
+250|WORKFLOW_SKILL|B2|excalidraw|Hand-drawn Excalidraw JSON diagrams (arch, flow, seq).
+251|WORKFLOW_SKILL|B2|faiss|Fast vector similarity search at billion scale.
+252|WORKFLOW_SKILL|B3|fastapi|FastAPI best practices and conventions. Use when working with FastAPI APIs and Pydantic models for them. Keeps FastAPI code clean and up to date with 
+253|WORKFLOW_SKILL|B1|findmy|Track Apple devices/AirTags via FindMy.app on macOS.
+254|WORKFLOW_SKILL|B2|flash-attention|Speed up long-sequence transformer training and inference.
+255|WORKFLOW_SKILL|A_|game-studio|游戏工作室流程：从概念到上线的25个工作流索引与调用指南。
+256|WORKFLOW_SKILL|A_|game-studio-architecture-decision|创建架构决策记录(ADR)，记录重大技术决策、上下文、备选方案和后果。
+257|WORKFLOW_SKILL|A_|game-studio-balance-check|分析游戏平衡数据、公式和配置，识别异常值、断裂进度、退化策略和经济失衡。
+258|WORKFLOW_SKILL|A_|game-studio-brainstorm|引导式游戏概念构思 — 从零到结构化游戏概念文档。使用专业工作室构思技术和玩家心理学框架。
+259|WORKFLOW_SKILL|A_|game-studio-create-epics|将已批准的GDD和架构转化为史诗 — 每个架构模块一个史诗。定义范围、治理ADR、引擎风险。
+260|WORKFLOW_SKILL|A_|game-studio-create-stories|将Epic分解为可实施的用户故事。每个故事有明确的验收标准、技术上下文和测试要求。
+261|WORKFLOW_SKILL|A_|game-studio-design-review|审查游戏设计文档的完整性、内部一致性、可实施性和项目设计标准遵循。
+262|WORKFLOW_SKILL|A_|game-studio-design-system|引导式、逐节GDD编写。从现有文档收集上下文，协作走完每个必要章节，交叉引用依赖，增量写入文件。
+263|WORKFLOW_SKILL|A_|game-studio-help|游戏工作室帮助 — 列出所有可用的工作流技能和当前项目状态。
+264|WORKFLOW_SKILL|A_|game-studio-project-stage-detect|Automatically analyze project state, detect stage, identify gaps, and recommend next steps based on existing artifacts. Use when user asks 'where are 
+265|WORKFLOW_SKILL|A_|game-studio-prototype|概念原型 — 在写GDD前验证核心想法是否值得深入设计。路由到HTML/引擎/纸上路径。产出一次性构建和PROCEED/PIVOT/KILL判决。
+266|WORKFLOW_SKILL|A_|game-studio-qa-plan|为Sprint或功能生成QA测试计划。读取GDD和故事文件，按测试类型分类，产出结构化测试计划。
+267|WORKFLOW_SKILL|A_|game-studio-release-checklist|生成全面的预发布验证清单，覆盖构建验证、认证要求、商店元数据和启动就绪。
+268|WORKFLOW_SKILL|A_|game-studio-scope-check|分析功能或Sprint的范围膨胀，比较当前范围与原始计划。标记增加项、量化膨胀、推荐裁剪。
+269|WORKFLOW_SKILL|A_|game-studio-sprint-plan|生成新的Sprint计划或更新现有计划。从生产文档和设计积压中提取上下文。
+270|WORKFLOW_SKILL|D_|git-essentials|Essential Git commands and workflows for version control, branching, and collaboration.
+271|WORKFLOW_SKILL|B2|godmode|Jailbreak LLMs: Parseltongue, GODMODE, ULTRAPLINIAN.
+272|WORKFLOW_SKILL|D_|godot-clear-children|Godot正确清除子节点的方法。当用户需要了解如何正确清除子节点时使用。
+273|WORKFLOW_SKILL|D_|godot-gdscript-grammar|Godot GDScript语法详解。当用户需要GDScript语法相关信息时使用。
+274|WORKFLOW_SKILL|D_|godot-global-variables|Godot全局变量使用指南。当用户需要全局变量和Autoload相关信息时使用。
+275|WORKFLOW_SKILL|D_|godot-packedscene|Godot PackedScene使用指南。当用户需要场景加载和池化相关信息时使用。
+276|WORKFLOW_SKILL|D_|godot-scene-skill|Godot UI与场景开发指南。当用户需要UI和场景开发相关信息时使用。
+277|WORKFLOW_SKILL|D_|godot-serialization-pattern|Godot序列化模式指南。当用户需要数据序列化和反序列化相关信息时使用。
+278|WORKFLOW_SKILL|D_|godot-singleton-pattern|Godot单例模式指南。当用户需要单例模式实现相关信息时使用。
+279|WORKFLOW_SKILL|D_|godot-tscn-format|Godot TSCN文件格式详解。当用户需要TSCN文件格式相关信息时使用。
+280|WORKFLOW_SKILL|D_|godot-unix-timestamp-fix|Godot Unix时间戳错误修复。当用户遇到Unix时间戳相关问题时使用。
+281|WORKFLOW_SKILL|B1|google-workspace|Gmail, Calendar, Drive, Docs, Sheets via gws CLI or Python.
+282|WORKFLOW_SKILL|B2|guidance|Constrain LLM output with grammars; guarantee valid JSON.
+283|WORKFLOW_SKILL|D_|harness-anything-mac|跨平台 Office + 设计 + 学术全栈 AI 操控 CLI。通过 JSON 文档模型 + COM 自动化创建和编辑 Word/Excel/PPT 文档。
+284|WORKFLOW_SKILL|B2|heartmula|HeartMuLa: Suno-like song generation from lyrics + tags.
+285|WORKFLOW_SKILL|B2|hermes-s6-container-supervision|Modify or debug s6 services in the Hermes Docker image.
+286|WORKFLOW_SKILL|D_|hotfix|Emergency fix workflow that bypasses normal sprint processes with a full audit trail. Creates hotfix branch, tracks approvals, and ensures the fix is 
+287|WORKFLOW_SKILL|B2|huggingface-tokenizers|Fast BPE/WordPiece tokenization and custom vocab training.
+288|WORKFLOW_SKILL|B2|hyperframes|Render MP4/WebM videos from HTML compositions.
+289|WORKFLOW_SKILL|B2|hyperliquid|Hyperliquid market data, account history, trade review.
+290|WORKFLOW_SKILL|B1|imessage|Send and receive iMessages/SMS via the imsg CLI on macOS.
+291|WORKFLOW_SKILL|D_|impl-design|按设计需求输出代码实现 — 读取设计规格文档，理解需求，输出可运行的代码并验证每个验收标准。
+292|WORKFLOW_SKILL|D_|incremental-implementation|Delivers changes incrementally. Use when implementing any feature or change that touches more than one file. Use when you're about to write a large am
+293|WORKFLOW_SKILL|B2|instructor|Structured LLM outputs validated with Pydantic.
+294|WORKFLOW_SKILL|D_|launch-checklist|Complete launch readiness validation covering every department: code, content, store, marketing, community, infrastructure, legal, and go/no-go sign-o
+295|WORKFLOW_SKILL|B2|live-dashboard|Build self-updating dashboards from live sources.
+296|WORKFLOW_SKILL|B2|llava|Vision-language chat: VQA, captioning, image dialogue.
+297|WORKFLOW_SKILL|B1|meeting-action-items|Turn meeting notes into cited decisions, owners, tickets.
+298|WORKFLOW_SKILL|B2|meme-generation|Create meme PNGs from templates with Pillow text overlay.
+299|WORKFLOW_SKILL|B2|memento-flashcards|Spaced-repetition flashcards: create, review, quiz, export.
+300|WORKFLOW_SKILL|B2|minecraft-modpack-server|Host modded Minecraft servers (CurseForge, Modrinth).
+301|WORKFLOW_SKILL|B2|mono-color|Generate one- or two-ink editorial print poster images.
+302|WORKFLOW_SKILL|B2|nemo-curator|Curate LLM training data: dedupe, filter, PII redaction.
+303|WORKFLOW_SKILL|A_|novel-body-verify|正文验收——检查草稿是否符合 10 维质量标准。触发：主流程检测到 draft + archives 有草稿时自动分发。
+304|WORKFLOW_SKILL|A_|novel-outline|主线拆纲+卷纲规划。设定完成后规划故事结构：先拆主线（总主线→拆几卷→每卷冲突），再逐卷展开（卷方向→卷纲讨论）。触发："规划章节""分卷""故事线""卷纲""规划卷"。
+305|WORKFLOW_SKILL|A_|novel-prompt|章提示词生成——从章纲生产 prompt.md。触发：章纲确认后自动分发或手动"生成本章提示词"。完成后回到主流程。
+306|WORKFLOW_SKILL|A_|novel-prompt-verify|提示词验收——检查生成的 prompt.md 是否完整、可执行。触发：主流程检测到 outline + prompt 文件存在时自动分发。
+307|WORKFLOW_SKILL|A_|novel-proofread|文字校对+安全审查+故事层审校+跨章一致性——一次精读完成编校全流程。触发：正文草稿生成完成（status=draft）→ 执行本 skill → 再到 body-verify。
+308|WORKFLOW_SKILL|A_|novel-review|章节深度评审——对已完成正文进行 10 维 60+ 细项诊断。可随时触发，不阻断流程。逐条对照章纲/卷纲/世界设定/角色设定/写作风格/前文/钩子/作者意图/中期聚焦/逻辑一致性。触发："评审""评价""review""检查这章""这章写得怎么样"。
+309|WORKFLOW_SKILL|A_|novel-write|正文生成——根据提示词写完整章正文。触发：提示词验收通过后自动分发，或手动"写正文""写这章"。完成后回到主流程。
+310|WORKFLOW_SKILL|B2|obliteratus|OBLITERATUS: abliterate LLM refusals (diff-in-means).
+311|WORKFLOW_SKILL|B2|one-three-one-rule|1-3-1 decision briefs: problem, three options, one pick.
+312|WORKFLOW_SKILL|B2|outlines|Outlines: structured JSON/regex/Pydantic LLM generation.
+313|WORKFLOW_SKILL|B1|pdf|PDF files: create, read, merge, fill, OCR, edit text.
+314|WORKFLOW_SKILL|B2|peft|Fine-tune large LLMs with LoRA on limited GPU memory.
+315|WORKFLOW_SKILL|D_|perf-profile|Structured performance profiling workflow. Identifies bottlenecks, measures against budgets, and generates optimization recommendations with priority 
+316|WORKFLOW_SKILL|B2|pinecone|Managed vector DB for production RAG and search.
+317|WORKFLOW_SKILL|B2|pinecone-research|Agent RAG and long-term memory with Pinecone.
+318|WORKFLOW_SKILL|B2|pixel-art|Pixel art w/ era palettes (NES, Game Boy, PICO-8).
+319|WORKFLOW_SKILL|D_|planning-and-task-breakdown|Breaks work into ordered tasks. Use when you have a spec or clear requirements and need to break work into implementable tasks. Use when a task feels 
+320|WORKFLOW_SKILL|B2|pretext|Build creative browser demos with DOM-free text layout.
+321|WORKFLOW_SKILL|B1|product-price-monitor|Watch product, flight, or listing prices; alert on target.
+322|WORKFLOW_SKILL|B2|property-listings|Present property and rental listings as desktop cards.
+323|WORKFLOW_SKILL|A_|python-debugpy|Debug Python: pdb REPL + debugpy remote (DAP).
+324|WORKFLOW_SKILL|B2|pytorch-fsdp|Fully sharded data-parallel training for large models.
+325|WORKFLOW_SKILL|B2|reddit-reading|Read Reddit: subreddits, search, threads, users. No browser.
+326|WORKFLOW_SKILL|B2|research-paper-writing|Write ML papers for NeurIPS/ICML/ICLR: design→submit.
+327|WORKFLOW_SKILL|B2|saelens|Train sparse autoencoders to interpret model features.
+328|WORKFLOW_SKILL|D_|security-and-hardening|Hardens code against vulnerabilities. Use when handling user input, authentication, data storage, or external integrations. Use when building any feat
+329|WORKFLOW_SKILL|B2|segment-anything-model|SAM: zero-shot image segmentation via points, boxes, masks.
+330|WORKFLOW_SKILL|B2|setup-wizard-generator|Generate a bash wizard guiding a human through manual setup.
+331|WORKFLOW_SKILL|B2|sherlock|Find accounts for a username across 400+ platforms.
+332|WORKFLOW_SKILL|A_|short-audit|short-audit SOP — 契约独立审计
+333|WORKFLOW_SKILL|A_|short-craft-prompt|short-craft-prompt SOP — 写作契约组装
+334|WORKFLOW_SKILL|A_|short-verify|short-verify SOP — 定稿兑现度核对
+335|WORKFLOW_SKILL|B2|slime|RL post-training for LLMs with Megatron and SGLang.
+336|WORKFLOW_SKILL|B2|social-media-content-calendar|Plan multi-platform social campaigns: briefs to posting.
+337|WORKFLOW_SKILL|B2|solana|Query Solana wallets, tokens, txs, and NFTs in USD.
+338|WORKFLOW_SKILL|D_|spec-driven-development|Creates specs before coding. Use when starting a new project, feature, or significant change and no specification exists yet. Use when requirements ar
+339|WORKFLOW_SKILL|B2|stocks|Stock quotes, history, search, compare, crypto via Yahoo.
+340|WORKFLOW_SKILL|B2|stripe-projects|Provision SaaS services + sync creds via Stripe Projects.
+341|WORKFLOW_SKILL|D_|team-audio|音频设计编排。从音频方向到设计文档的完整管线——声音身份定义、音效规格、技术实现方案。
+342|WORKFLOW_SKILL|B1|teams-meeting-pipeline|Teams meeting summaries, job replay, Graph subscriptions.
+343|WORKFLOW_SKILL|A_|test-driven-development|TDD: enforce RED-GREEN-REFACTOR, tests before code.
+344|WORKFLOW_SKILL|D_|test-evidence-review|Quality review of test files and manual evidence documents. Goes beyond existence checks — evaluates assertion coverage, edge case handling, naming co
+345|WORKFLOW_SKILL|D_|test-setup|Scaffold the test framework and CI/CD pipeline for the project's engine. Creates the tests/ directory structure, engine-specific test runner configura
+346|WORKFLOW_SKILL|B2|torchtitan|Pretrain LLMs at scale with PyTorch 4D parallelism.
+347|WORKFLOW_SKILL|B2|trl-fine-tuning|TRL: SFT, DPO, GRPO, RLOO reward modeling for LLM RLHF.
+348|WORKFLOW_SKILL|B2|unbroker|Autonomously remove your info from data-broker sites.
+349|WORKFLOW_SKILL|B2|unsloth|Unsloth: 2-5x faster LoRA/QLoRA fine-tuning, less VRAM.
+350|WORKFLOW_SKILL|A_|updater-setting|updater-setting-sop
+351|WORKFLOW_SKILL|D_|ux-design|引导式分章节 UX 规范编写。为屏幕/流程/HUD 产出交互设计规范，包含布局、交互映射、状态变体、可访问性和验收标准。
+352|WORKFLOW_SKILL|A_|volume-arc|主线拆纲 skill
+353|WORKFLOW_SKILL|A_|volume-direction|卷方向确定 skill
+354|WORKFLOW_SKILL|B2|watchers|Poll RSS, JSON APIs, and GitHub with watermark dedup.
+355|WORKFLOW_SKILL|B2|weights-and-biases|W&B: log ML experiments, sweeps, model registry, dashboards.
+356|WORKFLOW_SKILL|B2|whisper|Transcribe and translate speech in 99 languages.
+357|WORKFLOW_SKILL|B1|youtube-content|YouTube transcripts to summaries, threads, blogs.

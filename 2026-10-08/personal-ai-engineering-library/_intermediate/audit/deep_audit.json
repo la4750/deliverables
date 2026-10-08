@@ -1,0 +1,915 @@
+{
+ "leak_know_n": 79,
+ "leak_know_ids": [
+  "SKILL-GEN-NOVEL-ARCHIVE",
+  "SKILL-GEN-CHAPTER-REFERENCE",
+  "SKILL-GAME-NOVEL-MIGRATE",
+  "SKILL-GEN-NOVEL-PROOFREAD",
+  "SKILL-GEN-UPDATER-ARCHIVE",
+  "SKILL-GEN-ARXIV",
+  "SKILL-GAME-GAME-DEV-LESSONS",
+  "SKILL-GAME-GAME-STUDIO-ARCHITECTURE-REVIEW",
+  "SKILL-GAME-GAME-STUDIO-CREATE-ARCHITECTURE",
+  "SKILL-GAME-GAME-STUDIO-LOCALIZE",
+  "SKILL-GAME-GAME-STUDIO-REVIEW-ALL-GDDS",
+  "SKILL-GAME-GODOT-KB",
+  "SKILL-GEN-SPIKE",
+  "SKILL-GEN-BLACKBOX",
+  "SKILL-GEN-ASCII-ART",
+  "SKILL-AI-IMPECCABLE",
+  "SKILL-GEN-SKETCH",
+  "SKILL-GEN-PPTX-AUTHOR",
+  "SKILL-AI-NEUROSKILL-BCI",
+  "SKILL-AI-MCPORTER",
+  "SKILL-AI-OPENCLAW-MIGRATION",
+  "SKILL-AI-FLASH-ATTENTION",
+  "SKILL-AI-INSTRUCTOR",
+  "SKILL-AI-PYTORCH-FSDP",
+  "SKILL-AI-PYTORCH-LIGHTNING",
+  "SKILL-AI-DSPY",
+  "SKILL-AI-SIMPO",
+  "SKILL-AUTO-HERE-NOW",
+  "SKILL-GEN-SHOP",
+  "SKILL-GEN-SHOPIFY",
+  "SKILL-GEN-SIYUAN",
+  "SKILL-GEN-TELEPHONY",
+  "SKILL-GEN-DRUG-DISCOVERY",
+  "SKILL-AI-PINECONE-RESEARCH",
+  "SKILL-GEN-OSS-FORENSICS",
+  "SKILL-GEN-CLAUDE-CODE",
+  "SKILL-GEN-COMPUTER-USE",
+  "SKILL-GEN-POPULAR-WEB-DESIGNS",
+  "SKILL-AI-SONGWRITING-AND-AI-MUSIC",
+  "SKILL-AUTO-HIMALAYA",
+  "SKILL-GEN-AIRTABLE",
+  "SKILL-GEN-NOTION",
+  "SKILL-AI-LLM-WIKI",
+  "SKILL-GEN-XURL",
+  "SKILL-GEN-BLOCKED-PAGE-RECOVERY",
+  "SKILL-GEN-FASTAPI",
+  "SKILL-GEN-TYPER",
+  "SKILL-GEN-API-GATEWAY",
+  "SKILL-GEN-GIT-ESSENTIALS",
+  "SKILL-GEN-GITHUB-2",
+  "SKILL-GAME-GODOT-CODING-PATTERNS",
+  "SKILL-GAME-PLAYTEST-REPORT",
+  "SKILL-GAME-SETUP-ENGINE",
+  "SKILL-GAME-SMOKE-CHECK",
+  "SKILL-GAME-STORY-DONE",
+  "SKILL-GEN-TEST-HELPERS",
+  "SKILL-GAME-TEST-SETUP",
+  "SKILL-GAME-ARCHITECTURE-REVIEW",
+  "SKILL-GAME-CONSISTENCY-CHECK",
+  "SKILL-AI-SELF-IMPROVING-AGENT",
+  "SKILL-GEN-TENCENT-DOCS",
+  "SKILL-GEN-ANYSEARCH",
+  "SKILL-AUTO-PYTHON-WEB-SCRAPER",
+  "SKILL-AI-SELF-IMPROVING-AGENT-2",
+  "SKILL-GEN-WEB-TOOLS-GUIDE",
+  "SKILL-AI-AGENT-BROWSER",
+  "SKILL-AI-SELF-IMPROVING-AGENT-3",
+  "SKILL-GAME-GODOT-CLASS-NAME-CHECKER",
+  "SKILL-GAME-GODOT-CLEAR-CHILDREN",
+  "SKILL-GAME-GODOT-CONSOLE",
+  "SKILL-GAME-GODOT-GDSCRIPT-GRAMMAR",
+  "SKILL-GAME-GODOT-GLOBAL-VARIABLES",
+  "SKILL-GAME-GODOT-KNOWLEDGE",
+  "SKILL-GAME-GODOT-PACKEDSCENE",
+  "SKILL-GAME-GODOT-SCENE-SKILL",
+  "SKILL-GAME-GODOT-SERIALIZATION-PATTERN",
+  "SKILL-GAME-GODOT-SINGLETON-PATTERN",
+  "SKILL-GAME-GODOT-TSCN-FORMAT",
+  "SKILL-GAME-GODOT-UNIX-TIMESTAMP-FIX"
+ ],
+ "potential_cap_n": 11,
+ "potential_cap": [
+  [
+   "SKILL-GEN-MAPS",
+   "maps"
+  ],
+  [
+   "SKILL-GEN-POWERPOINT",
+   "powerpoint"
+  ],
+  [
+   "SKILL-AI-EVM",
+   "evm"
+  ],
+  [
+   "SKILL-GEN-SOLANA",
+   "solana"
+  ],
+  [
+   "SKILL-AI-HUGGINGFACE-TOKENIZERS",
+   "huggingface-tokenizers"
+  ],
+  [
+   "SKILL-AI-WHISPER",
+   "whisper"
+  ],
+  [
+   "SKILL-GEN-MANIM-VIDEO",
+   "manim-video"
+  ],
+  [
+   "SKILL-AUTO-HIMALAYA",
+   "himalaya"
+  ],
+  [
+   "SKILL-GEN-DOCX",
+   "docx"
+  ],
+  [
+   "SKILL-GEN-PDF",
+   "pdf"
+  ],
+  [
+   "SKILL-GEN-XLSX",
+   "xlsx"
+  ]
+ ],
+ "agent_coup": [
+  [
+   "SKILL-GEN-DETECT-LOOP",
+   [
+    "novel-agent"
+   ]
+  ],
+  [
+   "SKILL-GEN-MEMORY-RECORDING",
+   [
+    "novel-agent"
+   ]
+  ],
+  [
+   "SKILL-AI-NOVEL-DISPATCH",
+   [
+    "novel-agent"
+   ]
+  ],
+  [
+   "SKILL-GEN-ROLEPLAY-SANDBOX",
+   [
+    "novel-agent"
+   ]
+  ],
+  [
+   "SKILL-AI-STYLE-DISTILL",
+   [
+    "novel-agent"
+   ]
+  ],
+  [
+   "SKILL-GEN-UPDATER-ARCHIVE",
+   [
+    "novel-agent"
+   ]
+  ],
+  [
+   "SKILL-GEN-UPDATER-ROLLBACK",
+   [
+    "novel-agent"
+   ]
+  ],
+  [
+   "SKILL-GEN-UPDATER-SETTING",
+   [
+    "novel-agent"
+   ]
+  ],
+  [
+   "SKILL-GEN-VOLUME-WRITING",
+   [
+    "novel-agent"
+   ]
+  ]
+ ],
+ "llm_hard": [
+  [
+   "SKILL-GEN-CLAUDE-CODE",
+   [
+    [
+     "REQUIRES",
+     "",
+     "Claude Code"
+    ]
+   ]
+  ]
+ ],
+ "oc_required": [
+  "SKILL-AI-CONTEXT-ENGINEERING",
+  "SKILL-GEN-GIT-HELPER",
+  "SKILL-GEN-TENCENT-DOCS",
+  "SKILL-GEN-AWESOME-NOVEL",
+  "SKILL-AUTO-PYTHON-WEB-SCRAPER",
+  "SKILL-GEN-WEB-TOOLS-GUIDE",
+  "SKILL-GEN-TAVILY-SEARCH",
+  "SKILL-AUTO-TENCENTCLOUD-LIGHTHOUSE-SKILL",
+  "SKILL-AI-SELF-IMPROVING-AGENT-3",
+  "SKILL-GEN-TENCENT-CLOUD-COS",
+  "SKILL-AI-TENCENT-MEETING-MCP",
+  "SKILL-GEN-TENCENT-DOCS-2"
+ ],
+ "hermes_reasonable": 219,
+ "cap_refs": [],
+ "know_refs_n": 0,
+ "broken_krefs": [],
+ "broken_paths": [
+  [
+   "SKILL-GEN-MAPS",
+   "~/.hermes/skills/maps/scripts/maps_client.py"
+  ],
+  [
+   "SKILL-AI-EVM",
+   "~/.hermes/skills/blockchain/evm/scripts/evm_client.py"
+  ],
+  [
+   "SKILL-GAME-HYPERLIQUID",
+   "~/.hermes/skills/blockchain/hyperliquid/scripts/hyperliquid_client.py"
+  ],
+  [
+   "SKILL-GEN-SOLANA",
+   "~/.hermes/skills/blockchain/solana/scripts/solana_client.py"
+  ],
+  [
+   "SKILL-GAME-PIXEL-ART",
+   "~/.hermes/skills/creative/pixel-art/scripts"
+  ],
+  [
+   "SKILL-GAME-STOCKS",
+   "~/.hermes/skills/finance/stocks/scripts/stocks_client.py"
+  ],
+  [
+   "SKILL-AI-FASTMCP",
+   "~/.hermes/skills/mcp/fastmcp/scripts/scaffold_fastmcp.py"
+  ],
+  [
+   "SKILL-AI-OPENCLAW-MIGRATION",
+   "~/.hermes/skills/openclaw-imports/"
+  ],
+  [
+   "SKILL-AI-OPENCLAW-MIGRATION",
+   "~/.hermes/skills/migration/openclaw-migration/scripts/openclaw_to_hermes.py"
+  ],
+  [
+   "SKILL-AI-OPENCLAW-MIGRATION",
+   "~/.hermes/skills/openclaw-migration/..."
+  ],
+  [
+   "SKILL-GEN-MEMENTO-FLASHCARDS",
+   "~/.hermes/skills/productivity/memento-flashcards/scripts/memento_cards.py"
+  ],
+  [
+   "SKILL-GEN-MEMENTO-FLASHCARDS",
+   "~/.hermes/skills/productivity/memento-flashcards/scripts/youtube_quiz.py"
+  ],
+  [
+   "SKILL-GEN-MEMENTO-FLASHCARDS",
+   "~/.hermes/skills/productivity/memento-flashcards/data/cards.json"
+  ],
+  [
+   "SKILL-AI-DARWINIAN-EVOLVER",
+   "~/.hermes/skills/research/darwinian-evolver"
+  ],
+  [
+   "SKILL-GEN-OSS-FORENSICS",
+   "~/.hermes/skills/security/oss-forensics/"
+  ],
+  [
+   "SKILL-GEN-COMPUTER-USE",
+   "~/.hermes/skills/cua-driver"
+  ],
+  [
+   "SKILL-GEN-GROUNDED-CITATIONS",
+   "~/.hermes/skills/research/grounded-citations/scripts/sources.py"
+  ]
+ ],
+ "declared_skill_deps": 0,
+ "cycles": [],
+ "ext_no_25": [
+  "SKILL-GEN-WEB-TOOLS-GUIDE",
+  "SKILL-GEN-TAVILY-SEARCH",
+  "SKILL-AUTO-TENCENTCLOUD-LIGHTHOUSE-SKILL",
+  "SKILL-AI-AGENT-BROWSER",
+  "SKILL-AI-SELF-IMPROVING-AGENT-3",
+  "SKILL-GEN-TENCENT-CLOUD-COS",
+  "SKILL-AI-TENCENT-MEETING-MCP",
+  "SKILL-GEN-FIND-SKILL-SKILLHUB"
+ ],
+ "ext_content": [
+  "SKILL-GEN-ARCHIFY",
+  "SKILL-AI-IMPECCABLE",
+  "SKILL-GEN-POPULAR-WEB-DESIGNS",
+  "SKILL-GAME-GODOT-CODING-PATTERNS"
+ ],
+ "impl_bypass": [
+  [
+   "SKILL-GEN-AST-GREP",
+   [
+    "install.ps1",
+    "install.sh"
+   ]
+  ],
+  [
+   "SKILL-AI-GOOGLE-MEET",
+   [
+    "meet_bot.py",
+    "cli.py",
+    "_jsonfile.py",
+    "process_manager.py",
+    "tools.py",
+    "audio_bridge.py",
+    "__init__.py"
+   ]
+  ],
+  [
+   "SKILL-GEN-TENCENT-DOCS",
+   [
+    "setup.sh"
+   ]
+  ],
+  [
+   "SKILL-GEN-AWESOME-NOVEL",
+   [
+    "install.ps1"
+   ]
+  ],
+  [
+   "SKILL-GEN-TENCENT-DOCS-2",
+   [
+    "import_file.sh",
+    "ocr.js",
+    "aipage_pack.js",
+    "setup.sh"
+   ]
+  ]
+ ],
+ "over": [
+  "SKILL-GEN-NOVEL-PROOFREAD",
+  "SKILL-GEN-DCF-MODEL",
+  "SKILL-GEN-RESEARCH-PAPER-WRITING"
+ ],
+ "big15": 62,
+ "inline_know": 53,
+ "no_l3": 202,
+ "reg_len_avg": 1012.9,
+ "reg_len_max": 1833,
+ "tool": {
+  "total": 129,
+  "keep": [
+   "short-scan",
+   "node-inspect-debugger",
+   "antigravity-cli",
+   "honcho",
+   "hyperliquid",
+   "archify",
+   "audiocraft-audio-generation",
+   "comfyui",
+   "draw-your-font",
+   "excalidraw",
+   "heartmula",
+   "hyperframes",
+   "meme-generation",
+   "pretext",
+   "tldraw-offline",
+   "unreal-mcp",
+   "jupyter-notebook",
+   "actual-setup",
+   "docker-management",
+   "inference-sh-cli",
+   "pinggy-tunnel",
+   "watchers",
+   "agentmail",
+   "polymarket",
+   "stocks",
+   "pokemon-player",
+   "fastmcp",
+   "mcp-oauth-remote-gateway",
+   "accelerate",
+   "chroma",
+   "clip",
+   "evaluating-llms-harness",
+   "weights-and-biases",
+   "faiss",
+   "guidance",
+   "llama-cpp",
+   "outlines",
+   "serving-llms-vllm",
+   "lambda-labs",
+   "llava",
+   "modal",
+   "huggingface-hub",
+   "segment-anything-model",
+   "obliteratus",
+   "peft",
+   "pinecone",
+   "qdrant",
+   "saelens",
+   "slime",
+   "stable-diffusion",
+   "tensorrt-llm",
+   "torchtitan",
+   "axolotl",
+   "trl-fine-tuning",
+   "unsloth",
+   "mpp-agent",
+   "stripe-link-cli",
+   "stripe-projects",
+   "canvas",
+   "blogwatcher",
+   "duckduckgo-search",
+   "gitnexus-explorer",
+   "parallel-cli",
+   "qmd",
+   "rss-feeds",
+   "scrapling",
+   "searxng-search",
+   "sherlock",
+   "openhue",
+   "reddit-reading",
+   "ast-grep",
+   "rest-graphql-debug",
+   "cloudflare-temporary-deploy",
+   "har-derived-api-client",
+   "page-agent",
+   "publish-site",
+   "yuanbao",
+   "google_meet",
+   "apple-notes",
+   "apple-reminders",
+   "findmy",
+   "imessage",
+   "p5js",
+   "gif-search",
+   "songsee",
+   "obsidian",
+   "box",
+   "google-workspace",
+   "codebase-inspection",
+   "github",
+   "inspecting-hermes-desktop-dom",
+   "weixinpay-feedback",
+   "weixinpay-pay",
+   "weixinpay-register",
+   "git-helper",
+   "harness-anything-mac",
+   "tavily-search",
+   "tencentcloud-lighthouse-skill",
+   "tencent-cloud-cos",
+   "tencent-meeting-mcp",
+   "tencent-docs"
+  ],
+  "potential_capability": [
+   "evm",
+   "solana",
+   "huggingface-tokenizers",
+   "whisper",
+   "himalaya"
+  ],
+  "potential_knowledge": [
+   "arxiv",
+   "ascii-art",
+   "neuroskill-bci",
+   "mcporter",
+   "here-now",
+   "shop",
+   "shopify",
+   "siyuan",
+   "telephony",
+   "drug-discovery",
+   "computer-use",
+   "airtable",
+   "notion",
+   "llm-wiki",
+   "xurl",
+   "api-gateway",
+   "github",
+   "tencent-docs",
+   "anysearch",
+   "python-web-scraper",
+   "agent-browser",
+   "godot-class-name-checker",
+   "godot-console"
+  ]
+ },
+ "knowdeep": {
+  "total": 29,
+  "pure": [
+   "impeccable",
+   "songwriting-and-ai-music",
+   "godot-coding-patterns",
+   "playtest-report",
+   "godot-knowledge"
+  ],
+  "plus_routing": [
+   "game-dev-lessons",
+   "godot-kb",
+   "instructor",
+   "pytorch-fsdp",
+   "dspy",
+   "pinecone-research",
+   "popular-web-designs",
+   "fastapi",
+   "typer",
+   "godot-clear-children",
+   "godot-gdscript-grammar",
+   "godot-global-variables",
+   "godot-packedscene",
+   "godot-scene-skill",
+   "godot-serialization-pattern",
+   "godot-singleton-pattern",
+   "godot-tscn-format",
+   "godot-unix-timestamp-fix"
+  ],
+  "true_workflow": [
+   "chapter-reference",
+   "flash-attention",
+   "pytorch-lightning",
+   "simpo",
+   "git-essentials",
+   "web-tools-guide"
+  ]
+ },
+ "merge_review": [
+  {
+   "skill_id": "SKILL-AI-SELF-IMPROVING-AGENT",
+   "name": "self-improving-agent",
+   "reclassified_as": "FUNCTIONAL_OVERLAP",
+   "recommendation": "NEEDS_HUMAN_REVIEW",
+   "evidence": "3 版侧重不同(通用/错误捕获/空描述)，职责重叠但专长不同"
+  },
+  {
+   "skill_id": "SKILL-AI-SELF-IMPROVING-AGENT-2",
+   "name": "self-improving-agent",
+   "reclassified_as": "FUNCTIONAL_OVERLAP",
+   "recommendation": "NEEDS_HUMAN_REVIEW",
+   "evidence": "3 版侧重不同(通用/错误捕获/空描述)，职责重叠但专长不同"
+  },
+  {
+   "skill_id": "SKILL-AI-SELF-IMPROVING-AGENT-3",
+   "name": "self-improving-agent",
+   "reclassified_as": "FUNCTIONAL_OVERLAP",
+   "recommendation": "NEEDS_HUMAN_REVIEW",
+   "evidence": "3 版侧重不同(通用/错误捕获/空描述)，职责重叠但专长不同"
+  },
+  {
+   "skill_id": "SKILL-AUTO-EMAIL-MANAGEMENT",
+   "name": "Email Management",
+   "reclassified_as": "FUNCTIONAL_OVERLAP",
+   "recommendation": "MERGE_OPTIONAL",
+   "evidence": "上游已有对应物，遗产版可归并"
+  },
+  {
+   "skill_id": "SKILL-GAME-ARCHITECTURE-REVIEW",
+   "name": "architecture-review",
+   "reclassified_as": "FUNCTIONAL_OVERLAP",
+   "recommendation": "NEEDS_HUMAN_REVIEW",
+   "evidence": "未归组"
+  },
+  {
+   "skill_id": "SKILL-GAME-BALANCE-CHECK",
+   "name": "balance-check",
+   "reclassified_as": "FUNCTIONAL_OVERLAP",
+   "recommendation": "NEEDS_HUMAN_REVIEW",
+   "evidence": "未归组"
+  },
+  {
+   "skill_id": "SKILL-GAME-QA-PLAN",
+   "name": "qa-plan",
+   "reclassified_as": "FUNCTIONAL_OVERLAP",
+   "recommendation": "NEEDS_HUMAN_REVIEW",
+   "evidence": "未归组"
+  },
+  {
+   "skill_id": "SKILL-GEN-ANYSEARCH",
+   "name": "anysearch",
+   "reclassified_as": "COMPLEMENTARY",
+   "recommendation": "KEEP_SEPARATE",
+   "evidence": "不同后端互为 fallback，非重复"
+  },
+  {
+   "skill_id": "SKILL-GEN-AWESOME-NOVEL",
+   "name": "awesome-novel",
+   "reclassified_as": "EXACT_DUPLICATE",
+   "recommendation": "MERGE_REQUIRED",
+   "evidence": "awesome-novel 32 个子文件与 novel-writing 完全相同，父包职责相同"
+  },
+  {
+   "skill_id": "SKILL-GEN-DESIGN-REVIEW",
+   "name": "design-review",
+   "reclassified_as": "FUNCTIONAL_OVERLAP",
+   "recommendation": "NEEDS_HUMAN_REVIEW",
+   "evidence": "未归组"
+  },
+  {
+   "skill_id": "SKILL-GEN-GIT-ESSENTIALS",
+   "name": "git-essentials",
+   "reclassified_as": "FUNCTIONAL_OVERLAP",
+   "recommendation": "NEEDS_HUMAN_REVIEW",
+   "evidence": "未归组"
+  },
+  {
+   "skill_id": "SKILL-GEN-GIT-HELPER",
+   "name": "git-helper",
+   "reclassified_as": "COMPLEMENTARY",
+   "recommendation": "KEEP_SEPARATE",
+   "evidence": "知识版+薄操作版，层次不同"
+  },
+  {
+   "skill_id": "SKILL-GEN-GITHUB",
+   "name": "github",
+   "reclassified_as": "VERSION_SPECIALIZATION",
+   "recommendation": "MERGE_OPTIONAL",
+   "evidence": "上游版 vs 遗产版，同职责不同成熟度"
+  },
+  {
+   "skill_id": "SKILL-GEN-GITHUB-2",
+   "name": "github",
+   "reclassified_as": "VERSION_SPECIALIZATION",
+   "recommendation": "MERGE_OPTIONAL",
+   "evidence": "上游版 vs 遗产版，同职责不同成熟度"
+  },
+  {
+   "skill_id": "SKILL-GEN-TAVILY-SEARCH",
+   "name": "tavily-search",
+   "reclassified_as": "COMPLEMENTARY",
+   "recommendation": "KEEP_SEPARATE",
+   "evidence": "不同后端互为 fallback，非重复"
+  },
+  {
+   "skill_id": "SKILL-GEN-TENCENT-DOCS",
+   "name": "tencent-docs",
+   "reclassified_as": "VERSION_SPECIALIZATION",
+   "recommendation": "MERGE_OPTIONAL",
+   "evidence": "两版描述结构不同，各自演化"
+  },
+  {
+   "skill_id": "SKILL-GEN-TENCENT-DOCS-2",
+   "name": "tencent-docs",
+   "reclassified_as": "VERSION_SPECIALIZATION",
+   "recommendation": "MERGE_OPTIONAL",
+   "evidence": "两版描述结构不同，各自演化"
+  }
+ ],
+ "merge_groups": {
+  "EXACT_DUPLICATE": [
+   "awesome-novel"
+  ],
+  "FUNCTIONAL_OVERLAP": [
+   "self-improving-agent",
+   "self-improving-agent",
+   "self-improving-agent",
+   "Email Management",
+   "architecture-review",
+   "balance-check",
+   "qa-plan",
+   "design-review",
+   "git-essentials"
+  ],
+  "COMPLEMENTARY": [
+   "anysearch",
+   "git-helper",
+   "tavily-search"
+  ],
+  "VERSION_SPECIALIZATION": [
+   "github",
+   "github",
+   "tencent-docs",
+   "tencent-docs"
+  ]
+ },
+ "risk_rows": [
+  {
+   "skill": "1password",
+   "skill_id": "SKILL-GEN-1PASSWORD",
+   "flag": "credential_access"
+  },
+  {
+   "skill": "stripe-link-cli",
+   "skill_id": "SKILL-AI-STRIPE-LINK-CLI",
+   "flag": "credential_access"
+  },
+  {
+   "skill": "weixinpay-pay",
+   "skill_id": "SKILL-GEN-WEIXINPAY-PAY",
+   "flag": "credential_access"
+  },
+  {
+   "skill": "weixinpay-register",
+   "skill_id": "SKILL-GEN-WEIXINPAY-REGISTER",
+   "flag": "credential_access"
+  },
+  {
+   "skill": "himalaya",
+   "skill_id": "SKILL-AUTO-HIMALAYA",
+   "flag": "credential_access"
+  },
+  {
+   "skill": "agentmail",
+   "skill_id": "SKILL-AI-AGENTMAIL",
+   "flag": "credential_access"
+  },
+  {
+   "skill": "weixinpay-pay",
+   "skill_id": "SKILL-GEN-WEIXINPAY-PAY",
+   "flag": "payment_side_effect"
+  },
+  {
+   "skill": "stripe-link-cli",
+   "skill_id": "SKILL-AI-STRIPE-LINK-CLI",
+   "flag": "payment_side_effect"
+  },
+  {
+   "skill": "stripe-projects",
+   "skill_id": "SKILL-GEN-STRIPE-PROJECTS",
+   "flag": "payment_side_effect"
+  },
+  {
+   "skill": "mpp-agent",
+   "skill_id": "SKILL-AI-MPP-AGENT",
+   "flag": "payment_side_effect"
+  },
+  {
+   "skill": "shop",
+   "skill_id": "SKILL-GEN-SHOP",
+   "flag": "payment_side_effect"
+  },
+  {
+   "skill": "xurl",
+   "skill_id": "SKILL-GEN-XURL",
+   "flag": "external_side_effect"
+  },
+  {
+   "skill": "publish-site",
+   "skill_id": "SKILL-AUTO-PUBLISH-SITE",
+   "flag": "external_side_effect"
+  },
+  {
+   "skill": "cloudflare-temporary-deploy",
+   "skill_id": "SKILL-AUTO-CLOUDFLARE-TEMPORARY-DEPLOY",
+   "flag": "external_side_effect"
+  },
+  {
+   "skill": "here-now",
+   "skill_id": "SKILL-AUTO-HERE-NOW",
+   "flag": "external_side_effect"
+  },
+  {
+   "skill": "unbroker",
+   "skill_id": "SKILL-GEN-UNBROKER",
+   "flag": "external_side_effect"
+  },
+  {
+   "skill": "social-media-content-calendar",
+   "skill_id": "SKILL-AUTO-SOCIAL-MEDIA-CONTENT-CALENDAR",
+   "flag": "external_side_effect"
+  },
+  {
+   "skill": "Email Management",
+   "skill_id": "SKILL-AUTO-EMAIL-MANAGEMENT",
+   "flag": "external_side_effect"
+  },
+  {
+   "skill": "email-inbox-triage",
+   "skill_id": "SKILL-AUTO-EMAIL-INBOX-TRIAGE",
+   "flag": "external_side_effect"
+  },
+  {
+   "skill": "himalaya",
+   "skill_id": "SKILL-AUTO-HIMALAYA",
+   "flag": "external_side_effect"
+  },
+  {
+   "skill": "imessage",
+   "skill_id": "SKILL-GEN-IMESSAGE",
+   "flag": "external_side_effect"
+  },
+  {
+   "skill": "google_meet",
+   "skill_id": "SKILL-AI-GOOGLE-MEET",
+   "flag": "external_side_effect"
+  },
+  {
+   "skill": "telephony",
+   "skill_id": "SKILL-GEN-TELEPHONY",
+   "flag": "external_side_effect"
+  },
+  {
+   "skill": "docker-management",
+   "skill_id": "SKILL-AUTO-DOCKER-MANAGEMENT",
+   "flag": "system_modification"
+  },
+  {
+   "skill": "computer-use",
+   "skill_id": "SKILL-GEN-COMPUTER-USE",
+   "flag": "system_modification"
+  },
+  {
+   "skill": "hermes-s6-container-supervision",
+   "skill_id": "SKILL-GAME-HERMES-S6-CONTAINER-SUPERVISION",
+   "flag": "system_modification"
+  },
+  {
+   "skill": "openclaw-migration",
+   "skill_id": "SKILL-AI-OPENCLAW-MIGRATION",
+   "flag": "system_modification"
+  },
+  {
+   "skill": "unbroker",
+   "skill_id": "SKILL-GEN-UNBROKER",
+   "flag": "destructive"
+  },
+  {
+   "skill": "obliteratus",
+   "skill_id": "SKILL-AI-OBLITERATUS",
+   "flag": "destructive"
+  },
+  {
+   "skill": "godmode",
+   "skill_id": "SKILL-AI-GODMODE",
+   "flag": "destructive"
+  },
+  {
+   "skill": "godmode",
+   "skill_id": "SKILL-AI-GODMODE",
+   "flag": "security_sensitive"
+  },
+  {
+   "skill": "obliteratus",
+   "skill_id": "SKILL-AI-OBLITERATUS",
+   "flag": "security_sensitive"
+  },
+  {
+   "skill": "web-pentest",
+   "skill_id": "SKILL-GEN-WEB-PENTEST",
+   "flag": "security_sensitive"
+  },
+  {
+   "skill": "domain-intel",
+   "skill_id": "SKILL-GEN-DOMAIN-INTEL",
+   "flag": "security_sensitive"
+  },
+  {
+   "skill": "oss-forensics",
+   "skill_id": "SKILL-GEN-OSS-FORENSICS",
+   "flag": "security_sensitive"
+  },
+  {
+   "skill": "sherlock",
+   "skill_id": "SKILL-GEN-SHERLOCK",
+   "flag": "security_sensitive"
+  }
+ ],
+ "declared_risk": 1,
+ "touchpoints": [
+  {
+   "id": "FT-1",
+   "maps_to": "FCP-001 T1",
+   "object": "LIBRARY_RULES §2/§4/§11 实体与生命周期映射表无 Skill 行",
+   "status": "FOUND_UNRESOLVED",
+   "action": "仅记录，待 FCP 人工批准"
+  },
+  {
+   "id": "FT-2",
+   "maps_to": "FCP-001 T2",
+   "object": "AGENT_ORCHESTRATION_SPEC §三十二 目录契约未含 14_AI_AGENTS/Skills/",
+   "status": "FOUND_UNRESOLVED",
+   "action": "目录依用户指令建立；spec 未修改，待 FCP"
+  },
+  {
+   "id": "FT-3",
+   "maps_to": "FCP-001 T3",
+   "object": "EVOLUTION_RULES 演化对象/提案类型无 SKILL_*",
+   "status": "FOUND_UNRESOLVED",
+   "action": "Skill 演化暂无合法提案类型，待 FCP"
+  },
+  {
+   "id": "FT-4",
+   "maps_to": "FCP-001 T4(可选)",
+   "object": "RETRIEVAL_DECISION_SPEC §五 检索清单无 Skill（方案A 下可不改）",
+   "status": "DEFERRED_BY_DESIGN",
+   "action": "方案 A 生效中，Phase 5 零改动"
+  },
+  {
+   "id": "FT-5",
+   "maps_to": "新增",
+   "object": "SKILL_RULES.md 为新规则文件（宪章 §1.2 规则文件=Foundation）",
+   "status": "DRAFT_PENDING",
+   "action": "以 DRAFT 形式存在，修订走 FCP"
+  }
+ ],
+ "priority": {
+  "P0": 1,
+  "P1": 176,
+  "P2": 101,
+  "P3": 21,
+  "personal_P1": 56,
+  "personal_P2": 39,
+  "upstream_gap": 196
+ },
+ "completeness": {
+  "L1": 100.0,
+  "L2_fill_pct": 47.4,
+  "L3_fill_pct": 42.7
+ }
+}

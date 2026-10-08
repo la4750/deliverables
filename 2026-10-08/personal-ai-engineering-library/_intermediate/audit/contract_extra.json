@@ -1,0 +1,38 @@
+{
+ "L2核心(触发+输入+输出齐)": "8/358",
+ "trigger": "230/358",
+ "inputs": "87/358",
+ "outputs": "48/358",
+ "L3硬三件全": "34/358",
+ "workflow结构": "177/358",
+ "validation提及": "157/358",
+ "failure_handling提及": "132/358",
+ "L3-required(118)内: workflow有": 70,
+ "L3-required内: validation有": 59,
+ "L3-required内: failure_handling有": 54,
+ "gap_by_domain": {
+  "AI": "75/81",
+  "Automation": "22/22",
+  "Game": "61/87",
+  "General": "141/168"
+ },
+ "gap_by_source": {
+  "hermes_bundled_core": "46/46",
+  "hermes_bundled_optional": "150/150",
+  "hermes_plugin": "3/3",
+  "hermes_user_installed": "24/81",
+  "legacy_openclaw_workspace": "76/76",
+  "third_party_dependency": "0/2"
+ },
+ "gap_by_category": {
+  "AGENT_WORKFLOW": "12/16",
+  "CAPABILITY_WRAPPER": "6/6",
+  "KNOWLEDGE_WRAPPER": "26/29",
+  "META_SKILL": "10/10",
+  "PROJECT_SPECIFIC": "1/1",
+  "TOOL_WRAPPER": "128/129",
+  "WORKFLOW_SKILL": "116/167"
+ },
+ "check_total_gap": 299,
+ "core3_all": 8
+}

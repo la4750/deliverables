@@ -43,3 +43,11 @@
 | SKILL_KNOWLEDGE_INGESTION.yaml | 358 行逐技能迁移追踪 + 10 项质检 + 映射 |
 | KNOWLEDGE_REGISTRY.yaml / SOURCE_REGISTRY.yaml / INGESTION_QUEUE.yaml / KNOWLEDGE_INDEX.md | Phase 4 注册表入库后状态（57 units / 46 sources / BATCH2） |
 | knowledge-units/ | 50 个新 Knowledge Unit 内容文件（镜像库内路径） |
+
+## _intermediate/ — 各阶段中间输出（脚本与过程数据）
+
+按产出时间归档，保证每个阶段可复现：
+
+- `2026-10-07/personal-ai-engineering-library/_intermediate/` — Skill Inventory/Classification/Registry/Optimization 阶段：扫描清单、原始/逻辑分类数据、人工复核清单、生成与统计脚本
+- `2026-10-08/personal-ai-engineering-library/_intermediate/audit/` — Contract 三级审计与边界/依赖/披露/风险深审计：审计脚本与聚合数据
+- `2026-10-08/personal-ai-engineering-library/_intermediate/ingestion/` — Skill→Knowledge 吸收阶段：候选段提取、吸收结果与三段式脚本

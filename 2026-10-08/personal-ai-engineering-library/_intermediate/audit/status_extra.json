@@ -1,0 +1,43 @@
+{
+ "pri": {
+  "P0": 1,
+  "P1": 176,
+  "P2": 101,
+  "P3": 21
+ },
+ "tier_split": {
+  "P0": {
+   "total": 1,
+   "personal": 1,
+   "upstream_reference_only": 0
+  },
+  "P1": {
+   "total": 176,
+   "personal": 56,
+   "upstream_reference_only": 120
+  },
+  "P2": {
+   "total": 101,
+   "personal": 39,
+   "upstream_reference_only": 62
+  },
+  "P3": {
+   "total": 21,
+   "personal": 7,
+   "upstream_reference_only": 14
+  }
+ },
+ "grp": {
+  "FUNCTIONAL_OVERLAP": 8,
+  "COMPLEMENTARY": 4,
+  "EXACT_DUPLICATE": 1,
+  "VERSION_SPECIALIZATION": 4
+ },
+ "rec": {
+  "NEEDS_HUMAN_REVIEW": 3,
+  "MERGE_OPTIONAL": 5,
+  "MERGE_REQUIRED": 5,
+  "KEEP_SEPARATE": 4
+ },
+ "risk_unique": 30
+}
