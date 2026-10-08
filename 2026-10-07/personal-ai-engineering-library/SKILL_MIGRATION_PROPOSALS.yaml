@@ -1,0 +1,2808 @@
+proposals:
+  stage: PROPOSAL ONLY——本轮禁止删除/合并/重写/转换，全部动作待人工批准
+  created_at: '2026-10-07'
+  action_enum:
+  - KEEP
+  - KEEP+OPTIMIZE
+  - MERGE_CANDIDATE
+  - CONVERT_TO_CAPABILITY
+  - CONVERT_TO_KNOWLEDGE
+  - CONVERT_TO_TOOL
+  - ARCHIVE_CANDIDATE
+  - REVIEW_REQUIRED
+  summary:
+    KEEP: 183
+    KEEP+OPTIMIZE: 117
+    CONVERT_TO_KNOWLEDGE: 26
+    MERGE_CANDIDATE: 17
+    REVIEW_REQUIRED: 9
+    CONVERT_TO_CAPABILITY: 6
+  entries:
+  - skill_id: SKILL-AI-ACCELERATE
+    name: accelerate
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-ACTUAL-SETUP
+    name: actual-setup
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-AGENT-BROWSER
+    name: agent-browser
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: TOOL_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-AI-AGENT-MERGE-CONFLICT-ARBITER
+    name: agent-merge-conflict-arbiter
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: AGENT_WORKFLOW
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-AGENTMAIL
+    name: agentmail
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-AXOLOTL
+    name: axolotl
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-CHROMA
+    name: chroma
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-CLIP
+    name: clip
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-CONTEXT-ENGINEERING
+    name: context-engineering
+    action: REVIEW_REQUIRED
+    reason: 绑定 OpenClaw 运行时——需移植验证或归档裁定
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-AI-DARWINIAN-EVOLVER
+    name: darwinian-evolver
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-DOCUMENTATION-AND-ADRS
+    name: documentation-and-adrs
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-AI-DSPY
+    name: dspy
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-EVALUATING-LLMS-HARNESS
+    name: evaluating-llms-harness
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-EVM
+    name: evm
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-FAISS
+    name: faiss
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-FASTMCP
+    name: fastmcp
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-FLASH-ATTENTION
+    name: flash-attention
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-GODMODE
+    name: godmode
+    action: REVIEW_REQUIRED
+    reason: 安全敏感技能（越狱/移除拒绝）——需人工合规复核后决定去留
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-GOOGLE-MEET
+    name: google_meet
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-AI-GUIDANCE
+    name: guidance
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-HARNESS-ANYTHING-MAC
+    name: harness-anything-mac
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: TOOL_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-AI-HERMES-AGENT
+    name: hermes-agent
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: META_SKILL
+    source: hermes_user_installed
+    related_skills: []
+  - skill_id: SKILL-AI-HERMES-AGENT-SKILL-AUTHORING
+    name: hermes-agent-skill-authoring
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: META_SKILL
+    source: hermes_user_installed
+    related_skills: []
+  - skill_id: SKILL-AI-HONCHO
+    name: honcho
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-HUGGINGFACE-TOKENIZERS
+    name: huggingface-tokenizers
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-IMPECCABLE
+    name: impeccable
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-INFERENCE-SH-CLI
+    name: inference-sh-cli
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-INSPECTING-HERMES-DESKTOP-DOM
+    name: inspecting-hermes-desktop-dom
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-AI-INSTRUCTOR
+    name: instructor
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-KANBAN-VIDEO-ORCHESTRATOR
+    name: kanban-video-orchestrator
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: AGENT_WORKFLOW
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-LAMBDA-LABS
+    name: lambda-labs
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-LEGACY-SYSTEM-MIGRATION
+    name: legacy-system-migration
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: META_SKILL
+    source: hermes_user_installed
+    related_skills: []
+  - skill_id: SKILL-AI-LLAMA-CPP
+    name: llama-cpp
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-LLM-WIKI
+    name: llm-wiki
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-AI-MCP-OAUTH-REMOTE-GATEWAY
+    name: mcp-oauth-remote-gateway
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-MCPORTER
+    name: mcporter
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-MODAL
+    name: modal
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-MPP-AGENT
+    name: mpp-agent
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-NEMO-CURATOR
+    name: nemo-curator
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-NEUROSKILL-BCI
+    name: neuroskill-bci
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-NOVEL-DISPATCH
+    name: novel-dispatch
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: AGENT_WORKFLOW
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-AI-NOVEL-PROMPT
+    name: novel-prompt
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-AI-NOVEL-PROMPT-VERIFY
+    name: novel-prompt-verify
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-AI-OBLITERATUS
+    name: obliteratus
+    action: REVIEW_REQUIRED
+    reason: 安全敏感技能（越狱/移除拒绝）——需人工合规复核后决定去留
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-OPENCLAW-MIGRATION
+    name: openclaw-migration
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: META_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-OPENHANDS
+    name: openhands
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: AGENT_WORKFLOW
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-OUTLINES
+    name: outlines
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-PAGE-AGENT
+    name: page-agent
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-PARALLEL-CLI
+    name: parallel-cli
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-PEFT
+    name: peft
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-PINECONE
+    name: pinecone
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-PINECONE-RESEARCH
+    name: pinecone-research
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-PROMPT-AUDIT
+    name: prompt-audit
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-AI-PYTORCH-FSDP
+    name: pytorch-fsdp
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-PYTORCH-LIGHTNING
+    name: pytorch-lightning
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-QDRANT
+    name: qdrant
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-SAELENS
+    name: saelens
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-SELF-IMPROVING-AGENT
+    name: self-improving-agent
+    action: MERGE_CANDIDATE
+    reason: 与关联技能职责高度重叠（见 SKILL_OVERLAP_REPORT）——仅标记，不合并
+    category: META_SKILL
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-AI-SELF-IMPROVING-AGENT-2
+    - SKILL-AI-SELF-IMPROVING-AGENT-3
+  - skill_id: SKILL-AI-SELF-IMPROVING-AGENT-2
+    name: self-improving-agent
+    action: MERGE_CANDIDATE
+    reason: 与关联技能职责高度重叠（见 SKILL_OVERLAP_REPORT）——仅标记，不合并
+    category: META_SKILL
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-AI-SELF-IMPROVING-AGENT
+    - SKILL-AI-SELF-IMPROVING-AGENT-3
+  - skill_id: SKILL-AI-SELF-IMPROVING-AGENT-3
+    name: self-improving-agent
+    action: MERGE_CANDIDATE
+    reason: 与关联技能职责高度重叠（见 SKILL_OVERLAP_REPORT）——仅标记，不合并
+    category: META_SKILL
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-AI-SELF-IMPROVING-AGENT
+    - SKILL-AI-SELF-IMPROVING-AGENT-2
+  - skill_id: SKILL-AI-SERVING-LLMS-VLLM
+    name: serving-llms-vllm
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-SHORT-CRAFT-PROMPT
+    name: short-craft-prompt
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-AI-SIMPLIFY-CODE
+    name: simplify-code
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: AGENT_WORKFLOW
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-AI-SIMPO
+    name: simpo
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-SLIME
+    name: slime
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-SONGSEE
+    name: songsee
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-AI-SONGWRITING-AND-AI-MUSIC
+    name: songwriting-and-ai-music
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-AI-STABLE-DIFFUSION
+    name: stable-diffusion
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-STRIPE-LINK-CLI
+    name: stripe-link-cli
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-STYLE-DISTILL
+    name: style-distill
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-AI-SUBAGENT-DRIVEN-DEVELOPMENT
+    name: subagent-driven-development
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: AGENT_WORKFLOW
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-SYSTEM-ATLAS
+    name: system-atlas
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-TENCENT-MEETING-MCP
+    name: tencent-meeting-mcp
+    action: REVIEW_REQUIRED
+    reason: 绑定 OpenClaw 运行时——需移植验证或归档裁定
+    category: TOOL_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-AI-TENSORRT-LLM
+    name: tensorrt-llm
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-TLDRAW-OFFLINE
+    name: tldraw-offline
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-TORCHTITAN
+    name: torchtitan
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-TRL-FINE-TUNING
+    name: trl-fine-tuning
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-UNREAL-MCP
+    name: unreal-mcp
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-UNSLOTH
+    name: unsloth
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AI-WEIXINPAY-FEEDBACK
+    name: weixinpay-feedback
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: TOOL_WRAPPER
+    source: hermes_plugin
+    related_skills: []
+  - skill_id: SKILL-AI-WHISPER
+    name: whisper
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AUTO-APPLE-REMINDERS
+    name: apple-reminders
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-AUTO-BLOGWATCHER
+    name: blogwatcher
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AUTO-CLOUDFLARE-TEMPORARY-DEPLOY
+    name: cloudflare-temporary-deploy
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AUTO-COMPETITOR-NEWS-MONITOR
+    name: competitor-news-monitor
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-AUTO-DOCKER-MANAGEMENT
+    name: docker-management
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AUTO-DUCKDUCKGO-SEARCH
+    name: duckduckgo-search
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills:
+    - SKILL-GEN-ANYSEARCH
+    - SKILL-GEN-SEARXNG-SEARCH
+    - SKILL-GEN-TAVILY-SEARCH
+  - skill_id: SKILL-AUTO-EMAIL-INBOX-TRIAGE
+    name: email-inbox-triage
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_core
+    related_skills:
+    - SKILL-AUTO-EMAIL-MANAGEMENT
+  - skill_id: SKILL-AUTO-EMAIL-MANAGEMENT
+    name: Email Management
+    action: MERGE_CANDIDATE
+    reason: 与关联技能职责高度重叠（见 SKILL_OVERLAP_REPORT）——仅标记，不合并
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-AUTO-EMAIL-INBOX-TRIAGE
+  - skill_id: SKILL-AUTO-GOOGLE-WORKSPACE
+    name: google-workspace
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-AUTO-HERE-NOW
+    name: here-now
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AUTO-HIMALAYA
+    name: himalaya
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-AUTO-MEETING-ACTION-ITEMS
+    name: meeting-action-items
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-AUTO-PINGGY-TUNNEL
+    name: pinggy-tunnel
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AUTO-PRODUCT-PRICE-MONITOR
+    name: product-price-monitor
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-AUTO-PUBLISH-SITE
+    name: publish-site
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AUTO-PYTHON-WEB-SCRAPER
+    name: python-web-scraper
+    action: REVIEW_REQUIRED
+    reason: 绑定 OpenClaw 运行时——需移植验证或归档裁定
+    category: TOOL_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-AUTO-RSS-FEEDS
+    name: rss-feeds
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AUTO-SCRAPLING
+    name: scrapling
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AUTO-SOCIAL-MEDIA-CONTENT-CALENDAR
+    name: social-media-content-calendar
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-AUTO-TEAMS-MEETING-PIPELINE
+    name: teams-meeting-pipeline
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-AUTO-TENCENTCLOUD-LIGHTHOUSE-SKILL
+    name: tencentcloud-lighthouse-skill
+    action: REVIEW_REQUIRED
+    reason: 绑定 OpenClaw 运行时——需移植验证或归档裁定
+    category: TOOL_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-AUTO-WATCHERS
+    name: watchers
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GAME-ADVERSARIAL-UX-TEST
+    name: adversarial-ux-test
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GAME-ARCHITECTURE-REVIEW
+    name: architecture-review
+    action: MERGE_CANDIDATE
+    reason: 与关联技能职责高度重叠（见 SKILL_OVERLAP_REPORT）——仅标记，不合并
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO-ARCHITECTURE-REVIEW
+  - skill_id: SKILL-GAME-ART-BIBLE
+    name: art-bible
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-ASSET-AUDIT
+    name: asset-audit
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-ASSET-SPEC
+    name: asset-spec
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-AUTEUR
+    name: auteur
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GAME-BALANCE-CHECK
+    name: balance-check
+    action: MERGE_CANDIDATE
+    reason: 与关联技能职责高度重叠（见 SKILL_OVERLAP_REPORT）——仅标记，不合并
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO-BALANCE-CHECK
+  - skill_id: SKILL-GAME-BUG-TRIAGE
+    name: bug-triage
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-CHANGELOG
+    name: changelog
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-CLAUDE-DESIGN
+    name: claude-design
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GAME-CONSISTENCY-CHECK
+    name: consistency-check
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-DAY-ONE-PATCH
+    name: day-one-patch
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-DELIVERY-WORKFLOW
+    name: delivery-workflow
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-DEV-STORY
+    name: dev-story
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-DOGFOOD
+    name: dogfood
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GAME-DOUBT-DRIVEN-DEVELOPMENT
+    name: doubt-driven-development
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-GAME-DEV-LESSONS
+    name: game-dev-lessons
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: hermes_user_installed
+    related_skills: []
+  - skill_id: SKILL-GAME-GAME-STUDIO
+    name: game-studio
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO-ARCHITECTURE-DECISION
+    - SKILL-GAME-GAME-STUDIO-ARCHITECTURE-REVIEW
+    - SKILL-GAME-GAME-STUDIO-BALANCE-CHECK
+    - SKILL-GAME-GAME-STUDIO-BRAINSTORM
+    - SKILL-GAME-GAME-STUDIO-BUG-REPORT
+    - SKILL-GAME-GAME-STUDIO-CREATE-ARCHITECTURE
+    - SKILL-GAME-GAME-STUDIO-CREATE-EPICS
+    - SKILL-GAME-GAME-STUDIO-CREATE-STORIES
+    - SKILL-GAME-GAME-STUDIO-DESIGN-REVIEW
+    - SKILL-GAME-GAME-STUDIO-DESIGN-SYSTEM
+    - SKILL-GAME-GAME-STUDIO-HELP
+    - SKILL-GAME-GAME-STUDIO-LOCALIZE
+    - SKILL-GAME-GAME-STUDIO-MAP-SYSTEMS
+    - SKILL-GAME-GAME-STUDIO-PROJECT-STAGE-DETECT
+    - SKILL-GAME-GAME-STUDIO-PROTOTYPE
+    - SKILL-GAME-GAME-STUDIO-QA-PLAN
+    - SKILL-GAME-GAME-STUDIO-QUICK-DESIGN
+    - SKILL-GAME-GAME-STUDIO-RELEASE-CHECKLIST
+    - SKILL-GAME-GAME-STUDIO-REVIEW-ALL-GDDS
+    - SKILL-GAME-GAME-STUDIO-SCOPE-CHECK
+    - SKILL-GAME-GAME-STUDIO-SPRINT-PLAN
+    - SKILL-GAME-GAME-STUDIO-START
+    - SKILL-GAME-GAME-STUDIO-TEAM-COMBAT
+    - SKILL-GAME-GAME-STUDIO-TEAM-LEVEL
+    - SKILL-GAME-GAME-STUDIO-TEAM-LIVE-OPS
+  - skill_id: SKILL-GAME-GAME-STUDIO-ARCHITECTURE-DECISION
+    name: game-studio-architecture-decision
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-ARCHITECTURE-REVIEW
+    name: game-studio-architecture-review
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-ARCHITECTURE-REVIEW
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-BALANCE-CHECK
+    name: game-studio-balance-check
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-BALANCE-CHECK
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-BRAINSTORM
+    name: game-studio-brainstorm
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-BUG-REPORT
+    name: game-studio-bug-report
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-CREATE-ARCHITECTURE
+    name: game-studio-create-architecture
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-CREATE-EPICS
+    name: game-studio-create-epics
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-CREATE-STORIES
+    name: game-studio-create-stories
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-DESIGN-REVIEW
+    name: game-studio-design-review
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+    - SKILL-GEN-DESIGN-REVIEW
+  - skill_id: SKILL-GAME-GAME-STUDIO-DESIGN-SYSTEM
+    name: game-studio-design-system
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-HELP
+    name: game-studio-help
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-LOCALIZE
+    name: game-studio-localize
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-MAP-SYSTEMS
+    name: game-studio-map-systems
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-PROJECT-STAGE-DETECT
+    name: game-studio-project-stage-detect
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-PROTOTYPE
+    name: game-studio-prototype
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-QA-PLAN
+    name: game-studio-qa-plan
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+    - SKILL-GAME-QA-PLAN
+  - skill_id: SKILL-GAME-GAME-STUDIO-QUICK-DESIGN
+    name: game-studio-quick-design
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-RELEASE-CHECKLIST
+    name: game-studio-release-checklist
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-REVIEW-ALL-GDDS
+    name: game-studio-review-all-gdds
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-SCOPE-CHECK
+    name: game-studio-scope-check
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-SPRINT-PLAN
+    name: game-studio-sprint-plan
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-START
+    name: game-studio-start
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-TEAM-COMBAT
+    name: game-studio-team-combat
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: AGENT_WORKFLOW
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-TEAM-LEVEL
+    name: game-studio-team-level
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: AGENT_WORKFLOW
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GAME-STUDIO-TEAM-LIVE-OPS
+    name: game-studio-team-live-ops
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: AGENT_WORKFLOW
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO
+  - skill_id: SKILL-GAME-GODOT-CLASS-NAME-CHECKER
+    name: godot-class-name-checker
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: TOOL_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-GODOT-CLEAR-CHILDREN
+    name: godot-clear-children
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-GAME-GODOT-CODING-PATTERNS
+    - SKILL-GAME-GODOT-GDSCRIPT-GRAMMAR
+    - SKILL-GAME-GODOT-GLOBAL-VARIABLES
+    - SKILL-GAME-GODOT-KB
+    - SKILL-GAME-GODOT-KNOWLEDGE
+    - SKILL-GAME-GODOT-PACKEDSCENE
+    - SKILL-GAME-GODOT-SCENE-SKILL
+    - SKILL-GAME-GODOT-SERIALIZATION-PATTERN
+    - SKILL-GAME-GODOT-SINGLETON-PATTERN
+    - SKILL-GAME-GODOT-TSCN-FORMAT
+    - SKILL-GAME-GODOT-UNIX-TIMESTAMP-FIX
+  - skill_id: SKILL-GAME-GODOT-CODING-PATTERNS
+    name: godot-coding-patterns
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-GAME-GODOT-CLEAR-CHILDREN
+    - SKILL-GAME-GODOT-GDSCRIPT-GRAMMAR
+    - SKILL-GAME-GODOT-GLOBAL-VARIABLES
+    - SKILL-GAME-GODOT-KB
+    - SKILL-GAME-GODOT-KNOWLEDGE
+    - SKILL-GAME-GODOT-PACKEDSCENE
+    - SKILL-GAME-GODOT-SCENE-SKILL
+    - SKILL-GAME-GODOT-SERIALIZATION-PATTERN
+    - SKILL-GAME-GODOT-SINGLETON-PATTERN
+    - SKILL-GAME-GODOT-TSCN-FORMAT
+    - SKILL-GAME-GODOT-UNIX-TIMESTAMP-FIX
+  - skill_id: SKILL-GAME-GODOT-CONSOLE
+    name: godot-console
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: TOOL_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-GODOT-GDSCRIPT-GRAMMAR
+    name: godot-gdscript-grammar
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-GAME-GODOT-CLEAR-CHILDREN
+    - SKILL-GAME-GODOT-CODING-PATTERNS
+    - SKILL-GAME-GODOT-GLOBAL-VARIABLES
+    - SKILL-GAME-GODOT-KB
+    - SKILL-GAME-GODOT-KNOWLEDGE
+    - SKILL-GAME-GODOT-PACKEDSCENE
+    - SKILL-GAME-GODOT-SCENE-SKILL
+    - SKILL-GAME-GODOT-SERIALIZATION-PATTERN
+    - SKILL-GAME-GODOT-SINGLETON-PATTERN
+    - SKILL-GAME-GODOT-TSCN-FORMAT
+    - SKILL-GAME-GODOT-UNIX-TIMESTAMP-FIX
+  - skill_id: SKILL-GAME-GODOT-GLOBAL-VARIABLES
+    name: godot-global-variables
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-GAME-GODOT-CLEAR-CHILDREN
+    - SKILL-GAME-GODOT-CODING-PATTERNS
+    - SKILL-GAME-GODOT-GDSCRIPT-GRAMMAR
+    - SKILL-GAME-GODOT-KB
+    - SKILL-GAME-GODOT-KNOWLEDGE
+    - SKILL-GAME-GODOT-PACKEDSCENE
+    - SKILL-GAME-GODOT-SCENE-SKILL
+    - SKILL-GAME-GODOT-SERIALIZATION-PATTERN
+    - SKILL-GAME-GODOT-SINGLETON-PATTERN
+    - SKILL-GAME-GODOT-TSCN-FORMAT
+    - SKILL-GAME-GODOT-UNIX-TIMESTAMP-FIX
+  - skill_id: SKILL-GAME-GODOT-KB
+    name: godot-kb
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GAME-GODOT-CLEAR-CHILDREN
+    - SKILL-GAME-GODOT-CODING-PATTERNS
+    - SKILL-GAME-GODOT-GDSCRIPT-GRAMMAR
+    - SKILL-GAME-GODOT-GLOBAL-VARIABLES
+    - SKILL-GAME-GODOT-KNOWLEDGE
+    - SKILL-GAME-GODOT-PACKEDSCENE
+    - SKILL-GAME-GODOT-SCENE-SKILL
+    - SKILL-GAME-GODOT-SERIALIZATION-PATTERN
+    - SKILL-GAME-GODOT-SINGLETON-PATTERN
+    - SKILL-GAME-GODOT-TSCN-FORMAT
+    - SKILL-GAME-GODOT-UNIX-TIMESTAMP-FIX
+  - skill_id: SKILL-GAME-GODOT-KNOWLEDGE
+    name: godot-knowledge
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-GAME-GODOT-CLEAR-CHILDREN
+    - SKILL-GAME-GODOT-CODING-PATTERNS
+    - SKILL-GAME-GODOT-GDSCRIPT-GRAMMAR
+    - SKILL-GAME-GODOT-GLOBAL-VARIABLES
+    - SKILL-GAME-GODOT-KB
+    - SKILL-GAME-GODOT-PACKEDSCENE
+    - SKILL-GAME-GODOT-SCENE-SKILL
+    - SKILL-GAME-GODOT-SERIALIZATION-PATTERN
+    - SKILL-GAME-GODOT-SINGLETON-PATTERN
+    - SKILL-GAME-GODOT-TSCN-FORMAT
+    - SKILL-GAME-GODOT-UNIX-TIMESTAMP-FIX
+  - skill_id: SKILL-GAME-GODOT-PACKEDSCENE
+    name: godot-packedscene
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-GAME-GODOT-CLEAR-CHILDREN
+    - SKILL-GAME-GODOT-CODING-PATTERNS
+    - SKILL-GAME-GODOT-GDSCRIPT-GRAMMAR
+    - SKILL-GAME-GODOT-GLOBAL-VARIABLES
+    - SKILL-GAME-GODOT-KB
+    - SKILL-GAME-GODOT-KNOWLEDGE
+    - SKILL-GAME-GODOT-SCENE-SKILL
+    - SKILL-GAME-GODOT-SERIALIZATION-PATTERN
+    - SKILL-GAME-GODOT-SINGLETON-PATTERN
+    - SKILL-GAME-GODOT-TSCN-FORMAT
+    - SKILL-GAME-GODOT-UNIX-TIMESTAMP-FIX
+  - skill_id: SKILL-GAME-GODOT-SCENE-SKILL
+    name: godot-scene-skill
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-GAME-GODOT-CLEAR-CHILDREN
+    - SKILL-GAME-GODOT-CODING-PATTERNS
+    - SKILL-GAME-GODOT-GDSCRIPT-GRAMMAR
+    - SKILL-GAME-GODOT-GLOBAL-VARIABLES
+    - SKILL-GAME-GODOT-KB
+    - SKILL-GAME-GODOT-KNOWLEDGE
+    - SKILL-GAME-GODOT-PACKEDSCENE
+    - SKILL-GAME-GODOT-SERIALIZATION-PATTERN
+    - SKILL-GAME-GODOT-SINGLETON-PATTERN
+    - SKILL-GAME-GODOT-TSCN-FORMAT
+    - SKILL-GAME-GODOT-UNIX-TIMESTAMP-FIX
+  - skill_id: SKILL-GAME-GODOT-SERIALIZATION-PATTERN
+    name: godot-serialization-pattern
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-GAME-GODOT-CLEAR-CHILDREN
+    - SKILL-GAME-GODOT-CODING-PATTERNS
+    - SKILL-GAME-GODOT-GDSCRIPT-GRAMMAR
+    - SKILL-GAME-GODOT-GLOBAL-VARIABLES
+    - SKILL-GAME-GODOT-KB
+    - SKILL-GAME-GODOT-KNOWLEDGE
+    - SKILL-GAME-GODOT-PACKEDSCENE
+    - SKILL-GAME-GODOT-SCENE-SKILL
+    - SKILL-GAME-GODOT-SINGLETON-PATTERN
+    - SKILL-GAME-GODOT-TSCN-FORMAT
+    - SKILL-GAME-GODOT-UNIX-TIMESTAMP-FIX
+  - skill_id: SKILL-GAME-GODOT-SINGLETON-PATTERN
+    name: godot-singleton-pattern
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-GAME-GODOT-CLEAR-CHILDREN
+    - SKILL-GAME-GODOT-CODING-PATTERNS
+    - SKILL-GAME-GODOT-GDSCRIPT-GRAMMAR
+    - SKILL-GAME-GODOT-GLOBAL-VARIABLES
+    - SKILL-GAME-GODOT-KB
+    - SKILL-GAME-GODOT-KNOWLEDGE
+    - SKILL-GAME-GODOT-PACKEDSCENE
+    - SKILL-GAME-GODOT-SCENE-SKILL
+    - SKILL-GAME-GODOT-SERIALIZATION-PATTERN
+    - SKILL-GAME-GODOT-TSCN-FORMAT
+    - SKILL-GAME-GODOT-UNIX-TIMESTAMP-FIX
+  - skill_id: SKILL-GAME-GODOT-TSCN-FORMAT
+    name: godot-tscn-format
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-GAME-GODOT-CLEAR-CHILDREN
+    - SKILL-GAME-GODOT-CODING-PATTERNS
+    - SKILL-GAME-GODOT-GDSCRIPT-GRAMMAR
+    - SKILL-GAME-GODOT-GLOBAL-VARIABLES
+    - SKILL-GAME-GODOT-KB
+    - SKILL-GAME-GODOT-KNOWLEDGE
+    - SKILL-GAME-GODOT-PACKEDSCENE
+    - SKILL-GAME-GODOT-SCENE-SKILL
+    - SKILL-GAME-GODOT-SERIALIZATION-PATTERN
+    - SKILL-GAME-GODOT-SINGLETON-PATTERN
+    - SKILL-GAME-GODOT-UNIX-TIMESTAMP-FIX
+  - skill_id: SKILL-GAME-GODOT-UNIX-TIMESTAMP-FIX
+    name: godot-unix-timestamp-fix
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-GAME-GODOT-CLEAR-CHILDREN
+    - SKILL-GAME-GODOT-CODING-PATTERNS
+    - SKILL-GAME-GODOT-GDSCRIPT-GRAMMAR
+    - SKILL-GAME-GODOT-GLOBAL-VARIABLES
+    - SKILL-GAME-GODOT-KB
+    - SKILL-GAME-GODOT-KNOWLEDGE
+    - SKILL-GAME-GODOT-PACKEDSCENE
+    - SKILL-GAME-GODOT-SCENE-SKILL
+    - SKILL-GAME-GODOT-SERIALIZATION-PATTERN
+    - SKILL-GAME-GODOT-SINGLETON-PATTERN
+    - SKILL-GAME-GODOT-TSCN-FORMAT
+  - skill_id: SKILL-GAME-HERMES-S6-CONTAINER-SUPERVISION
+    name: hermes-s6-container-supervision
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GAME-HOTFIX
+    name: hotfix
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-HYPERLIQUID
+    name: hyperliquid
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GAME-LAUNCH-CHECKLIST
+    name: launch-checklist
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-LLAVA
+    name: llava
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GAME-MINECRAFT-MODPACK-SERVER
+    name: minecraft-modpack-server
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GAME-NODE-INSPECT-DEBUGGER
+    name: node-inspect-debugger
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: TOOL_WRAPPER
+    source: hermes_user_installed
+    related_skills: []
+  - skill_id: SKILL-GAME-NOVEL-MIGRATE
+    name: novel-migrate
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GAME-PIXEL-ART
+    name: pixel-art
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GAME-PLAYTEST-REPORT
+    name: playtest-report
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-POKEMON-PLAYER
+    name: pokemon-player
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GAME-POLYMARKET
+    name: polymarket
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GAME-PYTHON-DEBUGPY
+    name: python-debugpy
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills: []
+  - skill_id: SKILL-GAME-QA-PLAN
+    name: qa-plan
+    action: MERGE_CANDIDATE
+    reason: 与关联技能职责高度重叠（见 SKILL_OVERLAP_REPORT）——仅标记，不合并
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO-QA-PLAN
+  - skill_id: SKILL-GAME-REGRESSION-SUITE
+    name: regression-suite
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-REST-GRAPHQL-DEBUG
+    name: rest-graphql-debug
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GAME-SECURITY-AUDIT
+    name: security-audit
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-SETUP-ENGINE
+    name: setup-engine
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-SMOKE-CHECK
+    name: smoke-check
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-SPRINT-STATUS
+    name: sprint-status
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-STOCKS
+    name: stocks
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GAME-STORY-DONE
+    name: story-done
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-STUDIO-ROLES
+    name: studio-roles
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: AGENT_WORKFLOW
+    source: hermes_user_installed
+    related_skills: []
+  - skill_id: SKILL-GAME-SYSTEMATIC-DEBUGGING
+    name: systematic-debugging
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills: []
+  - skill_id: SKILL-GAME-TEST-EVIDENCE-REVIEW
+    name: test-evidence-review
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-TEST-FLAKINESS
+    name: test-flakiness
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-TEST-SETUP
+    name: test-setup
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-UX-DESIGN
+    name: ux-design
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-UX-REVIEW
+    name: ux-review
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GAME-VERTICAL-SLICE
+    name: vertical-slice
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GEN-1PASSWORD
+    name: 1password
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-3-STATEMENT-MODEL
+    name: 3-statement-model
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-AI-ENGINEERING-LIBRARY
+    name: ai-engineering-library
+    action: KEEP
+    reason: 项目专属，不泛化
+    category: PROJECT_SPECIFIC
+    source: hermes_user_installed
+    related_skills: []
+  - skill_id: SKILL-GEN-AI-PRESENTER-VIDEO
+    name: ai-presenter-video
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-AIRTABLE
+    name: airtable
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-ANTIGRAVITY-CLI
+    name: antigravity-cli
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-ANYSEARCH
+    name: anysearch
+    action: MERGE_CANDIDATE
+    reason: 与关联技能职责高度重叠（见 SKILL_OVERLAP_REPORT）——仅标记，不合并
+    category: TOOL_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-AUTO-DUCKDUCKGO-SEARCH
+    - SKILL-GEN-SEARXNG-SEARCH
+    - SKILL-GEN-TAVILY-SEARCH
+  - skill_id: SKILL-GEN-API-GATEWAY
+    name: api-gateway
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: TOOL_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GEN-APPLE-NOTES
+    name: apple-notes
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-ARCHIFY
+    name: archify
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-ARCHITECTURE-DIAGRAM
+    name: architecture-diagram
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills: []
+  - skill_id: SKILL-GEN-ARXIV
+    name: arxiv
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: TOOL_WRAPPER
+    source: hermes_user_installed
+    related_skills: []
+  - skill_id: SKILL-GEN-ASCII-ART
+    name: ascii-art
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-ASCII-VIDEO
+    name: ascii-video
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-AST-GREP
+    name: ast-grep
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-AUDIOCRAFT-AUDIO-GENERATION
+    name: audiocraft-audio-generation
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-AWESOME-NOVEL
+    name: awesome-novel
+    action: MERGE_CANDIDATE
+    reason: 与关联技能职责高度重叠（见 SKILL_OVERLAP_REPORT）——仅标记，不合并
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-BAOYU-ARTICLE-ILLUSTRATOR
+    name: baoyu-article-illustrator
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-BAOYU-COMIC
+    name: baoyu-comic
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-BAOYU-INFOGRAPHIC
+    name: baoyu-infographic
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-BIOINFORMATICS
+    name: bioinformatics
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: META_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-BLACKBOX
+    name: blackbox
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: AGENT_WORKFLOW
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-BLOCKED-PAGE-RECOVERY
+    name: blocked-page-recovery
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-BOX
+    name: box
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-CANVAS
+    name: canvas
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-CHAPTER-REFERENCE
+    name: chapter-reference
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-CLAUDE-CODE
+    name: claude-code
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: AGENT_WORKFLOW
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-CN-MARKET-DATA-FAILOVER
+    name: cn-market-data-failover
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills: []
+  - skill_id: SKILL-GEN-CODE-REVIEW
+    name: code-review
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GEN-CODE-WIKI
+    name: code-wiki
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-CODEBASE-INSPECTION
+    name: codebase-inspection
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-CODEBASE-MAPPING
+    name: codebase-mapping
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills: []
+  - skill_id: SKILL-GEN-CODEX
+    name: codex
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: AGENT_WORKFLOW
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-COMFYUI
+    name: comfyui
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-COMPS-ANALYSIS
+    name: comps-analysis
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-COMPUTER-USE
+    name: computer-use
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-CONCEPT-DIAGRAMS
+    name: concept-diagrams
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-CREATIVE-IDEATION
+    name: creative-ideation
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-DCF-MODEL
+    name: dcf-model
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-DECISION-QUESTIONNAIRE
+    name: decision-questionnaire
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-DESIGN-MD
+    name: design-md
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-DESIGN-REVIEW
+    name: design-review
+    action: MERGE_CANDIDATE
+    reason: 与关联技能职责高度重叠（见 SKILL_OVERLAP_REPORT）——仅标记，不合并
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-GAME-GAME-STUDIO-DESIGN-REVIEW
+  - skill_id: SKILL-GEN-DETECT-LOOP
+    name: detect-loop
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-DOCUMENT-TO-ACTION-ITEMS
+    name: document-to-action-items
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-DOCX
+    name: docx
+    action: CONVERT_TO_CAPABILITY
+    reason: 单一稳定能力接口——适合映射 Capability Registry（提案，不自动创建）
+    category: CAPABILITY_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-DOMAIN-INTEL
+    name: domain-intel
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-DRAW-YOUR-FONT
+    name: draw-your-font
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-DREAM-LOOP
+    name: dream-loop
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-DRUG-DISCOVERY
+    name: drug-discovery
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-DYNAMIC-WORKFLOW
+    name: dynamic-workflow
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: AGENT_WORKFLOW
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-EXCALIDRAW
+    name: excalidraw
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-EXCEL-AUTHOR
+    name: excel-author
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-FASTAPI
+    name: fastapi
+    action: REVIEW_REQUIRED
+    reason: 第三方依赖自带技能，非个人资产——建议 EXCLUDE 出治理范围（待裁定）
+    category: KNOWLEDGE_WRAPPER
+    source: third_party_dependency
+    related_skills: []
+  - skill_id: SKILL-GEN-FIND-SKILL-SKILLHUB
+    name: find-skill-skillhub
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: META_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GEN-FINDMY
+    name: findmy
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-FITNESS-NUTRITION
+    name: fitness-nutrition
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-GIF-SEARCH
+    name: gif-search
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-GIT-ESSENTIALS
+    name: git-essentials
+    action: MERGE_CANDIDATE
+    reason: 与关联技能职责高度重叠（见 SKILL_OVERLAP_REPORT）——仅标记，不合并
+    category: KNOWLEDGE_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-GEN-GIT-HELPER
+  - skill_id: SKILL-GEN-GIT-HELPER
+    name: git-helper
+    action: MERGE_CANDIDATE
+    reason: 与关联技能职责高度重叠（见 SKILL_OVERLAP_REPORT）——仅标记，不合并
+    category: TOOL_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-GEN-GIT-ESSENTIALS
+  - skill_id: SKILL-GEN-GITHUB
+    name: github
+    action: MERGE_CANDIDATE
+    reason: 与关联技能职责高度重叠（见 SKILL_OVERLAP_REPORT）——仅标记，不合并
+    category: TOOL_WRAPPER
+    source: hermes_bundled_core
+    related_skills:
+    - SKILL-GEN-GITHUB-2
+  - skill_id: SKILL-GEN-GITHUB-2
+    name: github
+    action: MERGE_CANDIDATE
+    reason: 与关联技能职责高度重叠（见 SKILL_OVERLAP_REPORT）——仅标记，不合并
+    category: TOOL_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-GEN-GITHUB
+  - skill_id: SKILL-GEN-GITNEXUS-EXPLORER
+    name: gitnexus-explorer
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-GRILL-ME
+    name: grill-me
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-GROK
+    name: grok
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: AGENT_WORKFLOW
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-GROUNDED-CITATIONS
+    name: grounded-citations
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-HAR-DERIVED-API-CLIENT
+    name: har-derived-api-client
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-HEARTMULA
+    name: heartmula
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-HUGGINGFACE-HUB
+    name: huggingface-hub
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-HUMANIZER
+    name: humanizer
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills: []
+  - skill_id: SKILL-GEN-HYPERFRAMES
+    name: hyperframes
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-IMESSAGE
+    name: imessage
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-IMPL-DESIGN
+    name: impl-design
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GEN-INCREMENTAL-IMPLEMENTATION
+    name: incremental-implementation
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GEN-INSIGHT-REGISTRY
+    name: insight-registry
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: META_SKILL
+    source: hermes_user_installed
+    related_skills: []
+  - skill_id: SKILL-GEN-IP-AS-LOGO
+    name: ip-as-logo
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-JUPYTER-NOTEBOOK
+    name: jupyter-notebook
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-LBO-MODEL
+    name: lbo-model
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-LIVE-DASHBOARD
+    name: live-dashboard
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-MANIM-VIDEO
+    name: manim-video
+    action: CONVERT_TO_CAPABILITY
+    reason: 单一稳定能力接口——适合映射 Capability Registry（提案，不自动创建）
+    category: CAPABILITY_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-MAPS
+    name: maps
+    action: CONVERT_TO_CAPABILITY
+    reason: 单一稳定能力接口——适合映射 Capability Registry（提案，不自动创建）
+    category: CAPABILITY_WRAPPER
+    source: hermes_user_installed
+    related_skills: []
+  - skill_id: SKILL-GEN-MEME-GENERATION
+    name: meme-generation
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-MEMENTO-FLASHCARDS
+    name: memento-flashcards
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-MEMORY-RECORDING
+    name: memory-recording
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-MERGER-MODEL
+    name: merger-model
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-MONO-COLOR
+    name: mono-color
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-NOTION
+    name: notion
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-NOVEL-ARCHIVE
+    name: novel-archive
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-NOVEL-BODY-VERIFY
+    name: novel-body-verify
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-NOVEL-CHAPTER
+    name: novel-chapter
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-NOVEL-OUTLINE
+    name: novel-outline
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-NOVEL-PROOFREAD
+    name: novel-proofread
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-NOVEL-REVIEW
+    name: novel-review
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-NOVEL-SETUP
+    name: novel-setup
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-NOVEL-WRITE
+    name: novel-write
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-NOVEL-WRITING
+    name: novel-writing
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-AI-NOVEL-DISPATCH
+    - SKILL-AI-NOVEL-PROMPT
+    - SKILL-AI-NOVEL-PROMPT-VERIFY
+    - SKILL-AI-PROMPT-AUDIT
+    - SKILL-AI-SHORT-CRAFT-PROMPT
+    - SKILL-AI-STYLE-DISTILL
+    - SKILL-GAME-NOVEL-MIGRATE
+    - SKILL-GEN-AWESOME-NOVEL
+    - SKILL-GEN-CHAPTER-REFERENCE
+    - SKILL-GEN-DETECT-LOOP
+    - SKILL-GEN-MEMORY-RECORDING
+    - SKILL-GEN-NOVEL-ARCHIVE
+    - SKILL-GEN-NOVEL-BODY-VERIFY
+    - SKILL-GEN-NOVEL-CHAPTER
+    - SKILL-GEN-NOVEL-OUTLINE
+    - SKILL-GEN-NOVEL-PROOFREAD
+    - SKILL-GEN-NOVEL-REVIEW
+    - SKILL-GEN-NOVEL-SETUP
+    - SKILL-GEN-NOVEL-WRITE
+    - SKILL-GEN-ROLEPLAY-SANDBOX
+    - SKILL-GEN-SHORT-ANALYZE
+    - SKILL-GEN-SHORT-AUDIT
+    - SKILL-GEN-SHORT-PLAN
+    - SKILL-GEN-SHORT-POLISH
+    - SKILL-GEN-SHORT-SCAN
+    - SKILL-GEN-SHORT-VERIFY
+    - SKILL-GEN-SHORT-WRITE
+    - SKILL-GEN-UPDATER-ARCHIVE
+    - SKILL-GEN-UPDATER-ROLLBACK
+    - SKILL-GEN-UPDATER-SETTING
+    - SKILL-GEN-VOLUME-ARC
+    - SKILL-GEN-VOLUME-DIRECTION
+    - SKILL-GEN-VOLUME-WRITING
+  - skill_id: SKILL-GEN-OBSIDIAN
+    name: obsidian
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-ONE-THREE-ONE-RULE
+    name: one-three-one-rule
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-OPENCODE
+    name: opencode
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: AGENT_WORKFLOW
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-OPENHUE
+    name: openhue
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-OSINT-INVESTIGATION
+    name: osint-investigation
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-OSS-FORENSICS
+    name: oss-forensics
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-P5JS
+    name: p5js
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-PDF
+    name: pdf
+    action: CONVERT_TO_CAPABILITY
+    reason: 单一稳定能力接口——适合映射 Capability Registry（提案，不自动创建）
+    category: CAPABILITY_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-PERF-PROFILE
+    name: perf-profile
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GEN-PLANNING-AND-TASK-BREAKDOWN
+    name: planning-and-task-breakdown
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GEN-POPULAR-WEB-DESIGNS
+    name: popular-web-designs
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-POWERPOINT
+    name: powerpoint
+    action: CONVERT_TO_CAPABILITY
+    reason: 单一稳定能力接口——适合映射 Capability Registry（提案，不自动创建）
+    category: CAPABILITY_WRAPPER
+    source: hermes_user_installed
+    related_skills: []
+  - skill_id: SKILL-GEN-PPTX-AUTHOR
+    name: pptx-author
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-PR-LENS
+    name: pr-lens
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-PRETEXT
+    name: pretext
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-PROPERTY-LISTINGS
+    name: property-listings
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-QMD
+    name: qmd
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-REDDIT-READING
+    name: reddit-reading
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-REQUESTING-CODE-REVIEW
+    name: requesting-code-review
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills: []
+  - skill_id: SKILL-GEN-RESEARCH-PAPER-WRITING
+    name: research-paper-writing
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-ROLEPLAY-SANDBOX
+    name: roleplay-sandbox
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-RULES-KNOWLEDGE-BASE
+    name: rules-knowledge-base
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills: []
+  - skill_id: SKILL-GEN-SCROLLCRAFT
+    name: scrollcraft
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-SDLC-REVIEW
+    name: sdlc-review
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-SEARXNG-SEARCH
+    name: searxng-search
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills:
+    - SKILL-AUTO-DUCKDUCKGO-SEARCH
+    - SKILL-GEN-ANYSEARCH
+    - SKILL-GEN-TAVILY-SEARCH
+  - skill_id: SKILL-GEN-SECURITY-AND-HARDENING
+    name: security-and-hardening
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GEN-SEGMENT-ANYTHING-MODEL
+    name: segment-anything-model
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-SETUP-WIZARD-GENERATOR
+    name: setup-wizard-generator
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-SHERLOCK
+    name: sherlock
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-SHOP
+    name: shop
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-SHOPIFY
+    name: shopify
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-SHORT-ANALYZE
+    name: short-analyze
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-SHORT-AUDIT
+    name: short-audit
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-SHORT-PLAN
+    name: short-plan
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-SHORT-POLISH
+    name: short-polish
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-SHORT-SCAN
+    name: short-scan
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: TOOL_WRAPPER
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-SHORT-VERIFY
+    name: short-verify
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-SHORT-WRITE
+    name: short-write
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-SIMPLE-ENGLISH
+    name: simple-english
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-SIYUAN
+    name: siyuan
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-SKETCH
+    name: sketch
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-SOAK-TEST
+    name: soak-test
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GEN-SOLANA
+    name: solana
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-SPEC-DRIVEN-DEVELOPMENT
+    name: spec-driven-development
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GEN-SPIKE
+    name: spike
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills: []
+  - skill_id: SKILL-GEN-STRIPE-PROJECTS
+    name: stripe-projects
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-TAVILY-SEARCH
+    name: tavily-search
+    action: MERGE_CANDIDATE
+    reason: 与关联技能职责高度重叠（见 SKILL_OVERLAP_REPORT）——仅标记，不合并
+    category: TOOL_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-AUTO-DUCKDUCKGO-SEARCH
+    - SKILL-GEN-ANYSEARCH
+    - SKILL-GEN-SEARXNG-SEARCH
+  - skill_id: SKILL-GEN-TEAM-AUDIO
+    name: team-audio
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GEN-TECH-DEBT
+    name: tech-debt
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GEN-TELEPHONY
+    name: telephony
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-TENCENT-CLOUD-COS
+    name: tencent-cloud-cos
+    action: REVIEW_REQUIRED
+    reason: 绑定 OpenClaw 运行时——需移植验证或归档裁定
+    category: TOOL_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GEN-TENCENT-DOCS
+    name: tencent-docs
+    action: MERGE_CANDIDATE
+    reason: 与关联技能职责高度重叠（见 SKILL_OVERLAP_REPORT）——仅标记，不合并
+    category: TOOL_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-GEN-TENCENT-DOCS-2
+  - skill_id: SKILL-GEN-TENCENT-DOCS-2
+    name: tencent-docs
+    action: MERGE_CANDIDATE
+    reason: 与关联技能职责高度重叠（见 SKILL_OVERLAP_REPORT）——仅标记，不合并
+    category: TOOL_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills:
+    - SKILL-GEN-TENCENT-DOCS
+  - skill_id: SKILL-GEN-TEST-DRIVEN-DEVELOPMENT
+    name: test-driven-development
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills: []
+  - skill_id: SKILL-GEN-TEST-HELPERS
+    name: test-helpers
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GEN-TYPER
+    name: typer
+    action: REVIEW_REQUIRED
+    reason: 第三方依赖自带技能，非个人资产——建议 EXCLUDE 出治理范围（待裁定）
+    category: KNOWLEDGE_WRAPPER
+    source: third_party_dependency
+    related_skills: []
+  - skill_id: SKILL-GEN-UNBROKER
+    name: unbroker
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-UPDATER-ARCHIVE
+    name: updater-archive
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-UPDATER-ROLLBACK
+    name: updater-rollback
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-UPDATER-SETTING
+    name: updater-setting
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-VOLUME-ARC
+    name: volume-arc
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-VOLUME-DIRECTION
+    name: volume-direction
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-VOLUME-WRITING
+    name: volume-writing
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: WORKFLOW_SKILL
+    source: hermes_user_installed
+    related_skills:
+    - SKILL-GEN-NOVEL-WRITING
+  - skill_id: SKILL-GEN-WEB-PENTEST
+    name: web-pentest
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-WEB-TOOLS-GUIDE
+    name: web-tools-guide
+    action: CONVERT_TO_KNOWLEDGE
+    reason: 主体为知识/参考内容——知识应迁 Phase 4，Skill 保留薄路由层
+    category: KNOWLEDGE_WRAPPER
+    source: legacy_openclaw_workspace
+    related_skills: []
+  - skill_id: SKILL-GEN-WEEKLY-REVIEW-PLANNING
+    name: weekly-review-planning
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-WEIGHTS-AND-BIASES
+    name: weights-and-biases
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
+  - skill_id: SKILL-GEN-WEIXINPAY-PAY
+    name: weixinpay-pay
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: TOOL_WRAPPER
+    source: hermes_plugin
+    related_skills: []
+  - skill_id: SKILL-GEN-WEIXINPAY-REGISTER
+    name: weixinpay-register
+    action: KEEP+OPTIMIZE
+    reason: 个人资产，但缺验证/输出声明或触发描述弱或知识混入（见 SKILL_OPTIMIZATION_REPORT）
+    category: TOOL_WRAPPER
+    source: hermes_plugin
+    related_skills: []
+  - skill_id: SKILL-GEN-XLSX
+    name: xlsx
+    action: CONVERT_TO_CAPABILITY
+    reason: 单一稳定能力接口——适合映射 Capability Registry（提案，不自动创建）
+    category: CAPABILITY_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-XURL
+    name: xurl
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-YOUTUBE-CONTENT
+    name: youtube-content
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: WORKFLOW_SKILL
+    source: hermes_bundled_core
+    related_skills: []
+  - skill_id: SKILL-GEN-YUANBAO
+    name: yuanbao
+    action: KEEP
+    reason: 当前定位清晰，直接注册
+    category: TOOL_WRAPPER
+    source: hermes_bundled_optional
+    related_skills: []
