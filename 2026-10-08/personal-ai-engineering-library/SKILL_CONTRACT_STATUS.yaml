@@ -1,0 +1,319 @@
+status:
+  stage: Skill Registry Quality & Contract Completeness Audit（READ→ANALYZE→CLASSIFY→REPORT）
+  date: '2026-10-08'
+  mode: READ-ONLY
+  note: 仅新增本文件与 SKILL_CONTRACT_AUDIT.md；既有交付物零修改
+1_total_logical_skills: 358
+2_level_required_distribution:
+  L1: 59
+  L2: 181
+  L3: 118
+3_contract_completeness:
+  level_current:
+    L0: 1
+    L1: 357
+    L2: 0
+    L3: 0
+  gap:
+    'true': 299
+    'false': 59
+  field_fill_pct:
+    L1_required: 100.0
+    L2_required: 47.4
+    L3_required: 42.7
+4_knowledge_leakage:
+  count: 79
+  definition: KNOWLEDGE_WRAPPER 或正文知识堆料(knowledge_heavy)
+  disposition: 仅标记 CONVERT_TO_KNOWLEDGE 候选；知识迁移须走 Phase 4 分批审批
+  ids_sample:
+  - SKILL-GEN-NOVEL-ARCHIVE
+  - SKILL-GEN-CHAPTER-REFERENCE
+  - SKILL-GAME-NOVEL-MIGRATE
+  - SKILL-GEN-NOVEL-PROOFREAD
+  - SKILL-GEN-UPDATER-ARCHIVE
+  - SKILL-GEN-ARXIV
+  - SKILL-GAME-GAME-DEV-LESSONS
+  - SKILL-GAME-GAME-STUDIO-ARCHITECTURE-REVIEW
+  - SKILL-GAME-GAME-STUDIO-CREATE-ARCHITECTURE
+  - SKILL-GAME-GAME-STUDIO-LOCALIZE
+  - SKILL-GAME-GAME-STUDIO-REVIEW-ALL-GDDS
+  - SKILL-GAME-GODOT-KB
+5_capability_leakage:
+  count: 11
+  flag: POTENTIAL_CAPABILITY
+  items:
+  - maps
+  - powerpoint
+  - evm
+  - solana
+  - huggingface-tokenizers
+  - whisper
+  - manim-video
+  - himalaya
+  - docx
+  - pdf
+  - xlsx
+  disposition: 不得自动创建 Capability
+6_agent_coupling:
+  count: 9
+  items:
+  - skill: detect-loop
+    tokens:
+    - novel-agent
+  - skill: memory-recording
+    tokens:
+    - novel-agent
+  - skill: novel-dispatch
+    tokens:
+    - novel-agent
+  - skill: roleplay-sandbox
+    tokens:
+    - novel-agent
+  - skill: style-distill
+    tokens:
+    - novel-agent
+  - skill: updater-archive
+    tokens:
+    - novel-agent
+  - skill: updater-rollback
+    tokens:
+    - novel-agent
+  - skill: updater-setting
+    tokens:
+    - novel-agent
+  - skill: volume-writing
+    tokens:
+    - novel-agent
+  note: 全部为硬编码 novel-agent 名称；角色名引用（game-studio team roles）属 Phase 7 角色结构，不算实例耦合
+7_runtime_coupling:
+  real_issues_openclaw_required:
+    count: 12
+    ids:
+    - SKILL-AI-CONTEXT-ENGINEERING
+    - SKILL-GEN-GIT-HELPER
+    - SKILL-GEN-TENCENT-DOCS
+    - SKILL-GEN-AWESOME-NOVEL
+    - SKILL-AUTO-PYTHON-WEB-SCRAPER
+    - SKILL-GEN-WEB-TOOLS-GUIDE
+    - SKILL-GEN-TAVILY-SEARCH
+    - SKILL-AUTO-TENCENTCLOUD-LIGHTHOUSE-SKILL
+    - SKILL-AI-SELF-IMPROVING-AGENT-3
+    - SKILL-GEN-TENCENT-CLOUD-COS
+    - SKILL-AI-TENCENT-MEETING-MCP
+    - SKILL-GEN-TENCENT-DOCS-2
+  llm_hard_requirement:
+    count: 1
+    items:
+    - - SKILL-GEN-CLAUDE-CODE
+      - - - REQUIRES
+          - ''
+          - Claude Code
+    verdict: claude-code 委派目标即该 CLI，属技能主题本身，不算违规
+  reasonable_implementation_context:
+    count: 219
+    verdict: 上游/用户技能正文提及 Hermes 属合理 implementation detail，不判违规
+8_broken_dependencies:
+  skill_to_skill:
+    declared: 0
+    cycles: 0
+    note: 依赖均未声明（not_recorded），嵌套树无环
+  broken_path:
+    count: 17
+    scope: 13 个上游技能引用本机缺失脚本
+  broken_id:
+    capability_refs_found: 0
+    knowledge_refs_found: 0
+    broken: 0
+    note: 技能从未引用库内 Capability/Knowledge ID——依赖全部未登记，故无 ID 可断
+  deprecated_dependency:
+    count: 12
+    note: OpenClaw 运行时依赖（与 runtime_coupling 同集）
+  version_mismatch:
+    count: undetermined
+    note: version_scope 缺失 321/358，无声明无法比对
+  bypass_phase_2_5_external:
+    count: 10
+    items:
+    - SKILL-GEN-WEB-TOOLS-GUIDE
+    - SKILL-GEN-TAVILY-SEARCH
+    - SKILL-AUTO-TENCENTCLOUD-LIGHTHOUSE-SKILL
+    - SKILL-AI-AGENT-BROWSER
+    - SKILL-AI-SELF-IMPROVING-AGENT-3
+    - SKILL-GEN-TENCENT-CLOUD-COS
+    - SKILL-AI-TENCENT-MEETING-MCP
+    - SKILL-GEN-FIND-SKILL-SKILLHUB
+    - SKILL-GAME-GODOT-CODING-PATTERNS(awesome-godot 提取)
+    - SKILL-GEN-POPULAR-WEB-DESIGNS(54 站点设计复刻)
+    disposition: 仅标记，外部资源评估走 Phase 2.5 管线
+  bypass_capability_interface:
+    count: 5
+    items:
+    - SKILL-GEN-AST-GREP ['install.ps1', 'install.sh']
+    - SKILL-AI-GOOGLE-MEET ['meet_bot.py', 'cli.py', '_jsonfile.py', 'process_manager.py', 'tools.py', 'audio_bridge.py', '__init__.py']
+    - SKILL-GEN-TENCENT-DOCS ['setup.sh']
+    - SKILL-GEN-AWESOME-NOVEL ['install.ps1']
+    - SKILL-GEN-TENCENT-DOCS-2 ['import_file.sh', 'ocr.js', 'aipage_pack.js', 'setup.sh']
+    disposition: 标记绑定 Implementation 嫌疑，不转换
+9_tool_wrapper_audit:
+  total: 129
+  KEEP_AS_SKILL: 101
+  POTENTIAL_CAPABILITY:
+  - evm
+  - solana
+  - huggingface-tokenizers
+  - whisper
+  - himalaya
+  POTENTIAL_KNOWLEDGE: 23
+  potential_knowledge_items:
+  - arxiv
+  - ascii-art
+  - neuroskill-bci
+  - mcporter
+  - here-now
+  - shop
+  - shopify
+  - siyuan
+  - telephony
+  - drug-discovery
+  - computer-use
+  - airtable
+  - notion
+  - llm-wiki
+  - xurl
+  - api-gateway
+  - github
+  - tencent-docs
+  - anysearch
+  - python-web-scraper
+  - agent-browser
+  - godot-class-name-checker
+  - godot-console
+  auto_conversion: NONE
+10_knowledge_wrapper_audit:
+  total: 29
+  PURE_KNOWLEDGE:
+  - impeccable
+  - songwriting-and-ai-music
+  - godot-coding-patterns
+  - playtest-report
+  - godot-knowledge
+  KNOWLEDGE_PLUS_ROUTING: 18
+  TRUE_WORKFLOW_SKILL: &id001
+  - chapter-reference
+  - flash-attention
+  - pytorch-lightning
+  - simpo
+  - git-essentials
+  - web-tools-guide
+  true_workflow_items: *id001
+  disposition: PLUS_ROUTING 保留薄 Skill（Skill→Knowledge Retrieval）；不建议删除任何 Skill
+11_merge_candidate_review:
+  total: 17
+  by_type:
+    FUNCTIONAL_OVERLAP: 8
+    COMPLEMENTARY: 4
+    EXACT_DUPLICATE: 1
+    VERSION_SPECIALIZATION: 4
+  by_recommendation:
+    NEEDS_HUMAN_REVIEW: 3
+    MERGE_OPTIONAL: 5
+    MERGE_REQUIRED: 5
+    KEEP_SEPARATE: 4
+  name_similarity_as_reason: FORBIDDEN——逐对以职责/内容证据判定，详见 SKILL_CONTRACT_AUDIT.md §9
+12_progressive_disclosure_issues:
+  registry_metadata_overweight: false
+  registry_entry_avg_bytes: 1012.9
+  registry_entry_max_bytes: 1833
+  verdict: Registry 元数据轻量（均值~1KB），合格
+  skill_md_oversized_gt40k:
+  - SKILL-GEN-NOVEL-PROOFREAD
+  - SKILL-GEN-DCF-MODEL
+  - SKILL-GEN-RESEARCH-PAPER-WRITING
+  skill_md_gt15k: 62
+  references_inline_not_lazy:
+    count: 53
+    note: 知识堆进正文而非 references/ 按需加载
+  scripts_assets_in_metadata: 0
+  no_l3_assets_at_all: 202
+13_security_risk:
+  risk_level_declared_in_registry: 0
+  risk_keywords_in_bodies: 1
+  flagged_skills: 30
+  flags:
+    credential_access: 6
+    payment_side_effect: 5
+    external_side_effect: 12
+    system_modification: 4
+    destructive: 3
+    security_sensitive: 6
+  credential_access:
+  - 1password
+  - stripe-link-cli
+  - weixinpay-pay
+  - weixinpay-register
+  - himalaya
+  - agentmail
+  disposition: 只标记；risk_level/requires_human_approval 补录属 REVIEWED 阶段动作
+14_foundation_touchpoints:
+  count: 5
+  items:
+  - id: FT-1
+    maps_to: FCP-001 T1
+    object: LIBRARY_RULES §2/§4/§11 实体与生命周期映射表无 Skill 行
+    status: FOUND_UNRESOLVED
+    action: 仅记录，待 FCP 人工批准
+  - id: FT-2
+    maps_to: FCP-001 T2
+    object: AGENT_ORCHESTRATION_SPEC §三十二 目录契约未含 14_AI_AGENTS/Skills/
+    status: FOUND_UNRESOLVED
+    action: 目录依用户指令建立；spec 未修改，待 FCP
+  - id: FT-3
+    maps_to: FCP-001 T3
+    object: EVOLUTION_RULES 演化对象/提案类型无 SKILL_*
+    status: FOUND_UNRESOLVED
+    action: Skill 演化暂无合法提案类型，待 FCP
+  - id: FT-4
+    maps_to: FCP-001 T4(可选)
+    object: RETRIEVAL_DECISION_SPEC §五 检索清单无 Skill（方案A 下可不改）
+    status: DEFERRED_BY_DESIGN
+    action: 方案 A 生效中，Phase 5 零改动
+  - id: FT-5
+    maps_to: 新增
+    object: SKILL_RULES.md 为新规则文件（宪章 §1.2 规则文件=Foundation）
+    status: DRAFT_PENDING
+    action: 以 DRAFT 形式存在，修订走 FCP
+  foundation_files_modified: 0
+  verdict: Skill=Content 层定位成立；5 个触点全部为待 FCP 的追加项，无一处已修改
+15_priorities:
+  P0:
+    skills: 1
+    total: 1
+    personal: 1
+    upstream_reference_only: 0
+    plugin: 0
+  P1:
+    skills: 176
+    total: 176
+    personal: 53
+    upstream_reference_only: 120
+    plugin: 3
+  P2:
+    skills: 101
+    total: 101
+    personal: 39
+    upstream_reference_only: 62
+    plugin: 0
+  P3:
+    skills: 21
+    total: 21
+    personal: 7
+    upstream_reference_only: 14
+    plugin: 0
+16_recommended_next_actions:
+- P0：补 1 个空 description（SKILL-AI-SELF-IMPROVING-AGENT）——最小修复
+- 个人层 P1（53 个，插件层另有 3 个）：补触发/输入/输出三件（A/D 层，发现性直接受益）
+- 个人层 P2（39）：L2 余量字段 + L3 硬三件，按真实使用频率排序执行
+- 12 个 OpenClaw 运行时依赖技能：移植验证或归档裁定（REVIEW）
+- 风险补录：30 个有副作用技能（去重）在 REVIEWED 阶段登记 risk_level/审批位
+- 上游/插件层 199 个缺口（B196+C3）：建议 SKILL_RULES 修订为 reference-only 考核豁免（协议变更→走审批），不逐个修
+- 以上全部为提案；本阶段不执行任何动作

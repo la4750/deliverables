@@ -25,3 +25,12 @@
 - 审计基准：personal-ai-engineering-library @ ec5f983；本轮**零既有文件改动、零删除、零合并、零新建 Skill**。
 - 所有迁移/合并/转换均为**提案**，等待人工批准。
 - 文档中出现的运行时/模型名均为事实来源记录，非依赖声明（见 SKILL_RULES §6）。
+
+## 2026-10-08/personal-ai-engineering-library/ — Skill Contract Audit（READ-ONLY）
+
+| 文件 | 说明 |
+|---|---|
+| SKILL_CONTRACT_AUDIT.md | 全量审计报告：L1/L2/L3 契约、边界、依赖、披露、TOOL/KNOWLEDGE 深审、Merge 复核、风险、Foundation 触点、P0–P3、五问结论 |
+| SKILL_CONTRACT_AUDIT.yaml | 逐技能 Contract 判定（358 条：required/current/gap/reason + 缺失字段 + 文件核对） |
+| SKILL_CONTRACT_AUDIT_REPORT.md | 上半场：契约判定规则、一致性核对、分项达成度 |
+| SKILL_CONTRACT_STATUS.yaml | 16 项机读状态汇总 |
