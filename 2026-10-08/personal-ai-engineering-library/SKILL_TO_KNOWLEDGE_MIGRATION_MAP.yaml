@@ -1,0 +1,448 @@
+skill_to_knowledge_map:
+  date: '2026-10-08'
+  source_skills: 38
+  units: 50
+  note: Skill 文件均未删除；RETURN_TO_SKILL 的单元在 Registry 中 status=REJECTED 并保留溯源链
+migrations:
+- source_skill: SKILL-AI-NOVEL-DISPATCH
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/novel-dispatch/SKILL.md
+  units:
+  - knowledge_id: K-AI-NOVEL-DISPATCH
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  - knowledge_id: K-AI-NOVEL-DISPATCH-002
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  provenance_chain: SKILL-AI-NOVEL-DISPATCH → /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/novel-dispatch/SKILL.md
+    → K-AI-NOVEL-DISPATCH, K-AI-NOVEL-DISPATCH-002 → RETURN_TO_SKILL
+- source_skill: SKILL-AI-NOVEL-PROMPT
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/prompt/SKILL.md
+  units:
+  - knowledge_id: K-AI-NOVEL-PROMPT
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  provenance_chain: SKILL-AI-NOVEL-PROMPT → /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/prompt/SKILL.md → K-AI-NOVEL-PROMPT
+    → RETURN_TO_SKILL
+- source_skill: SKILL-AI-PROMPT-AUDIT
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/prompt-audit/SKILL.md
+  units:
+  - knowledge_id: K-AI-PROMPT-AUDIT
+    content: 01_KNOWLEDGE/
+    classification: KEEP_KNOWLEDGE
+    markers: []
+    registry_status: Candidate
+  - knowledge_id: K-AI-PROMPT-AUDIT-002
+    content: 01_KNOWLEDGE/
+    classification: KEEP_KNOWLEDGE
+    markers: []
+    registry_status: Candidate
+  provenance_chain: SKILL-AI-PROMPT-AUDIT → /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/prompt-audit/SKILL.md
+    → K-AI-PROMPT-AUDIT, K-AI-PROMPT-AUDIT-002 → KEEP_KNOWLEDGE
+- source_skill: SKILL-AI-SELF-IMPROVING-AGENT
+  source_path: /home/ubuntu/ai-heritage-library/workspace/Agent/game-series/skills/self-improving-agent/SKILL.md
+  units:
+  - knowledge_id: K-AI-SELF-IMPROVING-AGENT-002
+    content: 01_KNOWLEDGE/
+    classification: KEEP_KNOWLEDGE
+    markers: []
+    registry_status: Candidate
+  provenance_chain: SKILL-AI-SELF-IMPROVING-AGENT → /home/ubuntu/ai-heritage-library/workspace/Agent/game-series/skills/self-improving-agent/SKILL.md
+    → K-AI-SELF-IMPROVING-AGENT-002 → KEEP_KNOWLEDGE
+- source_skill: SKILL-AI-SELF-IMPROVING-AGENT-3
+  source_path: /home/ubuntu/ai-heritage-library/workspace/skills/@pskoett/self-improving-agent/SKILL.md
+  units:
+  - knowledge_id: K-AI-SELF-IMPROVING-AGENT
+    content: 01_KNOWLEDGE/
+    classification: KEEP_KNOWLEDGE
+    markers: []
+    registry_status: Candidate
+  provenance_chain: SKILL-AI-SELF-IMPROVING-AGENT-3 → /home/ubuntu/ai-heritage-library/workspace/skills/@pskoett/self-improving-agent/SKILL.md
+    → K-AI-SELF-IMPROVING-AGENT → KEEP_KNOWLEDGE
+- source_skill: SKILL-AI-STYLE-DISTILL
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/style-distill/SKILL.md
+  units:
+  - knowledge_id: K-AI-STYLE-DISTILL
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  provenance_chain: SKILL-AI-STYLE-DISTILL → /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/style-distill/SKILL.md
+    → K-AI-STYLE-DISTILL → RETURN_TO_SKILL
+- source_skill: SKILL-AI-TENCENT-MEETING-MCP
+  source_path: /home/ubuntu/ai-heritage-library/workspace/skills/@wemeeting/tencent-meeting-skill/SKILL.md
+  units:
+  - knowledge_id: K-AI-TENCENT-MEETING-MCP
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  - knowledge_id: K-AI-TENCENT-MEETING-MCP-002
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  provenance_chain: SKILL-AI-TENCENT-MEETING-MCP → /home/ubuntu/ai-heritage-library/workspace/skills/@wemeeting/tencent-meeting-skill/SKILL.md
+    → K-AI-TENCENT-MEETING-MCP, K-AI-TENCENT-MEETING-MCP-002 → RETURN_TO_SKILL
+- source_skill: SKILL-AI-WEIXINPAY-FEEDBACK
+  source_path: /home/ubuntu/.hermes/plugins/weixinpay/skills/weixinpay-feedback/SKILL.md
+  units:
+  - knowledge_id: K-AI-WEIXINPAY-FEEDBACK
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  provenance_chain: SKILL-AI-WEIXINPAY-FEEDBACK → /home/ubuntu/.hermes/plugins/weixinpay/skills/weixinpay-feedback/SKILL.md → K-AI-WEIXINPAY-FEEDBACK
+    → RETURN_TO_SKILL
+- source_skill: SKILL-GAME-ART-BIBLE
+  source_path: /home/ubuntu/ai-heritage-library/workspace/Agent/art-series/skills/art-bible/SKILL.md
+  units:
+  - knowledge_id: K-GENERAL-ART-BIBLE
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  provenance_chain: SKILL-GAME-ART-BIBLE → /home/ubuntu/ai-heritage-library/workspace/Agent/art-series/skills/art-bible/SKILL.md → K-GENERAL-ART-BIBLE
+    → RETURN_TO_SKILL
+- source_skill: SKILL-GAME-GODOT-KB
+  source_path: /home/ubuntu/.hermes/skills/software-development/godot-kb/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-GODOT-KB
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  provenance_chain: SKILL-GAME-GODOT-KB → /home/ubuntu/.hermes/skills/software-development/godot-kb/SKILL.md → K-SOFTWARE-GODOT-KB →
+    RETURN_TO_SKILL
+- source_skill: SKILL-GAME-NOVEL-MIGRATE
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/migrate/SKILL.md
+  units:
+  - knowledge_id: K-GENERAL-NOVEL-MIGRATE
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  provenance_chain: SKILL-GAME-NOVEL-MIGRATE → /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/migrate/SKILL.md
+    → K-GENERAL-NOVEL-MIGRATE → RETURN_TO_SKILL
+- source_skill: SKILL-GAME-STUDIO-ROLES
+  source_path: /home/ubuntu/.hermes/skills/autonomous-ai-agents/studio-roles/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-STUDIO-ROLES
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  provenance_chain: SKILL-GAME-STUDIO-ROLES → /home/ubuntu/.hermes/skills/autonomous-ai-agents/studio-roles/SKILL.md → K-SOFTWARE-STUDIO-ROLES
+    → RETURN_TO_SKILL
+- source_skill: SKILL-GEN-ANYSEARCH
+  source_path: /home/ubuntu/ai-heritage-library/workspace/Agent/scholar-series/skills/anysearch/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-ANYSEARCH
+    content: 01_KNOWLEDGE/
+    classification: KEEP_TOOL_KNOWLEDGE
+    markers: []
+    registry_status: Candidate
+  provenance_chain: SKILL-GEN-ANYSEARCH → /home/ubuntu/ai-heritage-library/workspace/Agent/scholar-series/skills/anysearch/SKILL.md
+    → K-SOFTWARE-ANYSEARCH → KEEP_TOOL_KNOWLEDGE
+- source_skill: SKILL-GEN-AWESOME-NOVEL
+  source_path: /home/ubuntu/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-AWESOME-NOVEL
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  provenance_chain: SKILL-GEN-AWESOME-NOVEL → /home/ubuntu/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/SKILL.md
+    → K-SOFTWARE-AWESOME-NOVEL → RETURN_TO_SKILL
+- source_skill: SKILL-GEN-BOX
+  source_path: /home/ubuntu/.hermes/hermes-agent/skills/productivity/box/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-BOX
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  provenance_chain: SKILL-GEN-BOX → /home/ubuntu/.hermes/hermes-agent/skills/productivity/box/SKILL.md → K-SOFTWARE-BOX → RETURN_TO_SKILL
+- source_skill: SKILL-GEN-CN-MARKET-DATA-FAILOVER
+  source_path: /home/ubuntu/.hermes/skills/finance/cn-market-data-failover/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-CN-MARKET-DATA-FAILOVER
+    content: 01_KNOWLEDGE/
+    classification: PROJECT_EXPERIENCE
+    markers: []
+    registry_status: Candidate
+  provenance_chain: SKILL-GEN-CN-MARKET-DATA-FAILOVER → /home/ubuntu/.hermes/skills/finance/cn-market-data-failover/SKILL.md → K-SOFTWARE-CN-MARKET-DATA-FAILOVER
+    → PROJECT_EXPERIENCE
+- source_skill: SKILL-GEN-CODEBASE-MAPPING
+  source_path: /home/ubuntu/.hermes/skills/codebase-mapping/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-CODEBASE-MAPPING
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  - knowledge_id: K-SOFTWARE-CODEBASE-MAPPING-002
+    content: 01_KNOWLEDGE/
+    classification: KEEP_KNOWLEDGE
+    markers: []
+    registry_status: Candidate
+  provenance_chain: SKILL-GEN-CODEBASE-MAPPING → /home/ubuntu/.hermes/skills/codebase-mapping/SKILL.md → K-SOFTWARE-CODEBASE-MAPPING,
+    K-SOFTWARE-CODEBASE-MAPPING-002 → RETURN_TO_SKILL
+- source_skill: SKILL-GEN-COMFYUI
+  source_path: /home/ubuntu/.hermes/hermes-agent/optional-skills/creative/comfyui/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-COMFYUI
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  provenance_chain: SKILL-GEN-COMFYUI → /home/ubuntu/.hermes/hermes-agent/optional-skills/creative/comfyui/SKILL.md → K-SOFTWARE-COMFYUI
+    → RETURN_TO_SKILL
+- source_skill: SKILL-GEN-NOVEL-ARCHIVE
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/archive/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-NOVEL-ARCHIVE
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  provenance_chain: SKILL-GEN-NOVEL-ARCHIVE → /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/archive/SKILL.md
+    → K-SOFTWARE-NOVEL-ARCHIVE → RETURN_TO_SKILL
+- source_skill: SKILL-GEN-NOVEL-CHAPTER
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/chapter/SKILL.md
+  units:
+  - knowledge_id: K-GENERAL-NOVEL-CHAPTER
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  - knowledge_id: K-GENERAL-NOVEL-CHAPTER-002
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  provenance_chain: SKILL-GEN-NOVEL-CHAPTER → /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/chapter/SKILL.md
+    → K-GENERAL-NOVEL-CHAPTER, K-GENERAL-NOVEL-CHAPTER-002 → RETURN_TO_SKILL
+- source_skill: SKILL-GEN-NOVEL-OUTLINE
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/outline/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-NOVEL-OUTLINE
+    content: 01_KNOWLEDGE/
+    classification: KEEP_KNOWLEDGE
+    markers: []
+    registry_status: Candidate
+  provenance_chain: SKILL-GEN-NOVEL-OUTLINE → /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/outline/SKILL.md
+    → K-SOFTWARE-NOVEL-OUTLINE → KEEP_KNOWLEDGE
+- source_skill: SKILL-GEN-NOVEL-PROOFREAD
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/proofread/SKILL.md
+  units:
+  - knowledge_id: K-ELECTRON-NOVEL-PROOFREAD
+    content: 01_KNOWLEDGE/
+    classification: KEEP_KNOWLEDGE
+    markers:
+    - DOMAIN_MISCLASSIFIED
+    registry_status: Candidate
+  - knowledge_id: K-ELECTRON-NOVEL-PROOFREAD-002
+    content: 01_KNOWLEDGE/
+    classification: KEEP_KNOWLEDGE
+    markers:
+    - DOMAIN_MISCLASSIFIED
+    registry_status: Candidate
+  provenance_chain: SKILL-GEN-NOVEL-PROOFREAD → /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/proofread/SKILL.md
+    → K-ELECTRON-NOVEL-PROOFREAD, K-ELECTRON-NOVEL-PROOFREAD-002 → KEEP_KNOWLEDGE
+- source_skill: SKILL-GEN-NOVEL-REVIEW
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/review/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-NOVEL-REVIEW
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  - knowledge_id: K-SOFTWARE-NOVEL-REVIEW-002
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  provenance_chain: SKILL-GEN-NOVEL-REVIEW → /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/review/SKILL.md →
+    K-SOFTWARE-NOVEL-REVIEW, K-SOFTWARE-NOVEL-REVIEW-002 → RETURN_TO_SKILL
+- source_skill: SKILL-GEN-ONE-THREE-ONE-RULE
+  source_path: /home/ubuntu/.hermes/hermes-agent/optional-skills/communication/one-three-one-rule/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-ONE-THREE-ONE-RULE
+    content: 01_KNOWLEDGE/
+    classification: KEEP_KNOWLEDGE
+    markers: []
+    registry_status: Candidate
+  provenance_chain: SKILL-GEN-ONE-THREE-ONE-RULE → /home/ubuntu/.hermes/hermes-agent/optional-skills/communication/one-three-one-rule/SKILL.md
+    → K-SOFTWARE-ONE-THREE-ONE-RULE → KEEP_KNOWLEDGE
+- source_skill: SKILL-GEN-OSINT-INVESTIGATION
+  source_path: /home/ubuntu/.hermes/hermes-agent/optional-skills/research/osint-investigation/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-OSINT-INVESTIGATION
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  provenance_chain: SKILL-GEN-OSINT-INVESTIGATION → /home/ubuntu/.hermes/hermes-agent/optional-skills/research/osint-investigation/SKILL.md
+    → K-SOFTWARE-OSINT-INVESTIGATION → RETURN_TO_SKILL
+- source_skill: SKILL-GEN-OSS-FORENSICS
+  source_path: /home/ubuntu/.hermes/hermes-agent/optional-skills/security/oss-forensics/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-OSS-FORENSICS
+    content: 01_KNOWLEDGE/
+    classification: KEEP_TOOL_KNOWLEDGE
+    markers: []
+    registry_status: Candidate
+  provenance_chain: SKILL-GEN-OSS-FORENSICS → /home/ubuntu/.hermes/hermes-agent/optional-skills/security/oss-forensics/SKILL.md → K-SOFTWARE-OSS-FORENSICS
+    → KEEP_TOOL_KNOWLEDGE
+- source_skill: SKILL-GEN-RULES-KNOWLEDGE-BASE
+  source_path: /home/ubuntu/.hermes/skills/software-development/rules-knowledge-base/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-RULES-KNOWLEDGE-BASE
+    content: 01_KNOWLEDGE/
+    classification: KEEP_KNOWLEDGE
+    markers: []
+    registry_status: Candidate
+  - knowledge_id: K-SOFTWARE-RULES-KNOWLEDGE-BASE-002
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  provenance_chain: SKILL-GEN-RULES-KNOWLEDGE-BASE → /home/ubuntu/.hermes/skills/software-development/rules-knowledge-base/SKILL.md
+    → K-SOFTWARE-RULES-KNOWLEDGE-BASE, K-SOFTWARE-RULES-KNOWLEDGE-BASE-002 → KEEP_KNOWLEDGE
+- source_skill: SKILL-GEN-SHOPIFY
+  source_path: /home/ubuntu/.hermes/hermes-agent/optional-skills/productivity/shopify/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-SHOPIFY
+    content: 01_KNOWLEDGE/
+    classification: KEEP_TOOL_KNOWLEDGE
+    markers: []
+    registry_status: Candidate
+  provenance_chain: SKILL-GEN-SHOPIFY → /home/ubuntu/.hermes/hermes-agent/optional-skills/productivity/shopify/SKILL.md → K-SOFTWARE-SHOPIFY
+    → KEEP_TOOL_KNOWLEDGE
+- source_skill: SKILL-GEN-SHORT-AUDIT
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/short/short-audit/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-SHORT-AUDIT
+    content: 01_KNOWLEDGE/
+    classification: KEEP_KNOWLEDGE
+    markers: []
+    registry_status: Candidate
+  provenance_chain: SKILL-GEN-SHORT-AUDIT → /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/short/short-audit/SKILL.md
+    → K-SOFTWARE-SHORT-AUDIT → KEEP_KNOWLEDGE
+- source_skill: SKILL-GEN-SHORT-PLAN
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/short/short-plan/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-SHORT-PLAN
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  provenance_chain: SKILL-GEN-SHORT-PLAN → /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/short/short-plan/SKILL.md
+    → K-SOFTWARE-SHORT-PLAN → RETURN_TO_SKILL
+- source_skill: SKILL-GEN-SHORT-VERIFY
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/short/short-verify/SKILL.md
+  units:
+  - knowledge_id: K-GENERAL-SHORT-VERIFY
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  provenance_chain: SKILL-GEN-SHORT-VERIFY → /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/short/short-verify/SKILL.md
+    → K-GENERAL-SHORT-VERIFY → RETURN_TO_SKILL
+- source_skill: SKILL-GEN-TENCENT-CLOUD-COS
+  source_path: /home/ubuntu/ai-heritage-library/workspace/skills/@shawnminh/tencent-cos-skill/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-TENCENT-CLOUD-COS
+    content: 01_KNOWLEDGE/
+    classification: KEEP_TOOL_KNOWLEDGE
+    markers: []
+    registry_status: Candidate
+  - knowledge_id: K-SOFTWARE-TENCENT-CLOUD-COS-002
+    content: 01_KNOWLEDGE/
+    classification: KEEP_TOOL_KNOWLEDGE
+    markers: []
+    registry_status: Candidate
+  provenance_chain: SKILL-GEN-TENCENT-CLOUD-COS → /home/ubuntu/ai-heritage-library/workspace/skills/@shawnminh/tencent-cos-skill/SKILL.md
+    → K-SOFTWARE-TENCENT-CLOUD-COS, K-SOFTWARE-TENCENT-CLOUD-COS-002 → KEEP_TOOL_KNOWLEDGE
+- source_skill: SKILL-GEN-TENCENT-DOCS
+  source_path: /home/ubuntu/ai-heritage-library/workspace/Agent/office-agent/skills/tencent-docs/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-TENCENT-DOCS-002
+    content: 01_KNOWLEDGE/
+    classification: KEEP_TOOL_KNOWLEDGE
+    markers: []
+    registry_status: Candidate
+  - knowledge_id: K-SOFTWARE-TENCENT-DOCS-003
+    content: 01_KNOWLEDGE/
+    classification: KEEP_TOOL_KNOWLEDGE
+    markers: []
+    registry_status: Candidate
+  provenance_chain: SKILL-GEN-TENCENT-DOCS → /home/ubuntu/ai-heritage-library/workspace/Agent/office-agent/skills/tencent-docs/SKILL.md
+    → K-SOFTWARE-TENCENT-DOCS-002, K-SOFTWARE-TENCENT-DOCS-003 → KEEP_TOOL_KNOWLEDGE
+- source_skill: SKILL-GEN-TENCENT-DOCS-2
+  source_path: /home/ubuntu/ai-heritage-library/workspace/skills/tencent-docs/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-TENCENT-DOCS
+    content: 01_KNOWLEDGE/
+    classification: KEEP_TOOL_KNOWLEDGE
+    markers: []
+    registry_status: Candidate
+  - knowledge_id: K-SOFTWARE-TENCENT-DOCS-004
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  provenance_chain: SKILL-GEN-TENCENT-DOCS-2 → /home/ubuntu/ai-heritage-library/workspace/skills/tencent-docs/SKILL.md → K-SOFTWARE-TENCENT-DOCS,
+    K-SOFTWARE-TENCENT-DOCS-004 → KEEP_TOOL_KNOWLEDGE
+- source_skill: SKILL-GEN-UPDATER-ARCHIVE
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/updater-archive/SKILL.md
+  units:
+  - knowledge_id: K-GENERAL-UPDATER-ARCHIVE
+    content: 01_KNOWLEDGE/
+    classification: RETURN_TO_SKILL
+    markers: []
+    registry_status: REJECTED
+  provenance_chain: SKILL-GEN-UPDATER-ARCHIVE → /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/updater-archive/SKILL.md
+    → K-GENERAL-UPDATER-ARCHIVE → RETURN_TO_SKILL
+- source_skill: SKILL-GEN-VOLUME-WRITING
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/volume-writing/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-VOLUME-WRITING
+    content: 01_KNOWLEDGE/
+    classification: KEEP_KNOWLEDGE
+    markers: []
+    registry_status: Candidate
+  provenance_chain: SKILL-GEN-VOLUME-WRITING → /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/volume-writing/SKILL.md
+    → K-SOFTWARE-VOLUME-WRITING → KEEP_KNOWLEDGE
+- source_skill: SKILL-GEN-WEIXINPAY-PAY
+  source_path: /home/ubuntu/.hermes/plugins/weixinpay/skills/weixinpay-pay/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-WEIXINPAY-PAY
+    content: 01_KNOWLEDGE/
+    classification: NEEDS_REVIEW
+    markers:
+    - SECURITY_SENSITIVE
+    registry_status: Candidate
+  - knowledge_id: K-SOFTWARE-WEIXINPAY-PAY-002
+    content: 01_KNOWLEDGE/
+    classification: NEEDS_REVIEW
+    markers:
+    - SECURITY_SENSITIVE
+    registry_status: Candidate
+  provenance_chain: SKILL-GEN-WEIXINPAY-PAY → /home/ubuntu/.hermes/plugins/weixinpay/skills/weixinpay-pay/SKILL.md → K-SOFTWARE-WEIXINPAY-PAY,
+    K-SOFTWARE-WEIXINPAY-PAY-002 → NEEDS_REVIEW
+- source_skill: SKILL-GEN-XURL
+  source_path: /home/ubuntu/.hermes/hermes-agent/skills/social-media/xurl/SKILL.md
+  units:
+  - knowledge_id: K-SOFTWARE-XURL
+    content: 01_KNOWLEDGE/
+    classification: KEEP_TOOL_KNOWLEDGE
+    markers: []
+    registry_status: Candidate
+  provenance_chain: SKILL-GEN-XURL → /home/ubuntu/.hermes/hermes-agent/skills/social-media/xurl/SKILL.md → K-SOFTWARE-XURL → KEEP_TOOL_KNOWLEDGE

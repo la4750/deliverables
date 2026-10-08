@@ -51,3 +51,15 @@
 - `2026-10-07/personal-ai-engineering-library/_intermediate/` — Skill Inventory/Classification/Registry/Optimization 阶段：扫描清单、原始/逻辑分类数据、人工复核清单、生成与统计脚本
 - `2026-10-08/personal-ai-engineering-library/_intermediate/audit/` — Contract 三级审计与边界/依赖/披露/风险深审计：审计脚本与聚合数据
 - `2026-10-08/personal-ai-engineering-library/_intermediate/ingestion/` — Skill→Knowledge 吸收阶段：候选段提取、吸收结果与三段式脚本
+
+### 本批新增（Final Classification & Learning，2026-10-08 第三步）
+
+| 文件 | 说明 |
+|---|---|
+| SOURCE_50_UNIT_SET.yaml | 执行前 50 单元快照（index/id/source/path/hash，count=50 已验证） |
+| SKILL_KNOWLEDGE_FINAL_CLASSIFICATION.yaml | 50 单元最终分类（含 HARD 裁决执行、markers、溯源） |
+| SKILL_TO_KNOWLEDGE_MIGRATION_MAP.yaml | 38 个来源技能 → 单元 → 处置的迁移映射 |
+| SKILL_KNOWLEDGE_FINAL_REVIEW.md | 评审：HARD 24/24 执行 + 26 项自主判断理由 |
+| SKILL_KNOWLEDGE_LEARNING_PROPOSAL(.yaml → LEARNING_PROPOSALS.yaml) | 6 条学习提案（全部 PROPOSED） |
+| SKILL_KNOWLEDGE_VALIDATION_REPORT.md | A–M 验证 + 验收（STATUS: PASS） |
+| KNOWLEDGE_REGISTRY.yaml / KNOWLEDGE_INDEX.md | 终态（REJECTED 26、域修正 2、tool/project/security 块） |

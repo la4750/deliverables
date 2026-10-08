@@ -1,0 +1,764 @@
+source_unit_set:
+  id: SOURCE_50_UNIT_SET
+  batch: 2026-10-08 Skill→Knowledge Ingestion BATCH2
+  built_at: '2026-10-08'
+  count: 50
+  builder_rule: 以 KNOWLEDGE_REGISTRY(ingestion_date=2026-10-08) 为准，与 SKILL_KNOWLEDGE_INGESTION.yaml map 交叉核对，逐文件 sha256
+  cross_check:
+    registry_ids_eq_map_ids: true
+units:
+- index: 1
+  knowledge_id: K-AI-NOVEL-DISPATCH
+  title: 断点续跑语义
+  source_skill: SKILL-AI-NOVEL-DISPATCH
+  source_skill_name: novel-dispatch
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/novel-dispatch/SKILL.md
+  source_refs:
+  - SRC-SKILL-022
+  content_path: 01_KNOWLEDGE/AI/K-AI-NOVEL-DISPATCH.md
+  content_sha256_16: 7ec410d230161848
+  domain: AI
+  type: Concept
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 2
+  knowledge_id: K-AI-NOVEL-DISPATCH-002
+  title: 作者确认关卡（人铸灵魂，AI 行笔墨）
+  source_skill: SKILL-AI-NOVEL-DISPATCH
+  source_skill_name: novel-dispatch
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/novel-dispatch/SKILL.md
+  source_refs:
+  - SRC-SKILL-022
+  content_path: 01_KNOWLEDGE/AI/K-AI-NOVEL-DISPATCH-002.md
+  content_sha256_16: 640c37f7b42590b8
+  domain: AI
+  type: Constraint
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 3
+  knowledge_id: K-AI-NOVEL-PROMPT
+  title: 'novel-prompt: Step 2: 按指南填充 9 层'
+  source_skill: SKILL-AI-NOVEL-PROMPT
+  source_skill_name: novel-prompt
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/prompt/SKILL.md
+  source_refs:
+  - SRC-SKILL-012
+  content_path: 01_KNOWLEDGE/AI/K-AI-NOVEL-PROMPT.md
+  content_sha256_16: 3b2340c95f1270b7
+  domain: AI
+  type: Constraint
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 4
+  knowledge_id: K-AI-PROMPT-AUDIT
+  title: 维度 H：规则去重（硬门禁）
+  source_skill: SKILL-AI-PROMPT-AUDIT
+  source_skill_name: prompt-audit
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/prompt-audit/SKILL.md
+  source_refs:
+  - SRC-SKILL-001
+  - SRC-SKILL-001
+  content_path: 01_KNOWLEDGE/AI/K-AI-PROMPT-AUDIT.md
+  content_sha256_16: 6707f44704b6c486
+  domain: AI
+  type: Constraint
+  confidence: medium
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 5
+  knowledge_id: K-AI-PROMPT-AUDIT-002
+  title: 维度 F：去 AI 校验（新增核心维度）
+  source_skill: SKILL-AI-PROMPT-AUDIT
+  source_skill_name: prompt-audit
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/prompt-audit/SKILL.md
+  source_refs:
+  - SRC-SKILL-001
+  content_path: 01_KNOWLEDGE/AI/K-AI-PROMPT-AUDIT-002.md
+  content_sha256_16: f8aacf90107849f6
+  domain: AI
+  type: Constraint
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 6
+  knowledge_id: K-AI-SELF-IMPROVING-AGENT
+  title: Pattern-Key Taxonomy
+  source_skill: SKILL-AI-SELF-IMPROVING-AGENT-3
+  source_skill_name: self-improving-agent
+  source_path: /home/ubuntu/ai-heritage-library/workspace/skills/@pskoett/self-improving-agent/SKILL.md
+  source_refs:
+  - SRC-SKILL-027
+  content_path: 01_KNOWLEDGE/AI/K-AI-SELF-IMPROVING-AGENT.md
+  content_sha256_16: 15aca4904d685f7e
+  domain: AI
+  type: Pattern
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 7
+  knowledge_id: K-AI-SELF-IMPROVING-AGENT-002
+  title: Evolution Priority Matrix
+  source_skill: SKILL-AI-SELF-IMPROVING-AGENT
+  source_skill_name: self-improving-agent
+  source_path: /home/ubuntu/ai-heritage-library/workspace/Agent/game-series/skills/self-improving-agent/SKILL.md
+  source_refs:
+  - SRC-SKILL-038
+  - SRC-SKILL-039
+  content_path: 01_KNOWLEDGE/AI/K-AI-SELF-IMPROVING-AGENT-002.md
+  content_sha256_16: e23a31bf27be4531
+  domain: AI
+  type: Troubleshooting
+  confidence: medium
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 8
+  knowledge_id: K-AI-STYLE-DISTILL
+  title: 一、主卡蒸馏
+  source_skill: SKILL-AI-STYLE-DISTILL
+  source_skill_name: style-distill
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/style-distill/SKILL.md
+  source_refs:
+  - SRC-SKILL-014
+  content_path: 01_KNOWLEDGE/AI/K-AI-STYLE-DISTILL.md
+  content_sha256_16: ca74ef49ed6e471c
+  domain: AI
+  type: Engineering Rule
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 9
+  knowledge_id: K-AI-TENCENT-MEETING-MCP
+  title: 'tencent-meeting-mcp: 概述'
+  source_skill: SKILL-AI-TENCENT-MEETING-MCP
+  source_skill_name: tencent-meeting-mcp
+  source_path: /home/ubuntu/ai-heritage-library/workspace/skills/@wemeeting/tencent-meeting-skill/SKILL.md
+  source_refs:
+  - SRC-SKILL-006
+  content_path: 01_KNOWLEDGE/AI/K-AI-TENCENT-MEETING-MCP.md
+  content_sha256_16: 5a2de93c0a092d01
+  domain: AI
+  type: Troubleshooting
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 10
+  knowledge_id: K-AI-TENCENT-MEETING-MCP-002
+  title: 'tencent-meeting-mcp: 场景7：提交反馈（Agent 意见箱）'
+  source_skill: SKILL-AI-TENCENT-MEETING-MCP
+  source_skill_name: tencent-meeting-mcp
+  source_path: /home/ubuntu/ai-heritage-library/workspace/skills/@wemeeting/tencent-meeting-skill/SKILL.md
+  source_refs:
+  - SRC-SKILL-006
+  content_path: 01_KNOWLEDGE/AI/K-AI-TENCENT-MEETING-MCP-002.md
+  content_sha256_16: 26df816f6a214be7
+  domain: AI
+  type: Troubleshooting
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 11
+  knowledge_id: K-AI-WEIXINPAY-FEEDBACK
+  title: 'weixinpay-feedback: 适用场景'
+  source_skill: SKILL-AI-WEIXINPAY-FEEDBACK
+  source_skill_name: weixinpay-feedback
+  source_path: /home/ubuntu/.hermes/plugins/weixinpay/skills/weixinpay-feedback/SKILL.md
+  source_refs:
+  - SRC-SKILL-019
+  content_path: 01_KNOWLEDGE/AI/K-AI-WEIXINPAY-FEEDBACK.md
+  content_sha256_16: f959b25a50cc9a13
+  domain: AI
+  type: Troubleshooting
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 12
+  knowledge_id: K-ELECTRON-NOVEL-PROOFREAD
+  title: 'novel-proofread: 6.5.1 语境词表（题材可配置）'
+  source_skill: SKILL-GEN-NOVEL-PROOFREAD
+  source_skill_name: novel-proofread
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/proofread/SKILL.md
+  source_refs:
+  - SRC-SKILL-002
+  content_path: 01_KNOWLEDGE/Electronics/K-ELECTRON-NOVEL-PROOFREAD.md
+  content_sha256_16: bf598882b6c84d73
+  domain: Electronics
+  type: Pattern
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 13
+  knowledge_id: K-ELECTRON-NOVEL-PROOFREAD-002
+  title: 'novel-proofread: 11.2 跨章检测项'
+  source_skill: SKILL-GEN-NOVEL-PROOFREAD
+  source_skill_name: novel-proofread
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/proofread/SKILL.md
+  source_refs:
+  - SRC-SKILL-002
+  content_path: 01_KNOWLEDGE/Electronics/K-ELECTRON-NOVEL-PROOFREAD-002.md
+  content_sha256_16: 1834d08f3788ceaf
+  domain: Electronics
+  type: Pattern
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 14
+  knowledge_id: K-GENERAL-ART-BIBLE
+  title: 'art-bible: 阶段 0：解析参数和上下文检查'
+  source_skill: SKILL-GAME-ART-BIBLE
+  source_skill_name: art-bible
+  source_path: /home/ubuntu/ai-heritage-library/workspace/Agent/art-series/skills/art-bible/SKILL.md
+  source_refs:
+  - SRC-SKILL-008
+  content_path: 01_KNOWLEDGE/General/K-GENERAL-ART-BIBLE.md
+  content_sha256_16: f17a66fdb64b753e
+  domain: General
+  type: Troubleshooting
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 15
+  knowledge_id: K-GENERAL-NOVEL-CHAPTER
+  title: e. 验收（章纲完成后强制执行，全部通过才进提示词生成）
+  source_skill: SKILL-GEN-NOVEL-CHAPTER
+  source_skill_name: novel-chapter
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/chapter/SKILL.md
+  source_refs:
+  - SRC-SKILL-011
+  content_path: 01_KNOWLEDGE/General/K-GENERAL-NOVEL-CHAPTER.md
+  content_sha256_16: d0bb28aca0ba6d50
+  domain: General
+  type: Constraint
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 16
+  knowledge_id: K-GENERAL-NOVEL-CHAPTER-002
+  title: 主 agent 汇总 + 仲裁
+  source_skill: SKILL-GEN-NOVEL-CHAPTER
+  source_skill_name: novel-chapter
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/chapter/SKILL.md
+  source_refs:
+  - SRC-SKILL-011
+  content_path: 01_KNOWLEDGE/General/K-GENERAL-NOVEL-CHAPTER-002.md
+  content_sha256_16: daaf91298bb928b0
+  domain: General
+  type: Constraint
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 17
+  knowledge_id: K-GENERAL-NOVEL-MIGRATE
+  title: 'novel-migrate: Step 执行失败'
+  source_skill: SKILL-GAME-NOVEL-MIGRATE
+  source_skill_name: novel-migrate
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/migrate/SKILL.md
+  source_refs:
+  - SRC-SKILL-021
+  content_path: 01_KNOWLEDGE/General/K-GENERAL-NOVEL-MIGRATE.md
+  content_sha256_16: '1630688688360793'
+  domain: General
+  type: Troubleshooting
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 18
+  knowledge_id: K-GENERAL-SHORT-VERIFY
+  title: 十项核对清单
+  source_skill: SKILL-GEN-SHORT-VERIFY
+  source_skill_name: short-verify
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/short/short-verify/SKILL.md
+  source_refs:
+  - SRC-SKILL-032
+  content_path: 01_KNOWLEDGE/General/K-GENERAL-SHORT-VERIFY.md
+  content_sha256_16: d5e81bd8230748a8
+  domain: General
+  type: Engineering Rule
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 19
+  knowledge_id: K-GENERAL-UPDATER-ARCHIVE
+  title: 二、归档前检查
+  source_skill: SKILL-GEN-UPDATER-ARCHIVE
+  source_skill_name: updater-archive
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/updater-archive/SKILL.md
+  source_refs:
+  - SRC-SKILL-033
+  content_path: 01_KNOWLEDGE/General/K-GENERAL-UPDATER-ARCHIVE.md
+  content_sha256_16: 8ae945105bdf73b8
+  domain: General
+  type: Engineering Rule
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 20
+  knowledge_id: K-SOFTWARE-ANYSEARCH
+  title: Scenarios
+  source_skill: SKILL-GEN-ANYSEARCH
+  source_skill_name: anysearch
+  source_path: /home/ubuntu/ai-heritage-library/workspace/Agent/scholar-series/skills/anysearch/SKILL.md
+  source_refs:
+  - SRC-SKILL-026
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-ANYSEARCH.md
+  content_sha256_16: 308a5a0bbf03da10
+  domain: Software
+  type: API / Specification
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 21
+  knowledge_id: K-SOFTWARE-AWESOME-NOVEL
+  title: 各阶段文件读取指南
+  source_skill: SKILL-GEN-AWESOME-NOVEL
+  source_skill_name: awesome-novel
+  source_path: /home/ubuntu/ai-heritage-library/workspace/Agent/scholar-series/skills/awesome-novel/SKILL.md
+  source_refs:
+  - SRC-SKILL-040
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-AWESOME-NOVEL.md
+  content_sha256_16: d15c96e2445848a1
+  domain: Software
+  type: Procedure
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 22
+  knowledge_id: K-SOFTWARE-BOX
+  title: Choose the right path
+  source_skill: SKILL-GEN-BOX
+  source_skill_name: box
+  source_path: /home/ubuntu/.hermes/hermes-agent/skills/productivity/box/SKILL.md
+  source_refs:
+  - SRC-SKILL-037
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-BOX.md
+  content_sha256_16: b52a2d929c6a4159
+  domain: Software
+  type: Reference
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 23
+  knowledge_id: K-SOFTWARE-CN-MARKET-DATA-FAILOVER
+  title: 数据源层级（2026-07/08 实测）
+  source_skill: SKILL-GEN-CN-MARKET-DATA-FAILOVER
+  source_skill_name: cn-market-data-failover
+  source_path: /home/ubuntu/.hermes/skills/finance/cn-market-data-failover/SKILL.md
+  source_refs:
+  - SRC-SKILL-015
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-CN-MARKET-DATA-FAILOVER.md
+  content_sha256_16: 308496d436fda340
+  domain: Software
+  type: Troubleshooting
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 24
+  knowledge_id: K-SOFTWARE-CODEBASE-MAPPING
+  title: 流程（按序执行）
+  source_skill: SKILL-GEN-CODEBASE-MAPPING
+  source_skill_name: codebase-mapping
+  source_path: /home/ubuntu/.hermes/skills/codebase-mapping/SKILL.md
+  source_refs:
+  - SRC-SKILL-020
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-CODEBASE-MAPPING.md
+  content_sha256_16: 83c2086087196540
+  domain: Software
+  type: Engineering Rule
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 25
+  knowledge_id: K-SOFTWARE-CODEBASE-MAPPING-002
+  title: Pitfalls
+  source_skill: SKILL-GEN-CODEBASE-MAPPING
+  source_skill_name: codebase-mapping
+  source_path: /home/ubuntu/.hermes/skills/codebase-mapping/SKILL.md
+  source_refs:
+  - SRC-SKILL-020
+  - SRC-SKILL-007
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-CODEBASE-MAPPING-002.md
+  content_sha256_16: 488ac70d0310d5ac
+  domain: Software
+  type: Troubleshooting
+  confidence: medium
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 26
+  knowledge_id: K-SOFTWARE-COMFYUI
+  title: What's in this skill
+  source_skill: SKILL-GEN-COMFYUI
+  source_skill_name: comfyui
+  source_path: /home/ubuntu/.hermes/hermes-agent/optional-skills/creative/comfyui/SKILL.md
+  source_refs:
+  - SRC-SKILL-025
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-COMFYUI.md
+  content_sha256_16: 053c9f66043b8d27
+  domain: Software
+  type: API / Specification
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 27
+  knowledge_id: K-SOFTWARE-GODOT-KB
+  title: 'godot-kb: 使用规则'
+  source_skill: SKILL-GAME-GODOT-KB
+  source_skill_name: godot-kb
+  source_path: /home/ubuntu/.hermes/skills/software-development/godot-kb/SKILL.md
+  source_refs:
+  - SRC-SKILL-023
+  content_path: 02_GAME_ENGINES/Godot/Knowledge/K-SOFTWARE-GODOT-KB.md
+  content_sha256_16: eb4b729f517e3c3a
+  domain: Software
+  type: Engineering Rule
+  confidence: low
+  version_scope: Godot 4.6
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 28
+  knowledge_id: K-SOFTWARE-NOVEL-ARCHIVE
+  title: 发布前质检清单（Pre-Publish Checklist）
+  source_skill: SKILL-GEN-NOVEL-ARCHIVE
+  source_skill_name: novel-archive
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/archive/SKILL.md
+  source_refs:
+  - SRC-SKILL-010
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-NOVEL-ARCHIVE.md
+  content_sha256_16: 714309501ccf5ee2
+  domain: Software
+  type: Engineering Rule
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 29
+  knowledge_id: K-SOFTWARE-NOVEL-OUTLINE
+  title: 'novel-outline: 2.2 拆章节 + 填冲突载体'
+  source_skill: SKILL-GEN-NOVEL-OUTLINE
+  source_skill_name: novel-outline
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/outline/SKILL.md
+  source_refs:
+  - SRC-SKILL-030
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-NOVEL-OUTLINE.md
+  content_sha256_16: 63cac2eb94b8128e
+  domain: Software
+  type: Concept
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 30
+  knowledge_id: K-SOFTWARE-NOVEL-REVIEW
+  title: 维度 5：写作风格执行度（对照 settings/writing-style.md）
+  source_skill: SKILL-GEN-NOVEL-REVIEW
+  source_skill_name: novel-review
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/review/SKILL.md
+  source_refs:
+  - SRC-SKILL-013
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-NOVEL-REVIEW.md
+  content_sha256_16: 8f19ea62428de8e6
+  domain: Software
+  type: Engineering Rule
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 31
+  knowledge_id: K-SOFTWARE-NOVEL-REVIEW-002
+  title: 维度 4：角色一致性（对照 settings/character-setting/*.md）
+  source_skill: SKILL-GEN-NOVEL-REVIEW
+  source_skill_name: novel-review
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/review/SKILL.md
+  source_refs:
+  - SRC-SKILL-013
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-NOVEL-REVIEW-002.md
+  content_sha256_16: ebda43dfae4518a2
+  domain: Software
+  type: Concept
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 32
+  knowledge_id: K-SOFTWARE-ONE-THREE-ONE-RULE
+  title: 'one-three-one-rule: Example'
+  source_skill: SKILL-GEN-ONE-THREE-ONE-RULE
+  source_skill_name: one-three-one-rule
+  source_path: /home/ubuntu/.hermes/hermes-agent/optional-skills/communication/one-three-one-rule/SKILL.md
+  source_refs:
+  - SRC-SKILL-035
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-ONE-THREE-ONE-RULE.md
+  content_sha256_16: 789046af11aea720
+  domain: Software
+  type: Pattern
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 33
+  knowledge_id: K-SOFTWARE-OSINT-INVESTIGATION
+  title: 'osint-investigation: 2. Acquire data'
+  source_skill: SKILL-GEN-OSINT-INVESTIGATION
+  source_skill_name: osint-investigation
+  source_path: /home/ubuntu/.hermes/hermes-agent/optional-skills/research/osint-investigation/SKILL.md
+  source_refs:
+  - SRC-SKILL-036
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-OSINT-INVESTIGATION.md
+  content_sha256_16: 1108893b63ebf689
+  domain: Software
+  type: Concept
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 34
+  knowledge_id: K-SOFTWARE-OSS-FORENSICS
+  title: API Rate Limiting
+  source_skill: SKILL-GEN-OSS-FORENSICS
+  source_skill_name: oss-forensics
+  source_path: /home/ubuntu/.hermes/hermes-agent/optional-skills/security/oss-forensics/SKILL.md
+  source_refs:
+  - SRC-SKILL-016
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-OSS-FORENSICS.md
+  content_sha256_16: 056d41aba5b8baa4
+  domain: Software
+  type: API / Specification
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 35
+  knowledge_id: K-SOFTWARE-RULES-KNOWLEDGE-BASE
+  title: 'rules-knowledge-base: 1. 先立契约，再填内容'
+  source_skill: SKILL-GEN-RULES-KNOWLEDGE-BASE
+  source_skill_name: rules-knowledge-base
+  source_path: /home/ubuntu/.hermes/skills/software-development/rules-knowledge-base/SKILL.md
+  source_refs:
+  - SRC-SKILL-024
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-RULES-KNOWLEDGE-BASE.md
+  content_sha256_16: 8e360581c5dd09e8
+  domain: Software
+  type: Engineering Rule
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 36
+  knowledge_id: K-SOFTWARE-RULES-KNOWLEDGE-BASE-002
+  title: 'rules-knowledge-base: 2. 并行子代理扇出（学习阶段）'
+  source_skill: SKILL-GEN-RULES-KNOWLEDGE-BASE
+  source_skill_name: rules-knowledge-base
+  source_path: /home/ubuntu/.hermes/skills/software-development/rules-knowledge-base/SKILL.md
+  source_refs:
+  - SRC-SKILL-024
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-RULES-KNOWLEDGE-BASE-002.md
+  content_sha256_16: 126f82b068229e09
+  domain: Software
+  type: API / Specification
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 37
+  knowledge_id: K-SOFTWARE-SHOPIFY
+  title: Storefront API (public read-only)
+  source_skill: SKILL-GEN-SHOPIFY
+  source_skill_name: shopify
+  source_path: /home/ubuntu/.hermes/hermes-agent/optional-skills/productivity/shopify/SKILL.md
+  source_refs:
+  - SRC-SKILL-007
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-SHOPIFY.md
+  content_sha256_16: 513265be51c33ea4
+  domain: Software
+  type: API / Specification
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 38
+  knowledge_id: K-SOFTWARE-SHORT-AUDIT
+  title: 审计五项（每项附原文证据）
+  source_skill: SKILL-GEN-SHORT-AUDIT
+  source_skill_name: short-audit
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/short/short-audit/SKILL.md
+  source_refs:
+  - SRC-SKILL-031
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-SHORT-AUDIT.md
+  content_sha256_16: 049417925f69b3b8
+  domain: Software
+  type: Constraint
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 39
+  knowledge_id: K-SOFTWARE-SHORT-PLAN
+  title: 'short-plan: Phase planning：构思与排纲'
+  source_skill: SKILL-GEN-SHORT-PLAN
+  source_skill_name: short-plan
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/short/short-plan/SKILL.md
+  source_refs:
+  - SRC-SKILL-017
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-SHORT-PLAN.md
+  content_sha256_16: c1655b6c4298469d
+  domain: Software
+  type: Principle
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 40
+  knowledge_id: K-SOFTWARE-STUDIO-ROLES
+  title: 'studio-roles: 角色表'
+  source_skill: SKILL-GAME-STUDIO-ROLES
+  source_skill_name: studio-roles
+  source_path: /home/ubuntu/.hermes/skills/autonomous-ai-agents/studio-roles/SKILL.md
+  source_refs:
+  - SRC-SKILL-029
+  content_path: 02_GAME_ENGINES/Godot/Knowledge/K-SOFTWARE-STUDIO-ROLES.md
+  content_sha256_16: ca240910b3c7e191
+  domain: Software
+  type: Pattern
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 41
+  knowledge_id: K-SOFTWARE-TENCENT-CLOUD-COS
+  title: (prelude)
+  source_skill: SKILL-GEN-TENCENT-CLOUD-COS
+  source_skill_name: tencent-cloud-cos
+  source_path: /home/ubuntu/ai-heritage-library/workspace/skills/@shawnminh/tencent-cos-skill/SKILL.md
+  source_refs:
+  - SRC-SKILL-028
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-TENCENT-CLOUD-COS.md
+  content_sha256_16: a2f6ec59cfe105b8
+  domain: Software
+  type: Reference
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 42
+  knowledge_id: K-SOFTWARE-TENCENT-CLOUD-COS-002
+  title: 功能对照表
+  source_skill: SKILL-GEN-TENCENT-CLOUD-COS
+  source_skill_name: tencent-cloud-cos
+  source_path: /home/ubuntu/ai-heritage-library/workspace/skills/@shawnminh/tencent-cos-skill/SKILL.md
+  source_refs:
+  - SRC-SKILL-028
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-TENCENT-CLOUD-COS-002.md
+  content_sha256_16: 077588ea461dc877
+  domain: Software
+  type: Concept
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 43
+  knowledge_id: K-SOFTWARE-TENCENT-DOCS
+  title: 'tencent-docs: 核心规则'
+  source_skill: SKILL-GEN-TENCENT-DOCS-2
+  source_skill_name: tencent-docs
+  source_path: /home/ubuntu/ai-heritage-library/workspace/skills/tencent-docs/SKILL.md
+  source_refs:
+  - SRC-SKILL-003
+  - SRC-SKILL-004
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-TENCENT-DOCS.md
+  content_sha256_16: 02492f2d29eaed60
+  domain: Software
+  type: Engineering Rule
+  confidence: medium
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 44
+  knowledge_id: K-SOFTWARE-TENCENT-DOCS-002
+  title: 'tencent-docs: 注意事项'
+  source_skill: SKILL-GEN-TENCENT-DOCS
+  source_skill_name: tencent-docs
+  source_path: /home/ubuntu/ai-heritage-library/workspace/Agent/office-agent/skills/tencent-docs/SKILL.md
+  source_refs:
+  - SRC-SKILL-009
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-TENCENT-DOCS-002.md
+  content_sha256_16: 19a28436ba36d46d
+  domain: Software
+  type: API / Specification
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 45
+  knowledge_id: K-SOFTWARE-TENCENT-DOCS-003
+  title: 常见错误码及解决方案
+  source_skill: SKILL-GEN-TENCENT-DOCS
+  source_skill_name: tencent-docs
+  source_path: /home/ubuntu/ai-heritage-library/workspace/Agent/office-agent/skills/tencent-docs/SKILL.md
+  source_refs:
+  - SRC-SKILL-009
+  - SRC-SKILL-003
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-TENCENT-DOCS-003.md
+  content_sha256_16: 4a449da4bacd13e1
+  domain: Software
+  type: Troubleshooting
+  confidence: medium
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 46
+  knowledge_id: K-SOFTWARE-TENCENT-DOCS-004
+  title: 📁 文件目录结构
+  source_skill: SKILL-GEN-TENCENT-DOCS-2
+  source_skill_name: tencent-docs
+  source_path: /home/ubuntu/ai-heritage-library/workspace/skills/tencent-docs/SKILL.md
+  source_refs:
+  - SRC-SKILL-003
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-TENCENT-DOCS-004.md
+  content_sha256_16: 990973036cfa3211
+  domain: Software
+  type: Engineering Rule
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 47
+  knowledge_id: K-SOFTWARE-VOLUME-WRITING
+  title: 'volume-writing: 9. AI 味自检与去除'
+  source_skill: SKILL-GEN-VOLUME-WRITING
+  source_skill_name: volume-writing
+  source_path: /home/ubuntu/.hermes/skills/creative/novel-writing/references/skills/volume-writing/SKILL.md
+  source_refs:
+  - SRC-SKILL-034
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-VOLUME-WRITING.md
+  content_sha256_16: 2877e2e43b0826fb
+  domain: Software
+  type: Constraint
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 48
+  knowledge_id: K-SOFTWARE-WEIXINPAY-PAY
+  title: 回复前检查清单
+  source_skill: SKILL-GEN-WEIXINPAY-PAY
+  source_skill_name: weixinpay-pay
+  source_path: /home/ubuntu/.hermes/plugins/weixinpay/skills/weixinpay-pay/SKILL.md
+  source_refs:
+  - SRC-SKILL-005
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-WEIXINPAY-PAY.md
+  content_sha256_16: 37be08ca9d1b682b
+  domain: Software
+  type: Constraint
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 49
+  knowledge_id: K-SOFTWARE-WEIXINPAY-PAY-002
+  title: 失败返回与处理
+  source_skill: SKILL-GEN-WEIXINPAY-PAY
+  source_skill_name: weixinpay-pay
+  source_path: /home/ubuntu/.hermes/plugins/weixinpay/skills/weixinpay-pay/SKILL.md
+  source_refs:
+  - SRC-SKILL-005
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-WEIXINPAY-PAY-002.md
+  content_sha256_16: 61415a0c098d50e1
+  domain: Software
+  type: Engineering Rule
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)
+- index: 50
+  knowledge_id: K-SOFTWARE-XURL
+  title: Raw API Access
+  source_skill: SKILL-GEN-XURL
+  source_skill_name: xurl
+  source_path: /home/ubuntu/.hermes/hermes-agent/skills/social-media/xurl/SKILL.md
+  source_refs:
+  - SRC-SKILL-018
+  content_path: 01_KNOWLEDGE/Software/K-SOFTWARE-XURL.md
+  content_sha256_16: 1430064a2070d74f
+  domain: Software
+  type: API / Specification
+  confidence: low
+  version_scope: null
+  current_classification: CANDIDATE_INGESTED (status=Candidate, validation=UNVALIDATED)

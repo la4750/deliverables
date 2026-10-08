@@ -1,0 +1,89 @@
+learning_proposals:
+  policy: Observation→Detection→Analysis→Candidate→Evidence→Proposal→Review/Approval；AI 不得自行 ADOPTED
+  date: '2026-10-08'
+  count: 6
+  adopted: 0
+proposals:
+- proposal_id: LP-001
+  source_unit:
+  - K-ELECTRON-NOVEL-PROOFREAD
+  - K-ELECTRON-NOVEL-PROOFREAD-002
+  observation: 域分类启发式将题材禁用词表中的 'PCB/电路/芯片' 误判为 Electronics 信号
+  current_rule: ELE/ROB/AI hint ≥2 即可覆盖技能域
+  new_observation: 词表/枚举类内容会包含跨域关键词，命中≠内容属于该域
+  proposed_change: hint 覆盖须结合技能域与内容上下文（如仅在技能域匹配或命中词处于技术语境）时生效
+  confidence: high
+  evidence: 2 个单元被人工裁决 DOMAIN_MISCLASSIFIED；原文为修仙题材禁用词表
+  impact: 减少入库后域纠错
+  requires_human_review: true
+  status: PROPOSED
+- proposal_id: LP-002
+  source_unit:
+  - K-SOFTWARE-WEIXINPAY-PAY
+  - K-SOFTWARE-WEIXINPAY-PAY-002
+  observation: Knowledge Schema（§24 十类型）没有安全敏感/受控工具引用分类
+  current_rule: 人工要求优先 CONTROLLED_TOOL_REFERENCE / SECURITY-SENSITIVE_KNOWLEDGE
+  new_observation: 现枚举不表达安全等级，只能降级为 NEEDS_REVIEW
+  proposed_change: 增加 security_class 字段或 SECURITY_SENSITIVE 类型 + restricted 标志（检索面过滤）
+  confidence: high
+  evidence: 2 个支付单元无处安放，本轮按裁决 NEEDS_REVIEW
+  impact: 未来支付/凭据类知识有受控通道
+  requires_human_review: true
+  status: PROPOSED
+- proposal_id: LP-003
+  source_unit:
+  - K-SOFTWARE-CN-MARKET-DATA-FAILOVER
+  observation: PROJECT_EXPERIENCE 不在 §24 十类型枚举中
+  current_rule: 人工裁决分类 PROJECT_EXPERIENCE
+  new_observation: schema 无对应 type，本轮以 curation+project_experience 子结构承载
+  proposed_change: 类型枚举增加 Project Experience，或为 unit 增加 observation_date/revalidation_required 标准字段
+  confidence: high
+  evidence: 本轮1个单元，字段仅能落在自定义块
+  impact: 项目经验有标准生命周期与复验提醒
+  requires_human_review: true
+  status: PROPOSED
+- proposal_id: LP-004
+  source_unit:
+  - K-GENERAL-UPDATER-ARCHIVE
+  - K-SOFTWARE-RULES-KNOWLEDGE-BASE-002
+  - K-AI-STYLE-DISTILL
+  observation: Workflow 中发现可跨项目复用的抽象原则：幂等 checkpoint/resume、受托工作自述必须独立复核、统计样本量下限
+  current_rule: Workflow 不得转 Knowledge；无'从流程中抽象原则'的通道
+  new_observation: 流程绑定的单元内可能含抽象后可复用的通用工程原则
+  proposed_change: 允许以'抽象评审'方式从 Workflow 提取通用原则为 Knowledge Candidate（不搬运流程本身）
+  confidence: medium
+  evidence: 上述 3 个单元原文含通用原则但整体判 RETURN_TO_SKILL
+  impact: 提高知识沉淀率但需防碎片化
+  requires_human_review: true
+  status: PROPOSED
+- proposal_id: LP-005
+  source_unit:
+  - K-SOFTWARE-ANYSEARCH
+  - K-SOFTWARE-OSS-FORENSICS
+  - K-SOFTWARE-SHOPIFY
+  - K-SOFTWARE-TENCENT-CLOUD-COS
+  - K-SOFTWARE-TENCENT-CLOUD-COS-002
+  - K-SOFTWARE-TENCENT-DOCS
+  - K-SOFTWARE-TENCENT-DOCS-002
+  - K-SOFTWARE-TENCENT-DOCS-003
+  - K-SOFTWARE-XURL
+  observation: 人工裁决要求 tool/platform/api/version_scope/observed_date/volatility 字段，Schema 无此结构
+  current_rule: Tool knowledge 只能用通用字段近似
+  new_observation: tool_reference 本轮以自定义块落 Registry
+  proposed_change: Schema v1.2 增加可选 tool_reference 子结构（含 volatility/observed_date）
+  confidence: high
+  evidence: 9 个 Tool 单元需要该结构
+  impact: Tool 知识的时效与验证状态可管理
+  requires_human_review: true
+  status: PROPOSED
+- proposal_id: LP-006
+  source_unit: BATCH2 整体
+  observation: 50 单元中 26（52%）本质是 Workflow/Skill 元数据，入库后被退回
+  current_rule: 抽取→入库→人工裁决
+  new_observation: 抽取阶段缺少 Workflow/Knowledge 边界门，返工成本高
+  proposed_change: 抽取管线在入库前置边界分类门（Workflow/Skill-metadata 直接不入 Knowledge）
+  confidence: high
+  evidence: 本批 RETURN_TO_SKILL 26 个（人工8+AI18）
+  impact: 降低知识库噪声与裁决负担
+  requires_human_review: true
+  status: PROPOSED
